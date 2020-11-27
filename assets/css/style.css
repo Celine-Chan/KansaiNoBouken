@@ -65,10 +65,11 @@ body{
     height: 25px;
     bottom: 50px;
     right: 30px;
-  }
-  #scrollTop img {
+}
+
+#scrollTop img {
     width: 25px;
-  }
+}
 
 .fa-arrow-circle-up{
     color: #ff5252;
