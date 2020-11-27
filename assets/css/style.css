@@ -30,7 +30,6 @@ body{
 
 /* PAGE ACCUEIL */
 
-/* caroussel */
 .imgCaroussel{
     width: auto;
     height: 500px;
@@ -38,7 +37,6 @@ body{
     object-position: center;
 }
 
-/* texte accueil */
 .tanukiSize{
     width: 15rem;
     height: 15rem;
@@ -46,6 +44,20 @@ body{
 .textAccueil{
     text-align: justify;
     font-family: 'Lora', serif;
+}
+
+.textGastronomie{
+    text-align: justify;
+    font-family: 'Lora', serif;
+}
+
+.currySize{
+    width: 30rem;
+    height: 20rem;
+}
+
+.seeMore:hover{
+    text-decoration: underline;
 }
 
 /* PAGE CONTACT */
