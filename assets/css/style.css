@@ -1,0 +1,75 @@
+body{
+    padding-top: 9rem;
+}
+
+/* NavBar */
+
+.webSiteTitle{
+    font-family: 'Cinzel', serif;
+}
+
+.navFont{
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.navFont:hover{
+    text-decoration: underline;
+}
+
+.hoverBackgroundNav:hover{
+    background-color: #ff8a80;
+}
+
+.hoverBackgroundNav{
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.searchColor{
+    background-color: black;
+}
+
+/* PAGE ACCUEIL */
+
+/* caroussel */
+.imgCaroussel{
+    width: auto;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* texte accueil */
+.tanukiSize{
+    width: 15rem;
+    height: 15rem;
+}
+.textAccueil{
+    text-align: justify;
+    font-family: 'Lora', serif;
+}
+
+/* PAGE CONTACT */
+.imgContact{
+    width: auto;
+}
+
+.formHover:hover{
+    background-color: #ff8a80;
+}
+
+/* arrow top */
+
+#scrollTop {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    bottom: 50px;
+    right: 30px;
+  }
+  #scrollTop img {
+    width: 25px;
+  }
+
+.fa-arrow-circle-up{
+    color: #ff5252;
+}
