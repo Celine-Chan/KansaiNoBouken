@@ -31,75 +31,60 @@
 <body>
 
     <!--Navbar -->
-    <nav class="mb-1 navbar fixed-top navbar-expand-lg navbar-dark red lighten-5">
-        <div class="logoTitle row">
-            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.jpg"></a>
-            <h1 class="webSiteTitle">Kansai no bouken</h1>
-            <button class="navbar-toggler black" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark red lighten-5">
+
+        <a class="navbar-brand text-dark webSiteTitle" href="index.html">Kansai no Bouken</a>
+
+        <button class="navbar-toggler black" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link navFont text-dark" href="gallerie.html">Gallerie
+                    <a class="nav-link text-dark navFont" href="gallerie.html">Gallerie
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle navFont text-dark" id="navbarDropdownMenuLink-333"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kansai
-                    </a>
-                    <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item hoverBackgroundNav" href="#">Kansai</a>
-                        <a class="dropdown-item hoverBackgroundNav" href="#">Osaka</a>
-                        <a class="dropdown-item hoverBackgroundNav" href="#">Kyoto</a>
-                        <a class="dropdown-item hoverBackgroundNav" href="#">Nara</a>
-                        <a class="dropdown-item hoverBackgroundNav" href="#">Kobe</a>
-                        <a class="dropdown-item hoverBackgroundNav" href="#">Wakayama</a>
+                    <a class="nav-link dropdown-toggle text-dark navFont" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false text-dark">Kansai</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item text-dark hoverBackgroundNav" href="#">kansai</a>
+                        <a class="dropdown-item text-dark hoverBackgroundNav" href="#">Osaka</a>
+                        <a class="dropdown-item text-dark hoverBackgroundNav" href="#">Kyoto</a>
+                        <a class="dropdown-item text-dark hoverBackgroundNav" href="#">Nara</a>
+                        <a class="dropdown-item text-dark hoverBackgroundNav" href="#">Kobe</a>
+                        <a class="dropdown-item text-dark hoverBackgroundNav" href="#">Wakayama</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navFont text-dark" href="#">Gastronomie</a>
+                    <a class="nav-link text-dark navFont" href="gastronomie.html">Gastronomie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navFont text-dark" href="#">Vocabulaire</a>
+                    <a class="nav-link text-dark navFont" href="vocabulaire.html">Vocabulaire</a>
                 </li>
-                <li>
-                    <a class="nav-link navFont text-dark justify-content-end" href="contact.html">Contact</a>
+                <li class="nav-item">
+                    <a class="nav-link text-dark navFont" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark navFont" href="inscription.html">Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark navFont" data-toggle="modal"
+                        data-target="#modalLoginForm">Connexion</a>
                 </li>
             </ul>
 
-        </div>
-        <div class="col">
-            <div>
-                <ul class="navbar-nav ml-auto nav-flex-icons">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" id="navbarDropdownMenuLink-333"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                            aria-labelledby="navbarDropdownMenuLink-333">
-                            <a class="dropdown-item hoverBackgroundNav" href="inscription.html">Inscription</a>
-                            <a class="dropdown-item hoverBackgroundNav" href="" data-toggle="modal"
-                                data-target="#modalLoginForm">Connexion</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-                        aria-label="Search">
-                </form>
-            </div>
+            <form class="form-inline md-form form-sm">
+                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                    aria-label="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </form>
         </div>
     </nav>
-    <!--/.Navbar -->
 
     <!-- modal connexion -->
     <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -141,6 +126,8 @@
                 <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
                 <li data-target="#carousel-example-1z" data-slide-to="1"></li>
                 <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+                <li data-target="#carousel-example-1z" data-slide-to="3"></li>
+                <li data-target="#carousel-example-1z" data-slide-to="4"></li>
             </ol>
             <!--/.Indicators-->
             <!--Slides-->
@@ -157,6 +144,9 @@
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100 imgCaroussel" src="assets/img/kyoto/kyoto3.jpg" alt="fourth slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100 imgCaroussel" src="assets/img/Minoh/minohTemple.jpg" alt="fourth slide">
                 </div>
             </div>
             <!--/.Slides-->
@@ -175,10 +165,10 @@
 
     <div class="d-flex flex-row mt-5 container">
         <div>
-            <img src="assets/img/osaka/tanuki.jpg" alt="tanuki" class="tanukiSize mr-5">
+            <img src="assets/img/osaka/tanuki.jpg" alt="tanuki" class="img-fluid">
         </div>
         <div>
-            <p class="textAccueil">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            <p class="textAccueil ml-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                 tempor
                 invidunt ut
                 labore
@@ -246,7 +236,7 @@
                     <h5 class="red-text"><i class="fas fa-city"></i> 大阪</h5>
                     <h3 class="card-title pt-2"><strong>Osaka</strong></h3>
                     <p>Découvrez la ville d'Osaka qui est la 3ème plus grande ville du Japon derrière Tokyo et Yokohama.
-                    osaka est connu pour son hospitalité, ses animations et sa gastronomie typique.
+                        osaka est connu pour son hospitalité, ses animations et sa gastronomie typique.
                     </p>
                     <a class="btn btn-red" href="osaka.html"><i class="far fa-newspaper"></i> Voir l'article</a>
                 </div>
@@ -262,7 +252,8 @@
                     <h5 class="red-text"><i class="fas fa-city"></i> 京都</h5>
                     <h3 class="card-title pt-2"><strong>Kyoto</strong></h3>
                     <p>Découvrez Kyoto, ancienne capitale du Japon, le coeur culturel et religieux du Japon.
-                        Vous serez captivés par ses palais impériaux, ses milliers de sanctuaires shinto et temples bouddhistes.
+                        Vous serez captivés par ses palais impériaux, ses milliers de sanctuaires shinto et temples
+                        bouddhistes.
                     </p>
                     <a class="btn btn-red" href="kyoto.html"><i class="far fa-newspaper"></i> Voir l'article</a>
                 </div>
@@ -291,9 +282,10 @@
             <!-- Content -->
             <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
                 <div>
-                    <h5 class="red-text"><i class="fas fa-city"></i> 個別</h5>
+                    <h5 class="red-text"><i class="fas fa-city"></i> 神戸</h5>
                     <h3 class="card-title pt-2"><strong>Kobe</strong></h3>
-                    <p>Découvrez Kobe "la porte des esprits", connue pour sa célèbre viande de boeuf et son quartier européen.
+                    <p>Découvrez Kobe "la porte des esprits", connue pour sa célèbre viande de boeuf et son quartier
+                        européen.
                         Elle offre une vue incroyable la nuit si vous êtes adeptes des ballades nocturnes
                     </p>
                     <a class="btn btn-red" href="kobe.html"><i class="far fa-newspaper"></i> Voirl'article</a>
@@ -323,7 +315,11 @@
             nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum."
         </p>
-        <img src="assets/img/osaka/foodResto.jpg" alt="food" class="foodSize ml-5">
+
+    </div>
+        <img src="assets/img/osaka/foodResto2.jpg" alt="food" class="img-fluid mx-auto d-block rounded ">
+    <div>
+
     </div>
 
     <div class="container mt-4 text-center">
@@ -334,7 +330,7 @@
         <img src="assets/img/separator.svg" alt="separator" class="w-25">
     </div>
 
-    <div class="container mt-5 d-flex flex-row flex-fill col-12">
+    <div class="container mt-5 d-flex flex-row flex-fill col-12 justify-content-center">
 
         <!--First Card-->
         <div class="card red darken-1 text-center z-depth-2 mr-5">
@@ -408,7 +404,7 @@
                 <a href="https://www.facebook.com/nihonnobouken"><i class="fab fa-facebook fa-2x mr-2"></i></a>
                 <i class="fab fa-instagram fa-2x mr-2"></i>
                 <i class="fab fa-linkedin fa-2x mr-2"></i>
-                <i class="fab fa-github-square fa-2x mr-5"></i>
+                <i class="fab fa-github-square fa-2x mr-2"></i>
             </div>
 
             <a class="nav-link navFont text-light" href="gallerie.html">Gallerie

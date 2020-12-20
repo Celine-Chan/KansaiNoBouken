@@ -29,72 +29,57 @@
 <body>
 
     <!--Navbar -->
-    <nav class="mb-1 navbar fixed-top navbar-expand-lg navbar-dark red lighten-5">
-        <div class="logoTitle row">
-            <a class="navbar-brand" href="index.html"><img src="assets/img/logo.jpg"></a>
-            <h1 class="webSiteTitle">Kansai no bouken</h1>
-            <button class="navbar-toggler black" type="button" data-toggle="collapse"
-                data-target="#navbarSupportedContent-333" aria-controls="navbarSupportedContent-333"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark red lighten-5">
+
+        <a class="navbar-brand text-dark webSiteTitle" href="index.html">Kansai no Bouken</a>
+
+        <button class="navbar-toggler black" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="basicExampleNav">
+
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link navFont text-dark" href="gallerie.html">Gallerie
+                    <a class="nav-link text-dark navFont" href="gallerie.html">Gallerie
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle navFont text-dark" id="navbarDropdownMenuLink-333"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kansai
-                    </a>
-                    <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                        <a class="dropdown-item hoverBackgroundNav" href="#">Kansai</a>
-                        <a class="dropdown-item hoverBackgroundNav" href="#">Osaka</a>
-                        <a class="dropdown-item hoverBackgroundNav" href="#">Kyoto</a>
-                        <a class="dropdown-item hoverBackgroundNav" href="#">Nara</a>
-                        <a class="dropdown-item hoverBackgroundNav" href="#">Kobe</a>
-                        <a class="dropdown-item hoverBackgroundNav" href="#">Wakayama</a>
+                    <a class="nav-link dropdown-toggle text-dark navFont" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false text-dark">Kansai</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item text-dark hoverBackgroundNav" href="#">kansai</a>
+                        <a class="dropdown-item text-dark hoverBackgroundNav" href="#">Osaka</a>
+                        <a class="dropdown-item text-dark hoverBackgroundNav" href="#">Kyoto</a>
+                        <a class="dropdown-item text-dark hoverBackgroundNav" href="#">Nara</a>
+                        <a class="dropdown-item text-dark hoverBackgroundNav" href="#">Kobe</a>
+                        <a class="dropdown-item text-dark hoverBackgroundNav" href="#">Wakayama</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navFont text-dark" href="#">Gastronomie</a>
+                    <a class="nav-link text-dark navFont" href="gastronomie.html">Gastronomie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link navFont text-dark" href="#">Vocabulaire</a>
+                    <a class="nav-link text-dark navFont" href="vocabulaire.html">Vocabulaire</a>
                 </li>
-                <li>
-                    <a class="nav-link navFont text-dark justify-content-end" href="contact.html">Contact</a>
+                <li class="nav-item">
+                    <a class="nav-link text-dark navFont" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark navFont" href="inscription.html">Inscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark navFont" data-toggle="modal" data-target="#modalLoginForm">Connexion</a>
                 </li>
             </ul>
 
-        </div>
-        <div class="col">
-            <div>
-                <ul class="navbar-nav ml-auto nav-flex-icons">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" id="navbarDropdownMenuLink-333"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                            aria-labelledby="navbarDropdownMenuLink-333">
-                            <a class="dropdown-item hoverBackgroundNav" href="inscription.html">Inscription</a>
-                            <a class="dropdown-item hoverBackgroundNav" href="" data-toggle="modal"
-                            data-target="#modalLoginForm">Connexion</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-                        aria-label="Search">
-                </form>
-            </div>
+            <form class="form-inline md-form form-sm">
+                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                    aria-label="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </form>
         </div>
     </nav>
     <!--/.Navbar -->
@@ -134,7 +119,7 @@
 
     <!-- gallerie Osaka -->
 
-    <h1 class="text-center">Osaka</h1>
+    <h1 class="text-center mt-4 mb-3">Osaka</h1>
 
     <div class="row container-fluid">
         <div class="col-md-12">
@@ -182,7 +167,7 @@
 
     <!-- gallerie Kyoto -->
 
-    <h1 class="text-center mt-5">Kyoto</h1>
+    <h1 class="text-center mt-5 mb-3">Kyoto</h1>
 
     <div class="row container-fluid">
         <div class="col-md-12">
@@ -230,15 +215,15 @@
 
     <!-- gallerie Nara -->
 
-    <h1 class="text-center mt-5">Nara</h1>
+    <h1 class="text-center mt-5 mb-3">Nara</h1>
     
     <!-- gallerie Kobe -->
 
-    <h1 class="text-center mt-5">Kobe</h1>
+    <h1 class="text-center mt-5 mb-3">Kobe</h1>
 
     <!-- gallerie Wakayama -->
 
-    <h1 class="text-center mt-5">Wakayama</h1>
+    <h1 class="text-center mt-5 mb-3">Wakayama</h1>
 
 
 
