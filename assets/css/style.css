@@ -47,12 +47,14 @@ body {
 
 .textAccueil {
     text-align: justify;
-    font-family: 'Lora', serif;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2rem;
 }
 
 .textGastronomie {
     text-align: justify;
-    font-family: 'Lora', serif;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2rem;
 }
 
 .foodSize {
@@ -62,10 +64,17 @@ body {
 
 .seeMore:hover {
     text-decoration: underline;
+    color: red;
 }
 
 .vocabularyCard{
     justify-content: space-evenly;
+}
+
+/* City Card */
+
+.fontSizeCard .card-text{
+    font-size: 1.1rem;
 }
 
 /* PAGE CONTACT */
@@ -92,7 +101,11 @@ body {
     color: #ff5252;
 }
 
-
-
+.vocabularyCard:hover{
+    transform: scale(1.1);
+}
+.vocabularyCard{
+    transition: transform 0.2s ease;
+}
 
 

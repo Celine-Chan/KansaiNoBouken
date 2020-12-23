@@ -15,6 +15,8 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- MDB v2-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.css" rel="stylesheet">
     <!-- googlefont -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
@@ -23,6 +25,11 @@
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
     <!-- lien css -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -223,8 +230,6 @@
         <img src="assets/img/separator.svg" alt="separator" class="w-25">
     </div>
 
-    <!--  -->
-
     <!-- Card -->
     <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 cityCard">
         <!-- first card -->
@@ -238,10 +243,10 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Osaka 大阪</h5>
-                    <p class="card-text">
+                    <p class="card-text fontSizeCard" style="font-size: 1rem; color: black;">
                         Découvrez la ville d'Osaka qui est la 3ème plus grande ville du Japon derrière Tokyo et
                         Yokohama.
-                        osaka est connu pour son hospitalité, ses animations et sa gastronomie typique.
+                        osaka est connu pour son hospitalité, ses animations et sa gastronomie typique.</br>
                         <a href="kansai.html" class="black-text seeMore ml-3">Voir plus <i
                                 class="fas fa-plus-circle"></i></a>
                     </p>
@@ -259,7 +264,8 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Kyoto 京都</h5>
-                    <p class="card-text">Découvrez Kyoto, ancienne capitale du Japon, le coeur culturel et religieux du
+                    <p class="card-text" style="font-size: 1rem; color: black;">Découvrez Kyoto, ancienne capitale du
+                        Japon, le coeur culturel et religieux du
                         Japon.
                         Vous serez captivés par ses palais impériaux, ses milliers de sanctuaires shinto et temples
                         bouddhistes.
@@ -279,7 +285,7 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Nara 奈良</h5>
-                    <p class="card-text">
+                    <p class="card-text" style="font-size: 1rem; color: black;">
                         Découvrez Nara dont les monuments historiques de l'ancienne ville sont inscrits à l'UNESCO.
                         Laissez-vous transporté par l'ambiance de la ville où les cerfs en libertés flânent à vos côtés.
                         <a href="kansai.html" class="black-text seeMore ml-3">Voir plus <i
@@ -300,7 +306,7 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Kobe 神戸</h5>
-                    <p class="card-text">
+                    <p class="card-text" style="font-size: 1rem; color: black;">
                         Découvrez Kobe "la porte des esprits", connue pour sa célèbre viande de boeuf et son quartier
                         européen.
                         Elle offre une vue incroyable la nuit si vous êtes adeptes des ballades nocturnes.
@@ -321,7 +327,7 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Wakayama 和歌山</h5>
-                    <p class="card-text">
+                    <p class="card-text" style="font-size: 1rem; color: black;">
                         This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
                         <a href="kansai.html" class="black-text seeMore ml-3">Voir plus <i
@@ -341,7 +347,7 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">Kansai 関西</h5>
-                    <p class="card-text">
+                    <p class="card-text" style="font-size: 1rem; color: black;">
                         This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
                         <a href="kansai.html" class="black-text seeMore ml-3">Voir plus <i
@@ -378,9 +384,9 @@
         </p>
 
     </div>
-    <img src="assets/img/osaka/foodResto2.jpg" alt="food" class="img-fluid mx-auto d-block rounded ">
-    <div>
 
+    <div>
+        <img src="assets/img/osaka/foodResto2.jpg" alt="food" class="img-fluid mx-auto d-block rounded ">
     </div>
 
     <div class="container mt-4 text-center">
@@ -393,55 +399,40 @@
 
     <!-- Vocabulaire card -->
 
-    <div class="container-fluid row text-center vocabularyCard">
-        <div class="card text-white red darken-1 mb-3 mt-5 mr-3 ml-4" style="max-width: 18rem">
-            <div class="card-header">Header</div>
+    <div class="container-fluid row text-center justify-content-center">
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 mr-3 ml-4" style="max-width: 18rem">
+            <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
-                <h5 class="card-title">Danger card title</h5>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                </p>
+                <h5 class="card-title"><strong>Bonjour</strong></h5>
+                <p class="card-text white-text">おはよう</p>
             </div>
         </div>
-        <div class="card text-white red darken-1 mb-3 mt-5 mr-3" style="max-width: 18rem">
-            <div class="card-header">Header</div>
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 mr-3" style="max-width: 18rem">
+            <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
-                <h5 class="card-title">Danger card title</h5>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                </p>
+                <h5 class="card-title"><strong>Merci</strong></h5>
+                <p class="card-text white-text">ありがとう</p>
             </div>
         </div>
-        <div class="card text-white red darken-1 mb-3 mt-5 mr-3" style="max-width: 18rem">
-            <div class="card-header">Header</div>
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 mr-3" style="max-width: 18rem">
+            <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
-                <h5 class="card-title">Danger card title</h5>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                </p>
+                <h5 class="card-title"><strong>Au revoir</strong></h5>
+                <p class="card-text white-text">さようなら</p>
             </div>
         </div>
-        <div class="card text-white red darken-1 mb-3 mt-5 mr-3" style="max-width: 18rem">
-            <div class="card-header">Header</div>
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 mr-3" style="max-width: 18rem">
+            <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
-                <h5 class="card-title">Danger card title</h5>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                </p>
+                <h5 class="card-title"><strong>Bienvenue</strong></h5>
+                <p class="card-text white-text">ようこそ</p>
             </div>
         </div>
-        <div class="card text-white red darken-1 mb-3 mt-5" style="max-width: 18rem">
-            <div class="card-header">Header</div>
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 18rem">
+            <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
-                <h5 class="card-title">Danger card title</h5>
-                <p class="card-text">
-                    Some quick example text to build on the card title and make up the bulk of the
-                    card's content.
-                </p>
+                <h5 class="card-title"><strong>S'il vous plaît</strong></h5>
+                <p class="card-text white-text">おねがいします</p>
             </div>
         </div>
     </div>
@@ -452,8 +443,8 @@
         <a href="vocabulaire.html" class="black-text seeMore">Voir plus <i class="fas fa-plus-circle"></i></a>
     </div>
 
-    <div id="scrollTop">
-        <a href="#top"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+    <div>
+        <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
     </div>
 
     <footer class="page-footer font-small special-color-dark pt-4 mt-5">
@@ -500,6 +491,8 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js">
     </script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js"></script>
     <!-- lien js -->
     <script src="assets/js/script.js"></script>
 </body>
