@@ -1,72 +1,76 @@
-body{
+body {
     padding-top: 9rem;
     overflow-x: hidden;
+    height: auto;
+    width: 100%;
 }
 
 /* NavBar */
 
-.webSiteTitle{
+.webSiteTitle {
     font-family: 'Cinzel', serif;
 }
 
-.navFont{
+.navFont {
     font-family: 'Saira Condensed', sans-serif;
 }
 
-.navFont:hover{
+.navFont:hover {
     text-decoration: underline;
 }
 
-.hoverBackgroundNav:hover{
+.hoverBackgroundNav:hover {
     background-color: #ff8a80;
 }
 
-.hoverBackgroundNav{
+.hoverBackgroundNav {
     font-family: 'Saira Condensed', sans-serif;
 }
 
-.searchColor{
+.searchColor {
     background-color: black;
 }
 
 /* PAGE ACCUEIL */
 
-.imgCaroussel{
+.imgCaroussel {
     width: auto;
     height: 500px;
     object-fit: cover;
     object-position: center;
 }
 
-.tanukiSize{
+.tanukiSize {
     width: 15rem;
     height: 15rem;
 }
-.textAccueil{
+
+.textAccueil {
     text-align: justify;
     font-family: 'Lora', serif;
 }
 
-.textGastronomie{
+.textGastronomie {
     text-align: justify;
     font-family: 'Lora', serif;
 }
 
-.foodSize{
+.foodSize {
     width: 35rem;
     height: 20rem;
 }
 
-.seeMore:hover{
+.seeMore:hover {
     text-decoration: underline;
 }
 
-/* PAGE CONTACT */
-.imgContact{
-    width: auto;
+.vocabularyCard{
+    justify-content: space-evenly;
 }
 
-.formHover:hover{
+/* PAGE CONTACT */
+
+.formHover:hover {
     background-color: #ff8a80;
 }
 
@@ -84,6 +88,11 @@ body{
     width: 25px;
 }
 
-.fa-arrow-circle-up{
+.fa-arrow-circle-up {
     color: #ff5252;
 }
+
+
+
+
+
