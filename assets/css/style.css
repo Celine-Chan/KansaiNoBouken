@@ -40,10 +40,10 @@ body {
     object-position: center;
 }
 
-.tanukiSize {
+/* .tanukiSize {
     width: 15rem;
     height: 15rem;
-}
+} */
 
 .textAccueil {
     text-align: justify;
@@ -108,4 +108,13 @@ body {
     transition: transform 0.2s ease;
 }
 
+/* page vocabulaire */
+
+
+/*page gastronomie */
+
+.ramenOsaka {
+    height: 20rem;
+    width: 0%;
+}
 

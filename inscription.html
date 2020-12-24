@@ -71,7 +71,8 @@
                     <a class="nav-link text-dark navFont" href="inscription.html">Inscription</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark navFont" data-toggle="modal" data-target="#modalLoginForm">Connexion</a>
+                    <a class="nav-link text-dark navFont" data-toggle="modal"
+                        data-target="#modalLoginForm">Connexion</a>
                 </li>
             </ul>
 
@@ -116,13 +117,17 @@
         </div>
     </div>
 
+    <div class="banniereInscriptionImg mb-5">
+        <img src="assets/img/osakaPortKansai2.jpg" alt="takoyaki" class="img-fluid takoyakiImg">
+    </div>
+
 
     <!-- forms inscription -->
     <div class="container">
         <!-- Default form register -->
         <form class="text-center border border-danger p-5" action="#!">
 
-            <p class="h4 mb-4">Inscription</p>
+            <p class="h4 mb-5">Inscription</p>
 
             <div class="form-row mb-4">
                 <div class="col">
@@ -139,55 +144,29 @@
             <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
 
             <!-- Password -->
-            <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Mot de passe"
+            <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Mot de passe"
                 aria-describedby="defaultRegisterFormPasswordHelpBlock">
-            <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-3">
+            <!-- <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-3">
                 At least 8 characters and 1 digit
-            </small>
+            </small> -->
             <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4"
                 placeholder="Comfirmer votre mot de passe" aria-describedby="defaultRegisterFormPasswordHelpBlock">
 
-            <!-- Phone number -->
-            <input type="text" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number"
-                aria-describedby="defaultRegisterFormPhoneHelpBlock">
-            <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-                Optional - for two step authentication
-            </small>
-
-            <!-- Newsletter -->
-            <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
-                <label class="custom-control-label" for="defaultRegisterFormNewsletter">Subscribe to our
-                    newsletter</label>
-            </div>
-
             <!-- Sign up button -->
-            <button class="btn btn-info my-4 btn-block red darken-4" type="submit">Sign in</button>
+            <button class="btn btn-info my-4 btn-block red darken-4" type="submit">S'inscrire</button>
 
-            <!-- Social register -->
-            <p>or sign up with:</p>
-
-            <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
-            <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
-
-            <hr>
+            <!-- <hr> -->
 
             <!-- Terms of service -->
-            <p>By clicking
-                <em>Sign up</em> you agree to our
-                <a href="" target="_blank">terms of service</a>
+            <p>En cliquant sur <em>s'inscrire</em> vous acceptez nos <a href="" target="_blank">terms of service</a></p>
 
         </form>
         <!-- Default form register -->
     </div>
 
 
-
-
-    <div id="scrollTop">
-        <a href="#top"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+    <div>
+        <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
     </div>
 
     <footer class="page-footer font-small special-color-dark pt-4 mt-5">
