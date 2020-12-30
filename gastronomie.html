@@ -15,6 +15,8 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <!-- MDB v2-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.css" rel="stylesheet">
     <!-- googlefont -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
@@ -119,15 +121,16 @@
     </div>
 
     <div class="banniereTakoyakiImg">
-        <img src="assets/img/takoyaki2.jpg" alt="takoyaki" class="img-fluid takoyakiImg">
+        <img src="assets/img/banniere/takoyaki2.jpg" alt="takoyaki" class="img-fluid takoyakiImg">
     </div>
 
     <h1 class="text-center mt-5">Gastronomie du Kansai</h1>
 
     <div class="d-flex flex-row mt-5 container">
-        <div><img src="assets/img/osaka/ramenOsaka.jpg" alt="ramenOsaka" class="img-fluid ramenOsaka"></div>
+        <div><img src="assets/img/gastronomie/sushi.jpg" alt="ramenOsaka" class="img-fluid ramenOsaka"></div>
         <div>
-            <p class="textGastronomyPage ml-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            <p class="textGastronomyPage ml-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                eirmod tempor invidunt ut labore
                 et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
                 rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
                 dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
@@ -143,72 +146,289 @@
         </div>
     </div>
 
-    <div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div>
-        <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+    <div class="text-center mt-5">
+        <img src="assets/img/separator.svg" alt="separator" class="w-25">
     </div>
 
-    <footer class="page-footer font-small special-color-dark pt-4 mt-5">
-
-        <div class="d-flex flex-row justify-content-center mb-3">
-
-            <div>
-                <a href="https://www.facebook.com/nihonnobouken"><i class="fab fa-facebook fa-2x mr-2"></i></a>
-                <i class="fab fa-instagram fa-2x mr-2"></i>
-                <i class="fab fa-linkedin fa-2x mr-2"></i>
-                <i class="fab fa-github-square fa-2x mr-2"></i>
+    <h2>Quelques recettes...</h2>
+    <div class="container-fluid d-flex row mt-5 mx-auto">
+        <!-- Card recipe 1 -->
+        <div class="card mb-3" style="max-width: 540px">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="assets/img/gastronomie/takoyaki-gastronomie-recipe.jpg" alt="..." class="img-fluid" />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Takoyaki</h5>
+                        <p class="card-text">
+                            Spécialités d'Osaka, les takoyaki se présentent sous forme de boulette fourées avec des
+                            morceaux de poulpe (tako).
+                            Ils peuvent se manger à toute heure et sont vendu en barquette de 6 à 12 takoyaki.
+                        </p>
+                        <button type="button" class="btn btn-rounded btnGastronomieRecipe" data-mdb-toggle="modal"
+                            data-mdb-target="#recipeTakoyaki">
+                            Voir la recette
+                        </button>
+                    </div>
+                </div>
             </div>
-
-            <a class="nav-link navFont text-light" href="gallerie.html">Gallerie
-                <span class="sr-only">(current)</span>
-            </a>
-            <a class="nav-link dropdown-toggle navFont text-light" id="navbarDropdownMenuLink-333"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kansai
-            </a>
-            <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-                <a class="dropdown-item hoverBackgroundNav text-dark" href="#">Osaka</a>
-                <a class="dropdown-item hoverBackgroundNav text-dark" href="#">Kyoto</a>
-                <a class="dropdown-item hoverBackgroundNav text-dark" href="#">Nara</a>
-                <a class="dropdown-item hoverBackgroundNav text-dark" href="#">Kobe</a>
-                <a class="dropdown-item hoverBackgroundNav text-dark" href="#">Wakayama</a>
-            </div>
-            <a class="nav-link navFont text-light" href="#">Gastronomie</a>
-            <a class="nav-link navFont text-light" href="#">Vocabulaire</a>
-            <a class="nav-link navFont text-light justify-content-end" href="contact.html">Contact</a>
         </div>
 
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://github.com/Celine-chan"> Céline Louvel</a>
+        <!-- modal recipe 1 -->
+        <div class="modal fade" id="recipeTakoyaki" tabindex="-1" aria-labelledby="recipeTakoyaki" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="recipeTakoyaki">Takoyaki</h5>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/v-qm6bThYjY" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <p class="mt-2 titleModalRecipe">Ingrédients (40 takoyaki) :</p>
+                        <ul>
+                            <li>200g de farine de takoyaki</li>
+                            <li>700ml d'eau</li>
+                            <li>2 oeufs</li>
+                            <li>80g de poulpe</li>
+                            <li>100g de légumes (chou, poireau, gingembre rouge, etc)</li>
+                        </ul>
+                        <ul>
+                            <li>Appareil à takoyaki <i class="fas fa-exclamation"></i></li>
+                        </ul>
+                        <p class="titleModalRecipe">Préparation:</p>
+                        <ul>
+                            <li>Mélanger la farine, les oeufs et l'eau</li>
+                            <li>Couper les légumes</li>
+                            <li>Faire chauffer l'appareil à takoyaki et mettre de l'huile végétal</li>
+                            <li>Verser la pâte à takoyaki dans les moules et mettre les légumes</li>
+                            <li>Laisser cuire quelques minutes jusqu'à ce que la pâte ne soit plus liquide</li>
+                            <li>Tourner les takoyaki petit à petit jusqu'à ce qu'ils soient bien dorés</li>
+                            <li>Mettre dans une assiette et rajouter la sauce takoyaki, la poudre d'algues(aonori) et
+                                les copeaux de bonites</li>
+                        </ul>
+
+                        <img class="imgRecipeSize mb-3" src="assets/img/gastronomie/takoyakiRecipe.jpg"
+                            alt="takoyaki">
+                        <p>Source : <a href="https://www.youtube.com/channel/UCt8iNzhAJONk3leOg0hoNYA">Les
+                                recettes
+                                d'une japonaise</a></p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btnGastronomieRecipe btn-rounded" data-mdb-dismiss="modal">
+                            Retour
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    </footer>
+        <!-- Card recipe 2 -->
+        <div class="card mb-3" style="max-width: 540px">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="assets/img/gastronomie/pexels-ponyo-sakana-4193842.jpg" alt="..." class="img-fluid" />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Ramen</h5>
+                        <p class="card-text">
+                            Le Ramen, un plat très populaire, est constitué de nouilles servis dans un bouillon à
+                            base de viande ou de poisson.
+                            Il existe plusieurs sorte de ramen, le plus commun est servi généralement avec un oeuf et
+                            des tranches de porc.
+                        </p>
+                        <button type="button" class="btn btn-rounded btnGastronomieRecipe" data-mdb-toggle="modal"
+                            data-mdb-target="#recipeRamen">
+                            Voir la recette
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Optional JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-    </script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js">
-    </script>
-    <!-- lien js -->
-    <script src="assets/js/script.js"></script>
+        <!-- modal recipe 2 -->
+        <div class="modal fade" id="recipeRamen" tabindex="-1" aria-labelledby="recipeRamen" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="recipeRamen">Ramen</h5>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kTMomm4d73c" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <p class="mt-2 titleModalRecipe">Ingrédients pour recette d'accompagnement Ajitama :</p>
+                        <ul>
+                            <li>4 oeufs mollets</li>
+                            <li>100ml d'eau</li>
+                            <li>1 cuillère à café de dashi en poudre</li>
+                            <li>2 cuillère à soupe de sauce soja</li>
+                            <li>1 cuillère à soupe de sucre</li>
+                            <li>bouillon de ramen en sachet</li>
+                        </ul>
+                        <p class="titleModalRecipe">Préparation:</p>
+                        <ul>
+                            <li>Mettre l'eau , le dashi, la sauce soja et le sucre dans une casserole et faire chauffer
+                            </li>
+                            <li>Laisser reposer jusqu'à ce qu'il soit chaud</li>
+                            <li>Mettre les oeufs mollets dans un sac congélation et verser la sauce</li>
+                            <li>laisser reposer 1 ou 2 jours dans le frigo</li>
+                        </ul>
+
+                        <img class="imgRecipeSize mb-3" src="assets/img/gastronomie/ramen-gastronomie.jpg"
+                            alt="takoyaki">
+                        <p>Source : <a href="https://www.youtube.com/channel/UCt8iNzhAJONk3leOg0hoNYA">Les
+                                recettes
+                                d'une japonaise</a></p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-rounded btnGastronomieRecipe" data-mdb-dismiss="modal">
+                            Retour
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card recipe 3 -->
+        <div class="card mb-3" style="max-width: 540px">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="assets/img/gastronomie/yamayoshiOkonomiyaki2.jpg" alt="..." class="img-fluid" />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Okonomiyaki</h5>
+                        <p class="card-text">
+                            L'okonomiyaki est plat type d'Osaka. Il se présente sous la forme d'omelette composé de farine et de chou et accompagné
+                            généralemetn de fines tranches de porc et du dashi. Il est préparé sur une plaque chauffante.
+                        </p>
+                        <button type="button" class="btn btn-rounded btnGastronomieRecipe" data-mdb-toggle="modal"
+                            data-mdb-target="#recipeOkonomyaki">
+                            Voir la recette
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal recipe 3 -->
+        <div class="modal fade" id="recipeOkonomyaki" tabindex="-1" aria-labelledby="recipeOkonomyaki"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="recipeOkonomyaki">Okonomiyaki</h5>
+                        <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/RoJM6ob0oiE" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <p class="mt-2 titleModalRecipe">Ingrédients :</p>
+                        <ul>
+                            
+                        </ul>
+                        <p class="titleModalRecipe">Préparation:</p>
+                        <ul>
+                            
+                        </ul>
+
+                        <img class="imgRecipeSize mb-3" src="assets/img/gastronomie/okonoRecipe.jpg"
+                            alt="takoyaki">
+                        <p>Source : <a href="https://www.youtube.com/channel/UCt8iNzhAJONk3leOg0hoNYA">Les
+                                recettes
+                                d'une japonaise</a></p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-rounded btnGastronomieRecipe" data-mdb-dismiss="modal">
+                            Retour
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <img src="assets/img/separator.svg" alt="separator" class="w-25">
+        </div>
+
+        <h2>Quelques adresses...</h2>
+        <div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div>
+            <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+        </div>
+
+        <footer class="page-footer font-small special-color-dark pt-4 mt-5">
+
+            <div class="d-flex flex-row justify-content-center mb-3">
+
+                <div>
+                    <a href="https://www.facebook.com/nihonnobouken"><i class="fab fa-facebook fa-2x mr-2"></i></a>
+                    <i class="fab fa-instagram fa-2x mr-2"></i>
+                    <i class="fab fa-linkedin fa-2x mr-2"></i>
+                    <i class="fab fa-github-square fa-2x mr-2"></i>
+                </div>
+
+                <a class="nav-link navFont text-light" href="gallerie.html">Gallerie
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-link dropdown-toggle navFont text-light" id="navbarDropdownMenuLink-333"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kansai
+                </a>
+                <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+                    <a class="dropdown-item hoverBackgroundNav text-dark" href="#">Osaka</a>
+                    <a class="dropdown-item hoverBackgroundNav text-dark" href="#">Kyoto</a>
+                    <a class="dropdown-item hoverBackgroundNav text-dark" href="#">Nara</a>
+                    <a class="dropdown-item hoverBackgroundNav text-dark" href="#">Kobe</a>
+                    <a class="dropdown-item hoverBackgroundNav text-dark" href="#">Wakayama</a>
+                </div>
+                <a class="nav-link navFont text-light" href="#">Gastronomie</a>
+                <a class="nav-link navFont text-light" href="#">Vocabulaire</a>
+                <a class="nav-link navFont text-light justify-content-end" href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://github.com/Celine-chan"> Céline Louvel</a>
+            </div>
+
+        </footer>
+
+        <!-- Optional JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js">
+        </script>
+        <!-- MDB -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js">
+        </script>
+        <!-- lien js -->
+        <script src="assets/js/script.js"></script>
 </body>
 
 </html>

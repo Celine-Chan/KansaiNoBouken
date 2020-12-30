@@ -108,13 +108,32 @@ body {
     transition: transform 0.2s ease;
 }
 
-/* page vocabulaire  */
+/* page vocabulaire */
 
 
 /*page gastronomie */
 
 .ramenOsaka {
     height: 20rem;
-    width: 500rem;
+    width: 110rem;
+}
+
+.imgRecipeSize{
+    height: 20rem;
+    width: 29rem;
+}
+
+li{
+    text-align: justify;
+}
+
+.titleModalRecipe{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.btnGastronomieRecipe {
+    background-color:#B71C1C;
+    color: white;
 }
 
