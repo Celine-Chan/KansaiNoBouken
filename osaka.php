@@ -56,6 +56,8 @@
 
     <div>
         <h2 class="mt-5">Article</h2>
+
+        <?= (isset($_POST['osakaArticle'])) ? $_POST['osakaArticle'] : '' ?>
     </div>
 
 
