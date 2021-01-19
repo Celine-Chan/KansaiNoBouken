@@ -2,11 +2,26 @@
 
 $errorMessages = [];
 
+$regexName = '/^[a-zA-Z]+$/';
+
 if (isset($_POST['submit'])) {
-    
+    if (isset($_POST['firstName'])) {
+        if (!preg_match($regexName, $_POST['firstName'])) {
+            $errorMessages['firstName'] = 'Veuillez saisir un prénom valide.';
+        }
+        if (empty($_POST['firstName'])) {
+            $errorMessages['firstName'] = 'Veuillez saisir votre prénom.';
+        }
+    }
+    if (isset($_POST['lastName'])) {
+        if (!preg_match($regexName, $_POST['lastName'])) {
+            $errorMessages['lastName'] = 'Veuillez saisir un nom valide.';
+        }
+        if (empty($_POST['lastName'])) {
+            $errorMessages['lastName'] = 'Veuillez saisir votre nom.';
+        }
+    }
 }
-
-
 ?>
 <!doctype html>
 <html lang="fr">
@@ -29,7 +44,7 @@ if (isset($_POST['submit'])) {
 
     <!-- forms inscription -->
     <div class="container">
-        <form class=" border border-danger p-5" method="POST" action="#!">
+        <form class=" border border-danger p-5" method="POST" action="inscription.php">
 
             <p class="h4 mb-5 text-center">Inscription</p>
 
@@ -41,7 +56,10 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
                 <div class="col mt-4">
-                    <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Nom">
+                    <input type="text" id="defaultRegisterFormLastName" class="form-control" name="lastName" placeholder="Nom">
+                    <div class="text-danger">
+                        <span><?= isset($errorMessages['lastName']) ? $errorMessages['lastName'] : '' ?></span>
+                    </div>
                 </div>
                 <div class="col mt-4">
                     <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Pseudo">
