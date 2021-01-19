@@ -1,3 +1,13 @@
+<?php
+
+$errorMessages = [];
+
+if (isset($_POST['submit'])) {
+    
+}
+
+
+?>
 <!doctype html>
 <html lang="fr">
 
@@ -25,7 +35,10 @@
 
             <div class="form-row mb-4">
                 <div class="col">
-                    <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Prénom">
+                    <input type="text" id="defaultRegisterFormFirstName" class="form-control" name="firstName" placeholder="Prénom">
+                    <div class="text-danger">
+                        <span><?= isset($errorMessages['firstName']) ? $errorMessages['firstName'] : '' ?></span>
+                    </div>
                 </div>
                 <div class="col mt-4">
                     <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Nom">
@@ -56,7 +69,7 @@
             <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Mot de passe" aria-describedby="defaultRegisterFormPasswordHelpBlock">
             <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Comfirmer votre mot de passe" aria-describedby="defaultRegisterFormPasswordHelpBlock">
 
-            <button class="btn btn-info my-4 btn-block red darken-4" type="submit">S'inscrire</button>
+            <button class="btn btn-info my-4 btn-block red darken-4" type="submit" name="submit">S'inscrire</button>
 
             <p class="text-center">En cliquant sur <em>s'inscrire</em> vous acceptez nos <a href="" target="_blank">terms of service</a></p>
 
