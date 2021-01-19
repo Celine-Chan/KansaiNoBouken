@@ -216,7 +216,8 @@ require_once "controller_index.php";
         <img src="assets/img/separator.svg" alt="separator" class="w-25">
     </div>
 
-    <div class="container d-flex flex-row mt-5">
+    <div class="gastronomieSection mt-5">
+        <h2 class="titleFoodIndex">La Cuisine du kansai</h2>
         <p class="textGastronomie">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -230,10 +231,6 @@ require_once "controller_index.php";
             anim id est laborum."
         </p>
 
-    </div>
-
-    <div>
-        <img src="assets/img/osaka/foodResto2.jpg" alt="food" class="img-fluid mx-auto d-block rounded ">
     </div>
 
     <div class="container mt-4 text-center">

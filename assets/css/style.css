@@ -84,16 +84,35 @@ nav{
     margin-top: 2rem;
 }
 
-.textGastronomie {
-    text-align: justify;
-    font-family: 'Crimson Text', serif;
-    font-size: 1.2rem;
+.titleFoodIndex{
+    margin-left: 15rem;
+    padding-top: 3rem;
+    margin-bottom: 2rem;
+    color: white;
 }
 
-.foodSize {
+.textGastronomie {
+    color: white;
+    font-size: 1.1rem;
+    text-align: center;
+    text-align: justify;
+    margin-left: 18rem;
+    margin-right: 8rem;
+    padding-bottom: 3rem;
+}
+
+.gastronomieSection{
+    background-image: url('../img/gastronomie/ramen-gastronomie.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* .foodSize {
     width: 35rem;
     height: 20rem;
-}
+} */
 
 .seeMore:hover {
     text-decoration: underline;
