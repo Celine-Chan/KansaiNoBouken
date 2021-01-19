@@ -1,11 +1,15 @@
 body {
-    padding-top: 9rem;
+    padding-top: 5rem;
     overflow-x: hidden;
     height: auto;
     width: 100%;
 }
 
-/* NavBar */
+/* ---------- NAVBAR ---------- */
+
+nav{
+    background-color: #e8d4af;
+}
 
 .webSiteTitle {
     font-family: 'Cinzel', serif;
@@ -20,7 +24,8 @@ body {
 }
 
 .hoverBackgroundNav:hover {
-    background-color: #ff8a80;
+    background-color: #C62828;
+    color: white !important;
 }
 
 .hoverBackgroundNav {
@@ -31,7 +36,22 @@ body {
     background-color: black;
 }
 
-/* PAGE ACCUEIL */
+.buttonSignIn{
+    color: white;
+}
+
+.buttonSignIn:hover{
+    background-color: #1266F1;
+    color: white;
+}
+
+/* ---------- FOOTER ---------- */
+
+.socialIcon{
+    justify-content: space-between;
+}
+
+/* ---------- PAGE ACCUEIL ---------- */
 
 .imgCaroussel {
     width: auto;
@@ -40,15 +60,23 @@ body {
     object-position: center;
 }
 
-/* .tanukiSize {
+.tanukiSize {
     width: 15rem;
     height: 15rem;
-} */
+}
 
 .textAccueil {
     text-align: justify;
     font-family: 'Crimson Text', serif;
     font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+.textAccueil2{
+    text-align: justify;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2rem;
+    margin-top: 2rem;
 }
 
 .textGastronomie {
@@ -74,44 +102,126 @@ body {
 /* City Card */
 
 .fontSizeCard .card-text{
-    font-size: 1.1rem;
-}
-
-/* PAGE CONTACT */
-
-.formHover:hover {
-    background-color: #ff8a80;
-}
-
-/* arrow top */
-
-#scrollTop {
-    position: fixed;
-    width: 25px;
-    height: 25px;
-    bottom: 50px;
-    right: 30px;
-}
-
-#scrollTop img {
-    width: 25px;
-}
-
-.fa-arrow-circle-up {
-    color: #ff5252;
+    font-size: 1rem;
+    color: black !important;
 }
 
 .vocabularyCard:hover{
     transform: scale(1.1);
 }
+
 .vocabularyCard{
     transition: transform 0.2s ease;
 }
 
-/* page vocabulaire */
+/* ---------- PAGE OSAKA ----------  */
+
+.osakaPageParalax{
+    background-image: url('../img/osaka/osakaPage2.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.osakaTitlePageParalax{
+    color: white;
+    font-weight: bold;
+    padding-left: 18rem;
+    font-size: 3rem;
+    font-family: 'Cinzel', serif;
+}
+
+.textOsakaParalax{
+    width: 50rem;
+    padding-left: 20rem;
+    color: white;
+    padding-bottom: 10rem;
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+}
+
+.textPageOsaka{
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+.glicoImgOsaka{
+    height: 40rem;
+    width: 18rem;
+}
+
+.legoImgOsaka{
+    height: 25rem;
+    width: 15rem;
+}
+
+.makiSushi{
+    height: 12rem;
+    width: 30rem;
+}
+
+.giftTemple{
+    height: 12.5rem;
+    width: 30rem;
+}
+
+.imgPageOsaka{
+    margin-left: 10rem;
+}
+
+/* ---------- PAGE KYOTO ----------  */
+.kyotoPageParalax{
+    background-image: url('../img/kyoto/jizoKyoto2.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.kyotoTitlePageParalax{
+    color: white;
+    font-weight: bold;
+    padding-left: 18rem;
+    font-size: 3rem;
+    font-family: 'Cinzel', serif;
+}
+
+.textKyotoParalax{
+    width: 50rem;
+    padding-left: 20rem;
+    color: white;
+    padding-bottom: 10rem;
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+}
+
+.textPageKyoto{
+    text-align: justify;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+
+.lanterneImgKyoto{
+    height: 13rem;
+    width: 25rem;
+}
+
+.cimetiereImgKyoto{
+    height: 13rem;
+    width: 25rem;
+}
+
+/* ---------- PAGE CONTACT ---------- */
+
+.formHover:hover {
+    background-color: #ff8a80;
+}
+
+/* ---------- PAGE VOCABULAIRE ---------- */
 
 
-/*page gastronomie */
+/* ---------- PAGE GASTRONOMIE ---------- */
 
 .ramenOsaka {
     height: 20rem;
@@ -135,5 +245,22 @@ li{
 .btnGastronomieRecipe {
     background-color:#B71C1C;
     color: white;
+}
+
+/* arrow top */
+#scrollTop {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    bottom: 50px;
+    right: 30px;
+}
+
+#scrollTop img {
+    width: 25px;
+}
+
+.fa-arrow-circle-up {
+    color: #ff5252;
 }
 
