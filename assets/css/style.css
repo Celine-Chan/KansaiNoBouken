@@ -17,6 +17,7 @@ nav{
 
 .navFont {
     font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.2rem;
 }
 
 .navFont:hover {
@@ -49,6 +50,10 @@ nav{
 
 .socialIcon{
     justify-content: space-between;
+}
+
+.socialLogo{
+    margin-right: 1.5rem;
 }
 
 /* ---------- PAGE ACCUEIL ---------- */
@@ -96,7 +101,7 @@ nav{
 }
 
 .vocabularyCard{
-    justify-content: space-evenly;
+    margin-right: 1.5rem;
 }
 
 /* City Card */

@@ -247,35 +247,35 @@ require_once "controller_index.php";
     <!-- Vocabulaire card -->
 
     <div class="container-fluid row text-center justify-content-center">
-        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 mr-3 ml-4" style="max-width: 16rem">
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
             <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
                 <h5 class="card-title"><strong>Bonjour</strong></h5>
                 <p class="card-text white-text"><strong>おはよう</strong></p>
             </div>
         </div>
-        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 mr-3" style="max-width: 16rem">
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
             <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
                 <h5 class="card-title"><strong>Merci</strong></h5>
                 <p class="card-text white-text"><strong>ありがとう</strong></p>
             </div>
         </div>
-        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 mr-3" style="max-width: 16rem">
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
             <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
                 <h5 class="card-title"><strong>Au revoir</strong></h5>
                 <p class="card-text white-text"><strong>さようなら</strong></p>
             </div>
         </div>
-        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 mr-3" style="max-width: 16rem">
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
             <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
                 <h5 class="card-title"><strong>Bienvenue</strong></h5>
                 <p class="card-text white-text"><strong>ようこそ</strong></p>
             </div>
         </div>
-        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
+        <div class="card text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
             <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
                 <h5 class="card-title"><strong>S'il vous plaît</strong></h5>

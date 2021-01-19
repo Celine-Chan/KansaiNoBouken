@@ -20,10 +20,10 @@
     </div>
 
     <div class="d-flex flex-row justify-content-center socialIcon mb-3">
-        <a href="https://www.facebook.com/nihonnobouken"><i class="fab fa-facebook fa-2x mr-2"></i></a>
-        <i class="fab fa-instagram fa-2x mr-2"></i>
-        <i class="fab fa-linkedin fa-2x mr-2"></i>
-        <i class="fab fa-github-square fa-2x mr-2"></i>
+        <a href="https://www.facebook.com/nihonnobouken"><i class="fab fa-facebook fa-2x socialLogo"></i></a>
+        <i class="fab fa-instagram fa-2x socialLogo"></i>
+        <i class="fab fa-linkedin fa-2x socialLogo"></i>
+        <i class="fab fa-github-square fa-2x"></i>
     </div>
 
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
@@ -33,9 +33,9 @@
 </footer>
 
 <!-- Optional JavaScript -->
-<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
 </script> -->
 <!-- bootstrap v5 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

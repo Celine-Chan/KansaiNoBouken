@@ -32,7 +32,7 @@
                     <a class="nav-link text-dark navFont" href="inscription.php">Inscription</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark navFont" data-toggle="modal" data-target="#modalLoginForm">Connexion</a>
+                    <a class="nav-link text-dark navFont" data-bs-toggle="modal" data-bs-target="#modalLoginForm">Connexion</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -49,7 +49,7 @@
             <div class="modal-content">
                 <div class="modal-header text-center">
                     <h4 class="modal-title w-100 font-weight-bold">Connexion</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>

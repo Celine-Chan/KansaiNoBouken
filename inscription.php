@@ -3,6 +3,7 @@
 $errorMessages = [];
 
 $regexName = '/^[a-zA-Z]+$/';
+$regexBirthDate = '/^\d{4}(-)(((0)[0-9])|((1)[0-2]))(-)([0-2][0-9]|(3)[0-1])$/';
 
 if (isset($_POST['submit'])) {
     if (isset($_POST['firstName'])) {
@@ -21,6 +22,17 @@ if (isset($_POST['submit'])) {
             $errorMessages['lastName'] = 'Veuillez saisir votre nom.';
         }
     }
+    if (isset($_POST['birthDate'])) {
+        if (!preg_match($regexBirthDate, $_POST['birthDate'])) {
+            $errorMessages['birthDate'] = 'Veuillez saisir une date valide.';
+        }
+        if ($_POST['birthDate'] >= date('Y-m-d')) {
+            $errorMessages['birthDate'] = 'Date impossible !';
+        }
+        if (empty($_POST['birthDate'])) {
+            $errorMessages['birthDate'] = 'Veuillez saisir une date.';
+        }
+    }
 }
 ?>
 <!doctype html>
@@ -34,7 +46,6 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-    <!--Navbar -->
     <?php include('assets/pagePortion/navbar.php') ?>
 
     <div class="banniereInscriptionImg mb-5">
@@ -62,7 +73,17 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
                 <div class="col mt-4">
-                    <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Pseudo">
+                    <input type="text" id="defaultRegisterFormLastName" class="form-control" name="pseudo" placeholder="Pseudo">
+                    <div class="text-danger">
+                        <span><?= isset($errorMessages['pseudo']) ? $errorMessages['pseudo'] : '' ?></span>
+                    </div>
+                </div>
+                <div class="col mt-4">
+                    <label for="birthDate" class="form-label">Votre date de naissance :</label>
+                    <input type="date" class="form-control" id="birthDate" name="birthDate" placeholder="05/12/1990">
+                    <div class="text-danger">
+                        <span><?= isset($errorMessages['birthDate']) ? $errorMessages['birthDate'] : '' ?></span>
+                    </div>
                 </div>
             </div>
 
