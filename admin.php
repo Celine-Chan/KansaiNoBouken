@@ -41,7 +41,7 @@
     <script>
         tinymce.init({
             selector: 'textarea',
-            plugins: 'advlist autolink lists link image media charmap print preview hr anchor pagebreak',
+            plugins: 'advlist autolink lists link image media table charmap print preview hr anchor pagebreak',
             toolbar_mode: 'floating',
         });
     </script>

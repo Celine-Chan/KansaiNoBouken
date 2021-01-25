@@ -75,20 +75,23 @@ nav{
     font-family: 'Crimson Text', serif;
     font-size: 1.2rem;
     margin-left: 1rem;
+    font-family: 'Bodoni Moda', serif;
 }
 
-.textAccueil2{
+/* .textAccueil2{
     text-align: justify;
     font-family: 'Crimson Text', serif;
     font-size: 1.2rem;
     margin-top: 2rem;
-}
+} */
 
 .titleFoodIndex{
     margin-left: 15rem;
     padding-top: 3rem;
     margin-bottom: 2rem;
     color: white;
+    text-shadow: black 1px 1px;
+    font-family: 'Cinzel', serif;
 }
 
 .textGastronomie {
@@ -99,6 +102,8 @@ nav{
     margin-left: 18rem;
     margin-right: 8rem;
     padding-bottom: 3rem;
+    text-shadow: black 1px 1px;
+    font-family: 'Cinzel', serif;
 }
 
 .gastronomieSection{
@@ -115,19 +120,23 @@ nav{
 } */
 
 .seeMore:hover {
-    text-decoration: underline;
-    color: red;
-}
-
-.vocabularyCard{
-    margin-right: 1.5rem;
+    text-decoration: underline !important;
+    color: red !important;
 }
 
 /* City Card */
-
-.fontSizeCard .card-text{
-    font-size: 1rem;
+.titleCardSize{
+    font-size: 1.5rem !important;
     color: black !important;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold !important;
+}
+
+.fontSizeCard{
+    font-size: 1.5rem !important;
+    color: black !important;
+    font-family: 'Amatic SC', cursive;
+    /* font-weight: bold !important;*/
 }
 
 .vocabularyCard:hover{
@@ -136,6 +145,7 @@ nav{
 
 .vocabularyCard{
     transition: transform 0.2s ease;
+    margin-right: 1.5rem;
 }
 
 /* ---------- PAGE OSAKA ----------  */

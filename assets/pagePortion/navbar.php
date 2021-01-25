@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg red-600">
     <div class="container-fluid">
-        <a class="navbar-brand text-dark webSiteTitle" href="index.php">Nihon no Bouken</a>
+        <a class="navbar-brand text-dark webSiteTitle" href="index.php">Kansai no Bouken</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><img src="https://img.icons8.com/emoji/48/000000/white-flower.png"/></i></span>
         </button>
@@ -27,6 +27,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark navFont" href="vocabulaire.php">Vocabulaire</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark navFont" href="contact.php">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark navFont" href="inscription.php">Inscription</a>

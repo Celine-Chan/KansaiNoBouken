@@ -8,7 +8,8 @@ require_once "controller_index.php";
 <html lang="fr">
 
 <head>
-    <title>Kansai no bouken - 関西の冒険 - Accueil</title>
+    <title> Kansai no bouken - 関西の冒険 - Accueil</title>
+    
     <?php include('assets/pagePortion/header.php') ?>
 </head>
 
@@ -96,8 +97,8 @@ require_once "controller_index.php";
                     </a>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Osaka 大阪</h5>
-                    <p class="card-text fontSizeCard" style="font-size: 1rem; color: black;">
+                    <h5 class="card-title titleCardSize">Osaka 大阪</h5>
+                    <p class="card-text fontSizeCard">
                         Découvrez la ville d'Osaka qui est la 3ème plus grande ville du Japon derrière Tokyo et
                         Yokohama.
                         osaka est connu pour son hospitalité, ses animations et sa gastronomie typique.</br>
@@ -116,8 +117,8 @@ require_once "controller_index.php";
                     </a>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Kyoto 京都</h5>
-                    <p class="card-text" style="font-size: 1rem; color: black;">Découvrez Kyoto, ancienne capitale du
+                    <h5 class="card-title titleCardSize">Kyoto 京都</h5>
+                    <p class="card-text fontSizeCard">Découvrez Kyoto, ancienne capitale du
                         Japon, le coeur culturel et religieux du
                         Japon.
                         Vous serez captivés par ses palais impériaux, ses milliers de sanctuaires shinto et temples
@@ -137,7 +138,7 @@ require_once "controller_index.php";
                     </a>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Nara 奈良</h5>
+                    <h5 class="card-title titleCardSize">Nara 奈良</h5>
                     <p class="card-text fontSizeCard">
                         Découvrez Nara dont les monuments historiques de l'ancienne ville sont inscrits à l'UNESCO.
                         Laissez-vous transporté par l'ambiance de la ville où les cerfs en libertés flânent à vos côtés.
@@ -157,7 +158,7 @@ require_once "controller_index.php";
                     </a>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Kobe 神戸</h5>
+                    <h5 class="card-title titleCardSize">Kobe 神戸</h5>
                     <p class="card-text fontSizeCard">
                         Découvrez Kobe "la porte des esprits", connue pour sa célèbre viande de boeuf et son quartier
                         européen.
@@ -177,8 +178,8 @@ require_once "controller_index.php";
                     </a>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Wakayama 和歌山</h5>
-                    <p class="card-text" style="font-size: 1rem; color: black;">
+                    <h5 class="card-title titleCardSize">Wakayama 和歌山</h5>
+                    <p class="card-text fontSizeCard">
                         This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
                         <a href="kansai.html" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a>
@@ -196,8 +197,8 @@ require_once "controller_index.php";
                     </a>
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Kansai 関西</h5>
-                    <p class="card-text" style="font-size: 1rem; color: black;">
+                    <h5 class="card-title titleCardSize">Kansai 関西</h5>
+                    <p class="card-text fontSizeCard">
                         This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
                         <a href="kansai.html" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a>
@@ -272,7 +273,7 @@ require_once "controller_index.php";
                 <p class="card-text white-text"><strong>ようこそ</strong></p>
             </div>
         </div>
-        <div class="card text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
             <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
                 <h5 class="card-title"><strong>S'il vous plaît</strong></h5>
