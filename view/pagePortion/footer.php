@@ -7,16 +7,16 @@
         <a class="nav-link dropdown-toggle navFont text-light" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kansai
         </a>
         <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-            <a class="dropdown-item hoverBackgroundNav text-dark" href="kansai.php">Kansai</a>
-            <a class="dropdown-item hoverBackgroundNav text-dark" href="osaka.php">Osaka</a>
-            <a class="dropdown-item hoverBackgroundNav text-dark" href="kyoto.php">Kyoto</a>
-            <a class="dropdown-item hoverBackgroundNav text-dark" href="nara.php">Nara</a>
-            <a class="dropdown-item hoverBackgroundNav text-dark" href="kobe.php">Kobe</a>
-            <a class="dropdown-item hoverBackgroundNav text-dark" href="wakayama.php">Wakayama</a>
+            <a class="dropdown-item hoverBackgroundNav text-dark" href="../kansai.php">Kansai</a>
+            <a class="dropdown-item hoverBackgroundNav text-dark" href="../osaka.php">Osaka</a>
+            <a class="dropdown-item hoverBackgroundNav text-dark" href="../kyoto.php">Kyoto</a>
+            <a class="dropdown-item hoverBackgroundNav text-dark" href="../nara.php">Nara</a>
+            <a class="dropdown-item hoverBackgroundNav text-dark" href="../kobe.php">Kobe</a>
+            <a class="dropdown-item hoverBackgroundNav text-dark" href="../wakayama.php">Wakayama</a>
         </div>
-        <a class="nav-link navFont text-light" href="gastronomie.php">Gastronomie</a>
-        <a class="nav-link navFont text-light" href="vocabulaire.php">Vocabulaire</a>
-        <a class="nav-link navFont text-light justify-content-end" href="contact.php">Contact</a>
+        <a class="nav-link navFont text-light" href="../gastronomie.php">Gastronomie</a>
+        <a class="nav-link navFont text-light" href="../vocabulaire.php">Vocabulaire</a>
+        <a class="nav-link navFont text-light justify-content-end" href="../contact.php">Contact</a>
     </div>
 
     <div class="d-flex flex-row justify-content-center socialIcon mb-3">
@@ -45,4 +45,4 @@
 <!-- MDB -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js"></script>
 <!-- lien js -->
-<script src="assets/js/script.js"></script>
+<script src="../../assets/js/script.js"></script>

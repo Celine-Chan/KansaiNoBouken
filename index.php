@@ -1,6 +1,6 @@
 <?php
 
-require_once "controller_index.php";
+require_once "controllers/controller_index.php";
 
 ?>
 
@@ -10,12 +10,12 @@ require_once "controller_index.php";
 <head>
     <title> Kansai no bouken - 関西の冒険 - Accueil</title>
     
-    <?php include('assets/pagePortion/header.php') ?>
+    <?php include('view/pagePortion/header.php') ?>
 </head>
 
 <body>
 
-    <?php include('assets/pagePortion/navbar.php') ?>
+    <?php include('view/pagePortion/navbar.php') ?>
 
     <div class="container-fluid">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -290,7 +290,7 @@ require_once "controller_index.php";
         <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
     </div>
 
-    <?php include('assets/pagePortion/footer.php') ?>
+    <?php include('view/pagePortion/footer.php') ?>
 
 </body>
 

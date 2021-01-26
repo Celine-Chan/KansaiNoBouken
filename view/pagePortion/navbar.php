@@ -1,38 +1,38 @@
 <nav class="navbar fixed-top navbar-expand-lg red-600">
     <div class="container-fluid">
-        <a class="navbar-brand text-dark webSiteTitle" href="index.php">Kansai no Bouken</a>
+        <a class="navbar-brand text-dark webSiteTitle" href="../../index.php">Kansai no Bouken</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><img src="https://img.icons8.com/emoji/48/000000/white-flower.png"/></i></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active text-dark navFont" aria-current="page" href="gallerie.php">Gallerie</a>
+                    <a class="nav-link active text-dark navFont" aria-current="page" href="../../view/gallerie.php">Galerie</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-dark navFont" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Kansai
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-dark hoverBackgroundNav" href="kansai.php">Kansai</a></li>
-                        <li><a class="dropdown-item text-dark hoverBackgroundNav" href="osaka.php">Osaka</a></li>
-                        <li><a class="dropdown-item text-dark hoverBackgroundNav" href="kyoto.php">Kyoto</a></li>
-                        <li><a class="dropdown-item text-dark hoverBackgroundNav" href="nara.php">Nara</a></li>
-                        <li><a class="dropdown-item text-dark hoverBackgroundNav" href="kobe.php">Kobe</a></li>
-                        <li><a class="dropdown-item text-dark hoverBackgroundNav" href="wakayama.php">Wakayama</a></li>
+                        <li><a class="dropdown-item text-dark hoverBackgroundNav" href="../../view/kansai.php">Kansai</a></li>
+                        <li><a class="dropdown-item text-dark hoverBackgroundNav" href="../../view/osaka.php">Osaka</a></li>
+                        <li><a class="dropdown-item text-dark hoverBackgroundNav" href="../../view/kyoto.php">Kyoto</a></li>
+                        <li><a class="dropdown-item text-dark hoverBackgroundNav" href="../../view/nara.php">Nara</a></li>
+                        <li><a class="dropdown-item text-dark hoverBackgroundNav" href="../../view/kobe.php">Kobe</a></li>
+                        <li><a class="dropdown-item text-dark hoverBackgroundNav" href="../../view/wakayama.php">Wakayama</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark navFont" href="gastronomie.php">Gastronomie</a>
+                    <a class="nav-link text-dark navFont" href="../../view/gastronomie.php">Gastronomie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark navFont" href="vocabulaire.php">Vocabulaire</a>
+                    <a class="nav-link text-dark navFont" href="../../view/vocabulaire.php">Vocabulaire</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark navFont" href="contact.php">Contact</a>
+                    <a class="nav-link text-dark navFont" href="../../view/contact.php">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark navFont" href="inscription.php">Inscription</a>
+                    <a class="nav-link text-dark navFont" href="../../view/inscription.php">Inscription</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark navFont" data-bs-toggle="modal" data-bs-target="#modalLoginForm">Connexion</a>
