@@ -298,3 +298,14 @@ li{
     color: #ff5252;
 }
 
+/* ---------- PAGE GALERIE ---------- */
+.imgGallery:hover {
+    transform: scale(1.2);
+    z-index: 99;
+    transition: 0.5s;
+}
+
+.galleryTitle{
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
+}

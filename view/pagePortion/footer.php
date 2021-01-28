@@ -1,7 +1,7 @@
 <footer class="page-footer font-small special-color-dark pt-4 mt-5">
 
     <div class="d-flex flex-row justify-content-center mb-3">
-        <a class="nav-link navFont text-light" href="gallerie.php">Gallerie
+        <a class="nav-link navFont text-light" href="galerie.php">Galerie
             <span class="sr-only">(current)</span>
         </a>
         <a class="nav-link dropdown-toggle navFont text-light" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kansai

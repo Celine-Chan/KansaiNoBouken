@@ -50,6 +50,8 @@
 
     <div>
         <h2 class="mt-5">Article</h2>
+
+        <?= (isset($_POST['kyotoArticle'])) ? $_POST['kyotoArticle'] : '' ?>
     </div>
 
     <div>
