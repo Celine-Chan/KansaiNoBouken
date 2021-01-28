@@ -3,24 +3,22 @@
 
 <head>
     <title>Kansai no bouken - 関西の冒険 - Gastronomie</title>
-    <?php include('assets/pagePortion/header.php') ?>
+    <?php include('../view/pagePortion/header.php') ?>
 </head>
 
 
 <body>
-
-    <!--Navbar -->
-    <?php include('assets/pagePortion/navbar.php') ?>
+    <?php include('../view/pagePortion/navbar.php') ?>
 
 
     <div class="banniereTakoyakiImg">
-        <img src="assets/img/banniere/takoyaki2.jpg" alt="takoyaki" class="img-fluid takoyakiImg">
+        <img src="../assets/img/banniere/takoyaki2.jpg" alt="takoyaki" class="img-fluid takoyakiImg">
     </div>
 
     <h1 class="text-center mt-5">Gastronomie du Kansai</h1>
 
     <div class="d-flex flex-row mt-5 container">
-        <div><img src="assets/img/gastronomie/sushi.jpg" alt="ramenOsaka" class="img-fluid ramenOsaka"></div>
+        <div><img src="../assets/img/gastronomie/sushi.jpg" alt="ramenOsaka" class="img-fluid ramenOsaka"></div>
         <div>
             <p class="textGastronomyPage ml-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
                 eirmod tempor invidunt ut labore
@@ -40,7 +38,7 @@
     </div>
 
     <div class="text-center mt-5">
-        <img src="assets/img/separator.svg" alt="separator" class="w-25">
+        <img src="../assets/img/separator.svg" alt="separator" class="w-25">
     </div>
 
     <h2>Quelques recettes...</h2>
@@ -49,7 +47,7 @@
         <div class="card mb-3" style="max-width: 540px">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="assets/img/gastronomie/takoyaki-gastronomie-recipe.jpg" alt="..." class="img-fluid" />
+                    <img src="../assets/img/gastronomie/takoyaki-gastronomie-recipe.jpg" alt="takoyaki" class="img-fluid" />
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -103,7 +101,7 @@
                                 les copeaux de bonites</li>
                         </ul>
 
-                        <img class="imgRecipeSize mb-3" src="assets/img/gastronomie/takoyakiRecipe.jpg"
+                        <img class="imgRecipeSize mb-3" src="../assets/img/gastronomie/takoyakiRecipe.jpg"
                             alt="takoyaki">
                         <p>Source : <a href="https://www.youtube.com/channel/UCt8iNzhAJONk3leOg0hoNYA">Les
                                 recettes
@@ -123,7 +121,7 @@
         <div class="card mb-3" style="max-width: 540px">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="assets/img/gastronomie/pexels-ponyo-sakana-4193842.jpg" alt="..." class="img-fluid" />
+                    <img src="../assets/img/gastronomie/pexels-ponyo-sakana-4193842.jpg" alt="ramen" class="img-fluid" />
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -173,7 +171,7 @@
                             <li>laisser reposer 1 ou 2 jours dans le frigo</li>
                         </ul>
 
-                        <img class="imgRecipeSize mb-3" src="assets/img/gastronomie/ramen-gastronomie.jpg"
+                        <img class="imgRecipeSize mb-3" src="../assets/img/gastronomie/ramen-gastronomie.jpg"
                             alt="takoyaki">
                         <p>Source : <a href="https://www.youtube.com/channel/UCt8iNzhAJONk3leOg0hoNYA">Les
                                 recettes
@@ -193,7 +191,7 @@
         <div class="card mb-3" style="max-width: 540px">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="assets/img/gastronomie/yamayoshiOkonomiyaki2.jpg" alt="..." class="img-fluid" />
+                    <img src="../assets/img/gastronomie/yamayoshiOkonomiyaki2.jpg" alt="okonomiyaki" class="img-fluid" />
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -233,7 +231,7 @@
                             
                         </ul>
 
-                        <img class="imgRecipeSize mb-3" src="assets/img/gastronomie/okonoRecipe.jpg"
+                        <img class="imgRecipeSize mb-3" src="../assets/img/gastronomie/okonoRecipe.jpg"
                             alt="takoyaki">
                         <p>Source : <a href="https://www.youtube.com/channel/UCt8iNzhAJONk3leOg0hoNYA">Les
                                 recettes
@@ -251,7 +249,7 @@
     </div>
 
         <div class="text-center mt-5">
-            <img src="assets/img/separator.svg" alt="separator" class="w-25">
+            <img src="../assets/img/separator.svg" alt="separator" class="w-25">
         </div>
 
         <h2>Quelques adresses...</h2>
@@ -273,23 +271,7 @@
             <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
         </div>
 
-        <?php include('assets/pagePortion/footer.php') ?>
-
-        <!-- Optional JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-        </script>
-        <!-- MDB core JavaScript -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js">
-        </script>
-        <!-- MDB -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js">
-        </script>
-        <!-- lien js -->
-        <script src="assets/js/script.js"></script>
+        <?php include('../view/pagePortion/footer.php') ?>
 </body>
 
 </html>

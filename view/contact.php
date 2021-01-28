@@ -15,7 +15,7 @@
 
     <!-- image bannière -->
     <div class="imgContact">
-        <img src="assets/img/osaka/osakajou2.jpg" alt="osakajou" class="img-fluid osakajouImg">
+        <img src="../assets/img/osaka/osakajou2.jpg" alt="osakajou" class="img-fluid osakajouImg">
     </div>
 
     <div class="container mt-5">

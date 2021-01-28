@@ -4,15 +4,15 @@
 <head>
     <title>Kansai no bouken - 関西の冒険 - Administrateur</title>
     <script src="https://cdn.tiny.cloud/1/75w0aspes5o1fsfrwo2wxkidqu37998magwy5f44mnuk9ytq/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <?php include('pagePortion/header.php') ?>
+    <?php include('../view/pagePortion/header.php') ?>
 </head>
 
 <body>
 
-    <?php include('pagePortion/navbar.php') ?>
+    <?php include('../view/pagePortion/navbar.php') ?>
 
     <div class="banniereInscriptionImg mb-5">
-        <img src="assets/img/banniere/banniereAdmin.jpg" alt="admin" class="img-fluid adminImg">
+        <img src="../assets/img/banniere/banniereAdmin.jpg" alt="admin" class="img-fluid adminImg">
     </div>
 
     <h1 class="text-center">Page administrateur</h1>
@@ -45,7 +45,7 @@
             toolbar_mode: 'floating',
         });
     </script>
-    <?php include('pagePortion/footer.php') ?>
+    <?php include('../view/pagePortion/footer.php') ?>
 </body>
 
 </html>
