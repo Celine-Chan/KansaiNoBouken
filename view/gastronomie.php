@@ -42,9 +42,9 @@
     </div>
 
     <h2>Quelques recettes...</h2>
-    <div class="container-fluid d-flex row mt-5 mx-auto">
+    <div class="container-fluid mx-auto d-flex row mt-5 mx-auto">
         <!-- Card recipe 1 -->
-        <div class="card mb-3" style="max-width: 540px">
+        <div class="card mb-3" style="max-width: 480px">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../assets/img/gastronomie/takoyaki-gastronomie-recipe.jpg" alt="takoyaki" class="img-fluid" />
@@ -118,7 +118,7 @@
         </div>
 
         <!-- Card recipe 2 -->
-        <div class="card mb-3" style="max-width: 540px">
+        <div class="card mb-3" style="max-width: 480px">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../assets/img/gastronomie/pexels-ponyo-sakana-4193842.jpg" alt="ramen" class="img-fluid" />
@@ -188,7 +188,7 @@
         </div>
 
         <!-- Card recipe 3 -->
-        <div class="card mb-3" style="max-width: 540px">
+        <div class="card mb-3" style="max-width: 480px">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../assets/img/gastronomie/yamayoshiOkonomiyaki2.jpg" alt="okonomiyaki" class="img-fluid" />

@@ -14,7 +14,7 @@ if (isset($_FILES["fileToUpload"]) && $_FILES["fileToUpload"]["error"] == 0) {
     $filetype = $_FILES["fileToUpload"]["type"];
     $filesize = $_FILES["fileToUpload"]["size"];
 
-    // pour ne pas upload un ficher ou le format serait modifier.
+    // pour ne pas upload un ficher où le format serait modifié.
     if (
         mime_content_type($_FILES["fileToUpload"]["tmp_name"]) == "image/jpeg" ||
         mime_content_type($_FILES["fileToUpload"]["tmp_name"]) == "image/gif" ||
@@ -35,7 +35,7 @@ if (isset($_FILES["fileToUpload"]) && $_FILES["fileToUpload"]["error"] == 0) {
             $messageOk = 'Le fichier ' . $filename . ' a bien été uploadé.';
         }
     } else {
-        $messageNoFormat = 'Erreur : Mr Mime #122 !!.';
+        $messageNoFormat = 'Erreur : Mr Mime #122 !!';
     }
 }
 

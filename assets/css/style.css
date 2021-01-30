@@ -122,6 +122,7 @@ nav{
 .seeMore:hover {
     text-decoration: underline !important;
     color: red !important;
+    
 }
 
 /* City Card */
@@ -281,6 +282,13 @@ li{
     color: white;
 }
 
+.btnGastronomieRecipe:hover{
+    background-color: #00695C;
+    color: white;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
 /* arrow top */
 #scrollTop {
     position: fixed;
@@ -299,11 +307,12 @@ li{
 }
 
 /* ---------- PAGE GALERIE ---------- */
-.imgGallery:hover {
+
+/* .imgGallery:hover {
     transform: scale(1.2);
     z-index: 99;
     transition: 0.5s;
-}
+} */
 
 .galleryTitle{
     font-family: 'Bodoni Moda', serif;

@@ -58,7 +58,7 @@ require_once "controllers/controller_index.php";
 
     <div class="d-flex flex-row mt-5 container">
         <div>
-            <img src="assets/img/osaka/tanuki.jpg" alt="tanuki" class=" tanukiSize">
+            <img src="assets/img/osaka/tanuki.jpg" alt="tanuki" class="tanukiSize">
         </div>
         <div>
             <p class="textAccueil">Bienvenue sur Kansai no bouken, spécialisé sur la région du Kansai, au centre du Japon.
@@ -92,7 +92,7 @@ require_once "controllers/controller_index.php";
             <div class="card h-100">
                 <div class="bg-image hover-zoom view view-cascade overlay">
                     <img src="assets/img/osaka/osaka_night.jpg" class="card-img-top w-100" alt="osakaCity" />
-                    <a href="kansai.html">
+                    <a href="view/osaka.php">
                         <div class="mask rgba-red-light"></div>
                     </a>
                 </div>
@@ -101,8 +101,8 @@ require_once "controllers/controller_index.php";
                     <p class="card-text fontSizeCard">
                         Découvrez la ville d'Osaka qui est la 3ème plus grande ville du Japon derrière Tokyo et
                         Yokohama.
-                        osaka est connu pour son hospitalité, ses animations et sa gastronomie typique.</br>
-                        <a href="kansai.html" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a>
+                        osaka est connu pour son hospitalité, ses animations et sa gastronomie typique.
+                        <p><a href="view/osaka.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
                     </p>
                 </div>
             </div>
@@ -112,7 +112,7 @@ require_once "controllers/controller_index.php";
             <div class="card h-100">
                 <div class="bg-image hover-zoom view view-cascade overlay">
                     <img src="assets/img/kyoto/fushimi.jpg" class="card-img-top" alt="kyotoFushimiInari" />
-                    <a href="kansai.html">
+                    <a href="view/kyoto.php">
                         <div class="mask rgba-red-light"></div>
                     </a>
                 </div>
@@ -123,7 +123,7 @@ require_once "controllers/controller_index.php";
                         Japon.
                         Vous serez captivés par ses palais impériaux, ses milliers de sanctuaires shinto et temples
                         bouddhistes.
-                        <a href="kansai.html" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a>
+                        <p><a href="view/kyoto.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
                     </p>
                 </div>
             </div>
@@ -133,7 +133,7 @@ require_once "controllers/controller_index.php";
             <div class="card h-100">
                 <div class="bg-image hover-zoom view view-cascade overlay">
                     <img src="assets/img/Nara/shika3.jpg" class="card-img-top" alt="naraShika" />
-                    <a href="kansai.html">
+                    <a href="view/nara.php">
                         <div class="mask rgba-red-light"></div>
                     </a>
                 </div>
@@ -142,7 +142,7 @@ require_once "controllers/controller_index.php";
                     <p class="card-text fontSizeCard">
                         Découvrez Nara dont les monuments historiques de l'ancienne ville sont inscrits à l'UNESCO.
                         Laissez-vous transporté par l'ambiance de la ville où les cerfs en libertés flânent à vos côtés.
-                        <a href="kansai.html" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a>
+                        <p><a href="view/nara.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
                     </p>
 
                 </div>
@@ -153,7 +153,7 @@ require_once "controllers/controller_index.php";
             <div class="card h-100">
                 <div class="bg-image hover-zoom view view-cascade overlay">
                     <img src="assets/img/Kobe/kobeCity.jpg" class="card-img-top" alt="kobeCity" />
-                    <a href="kansai.html">
+                    <a href="view/kobe.php">
                         <div class="mask rgba-red-light"></div>
                     </a>
                 </div>
@@ -163,7 +163,7 @@ require_once "controllers/controller_index.php";
                         Découvrez Kobe "la porte des esprits", connue pour sa célèbre viande de boeuf et son quartier
                         européen.
                         Elle offre une vue incroyable la nuit si vous êtes adeptes des ballades nocturnes.
-                        <a href="kansai.html" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a>
+                        <p><a href="view/kobe.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
                     </p>
                 </div>
             </div>
@@ -173,7 +173,7 @@ require_once "controllers/controller_index.php";
             <div class="card h-100">
                 <div class="bg-image hover-zoom view view-cascade overlay">
                     <img src="assets/img/Wakayama/wakayamaCity.jpg" class="card-img-top" alt="wakayamaCity" />
-                    <a href="kansai.html">
+                    <a href="view/kobe.php">
                         <div class="mask rgba-red-light"></div>
                     </a>
                 </div>
@@ -182,7 +182,7 @@ require_once "controllers/controller_index.php";
                     <p class="card-text fontSizeCard">
                         This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
-                        <a href="kansai.html" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a>
+                        <p><a href="view/kobe.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
                     </p>
                 </div>
             </div>
@@ -192,7 +192,7 @@ require_once "controllers/controller_index.php";
             <div class="card h-100">
                 <div class="bg-image hover-zoom view view-cascade overlay">
                     <img src="assets/img/geisha.jpg" class="card-img-top" alt="kimonoWoman" />
-                    <a href="kansai.html">
+                    <a href="view/kansai.php">
                         <div class="mask rgba-red-light"></div>
                     </a>
                 </div>
@@ -201,17 +201,13 @@ require_once "controllers/controller_index.php";
                     <p class="card-text fontSizeCard">
                         This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
-                        <a href="kansai.html" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a>
+                        <p><a href="view/kansai.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
                     </p>
 
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- <div class="container mt-5 text-center">
-        <a href="kansai.html" class="black-text seeMore">Voir plus <i class="fas fa-plus-circle"></i></a>
-    </div> -->
 
     <div class="text-center mt-5">
         <img src="assets/img/separator.svg" alt="separator" class="w-25">
@@ -235,7 +231,7 @@ require_once "controllers/controller_index.php";
     </div>
 
     <div class="container mt-4 text-center">
-        <a href="gastronomie.html" class="black-text seeMore">Voir plus <i class="fas fa-plus-circle"></i></a>
+        <a href="view/gastronomie.php" class="black-text seeMore">Voir plus <i class="fas fa-plus-circle"></i></a>
     </div>
 
     <div class="text-center mt-5">
@@ -283,7 +279,7 @@ require_once "controllers/controller_index.php";
     </div>
 
     <div class="container mt-4 text-center">
-        <a href="vocabulaire.html" class="black-text seeMore">Voir plus <i class="fas fa-plus-circle"></i></a>
+        <a href="view/vocabulaire.php" class="black-text seeMore">Voir plus <i class="fas fa-plus-circle"></i></a>
     </div>
 
     <div>
