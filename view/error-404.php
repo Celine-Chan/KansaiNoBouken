@@ -9,7 +9,7 @@
 <body>
 
     <div class="container text-center">
-        <h1 class="errorTitle">Oups! Page introuvable</h1>
+        <h1 class="errorTitle">Oups ! Page introuvable !</h1>
 
         <div class="mt-4">
             <p class="textError">Vous avez tenté d’accéder à une page qui ne se trouve pas sur ce site. Veuillez revenir sur la page d'accueil afin de continuer votre navigation sur notre site.</p>
