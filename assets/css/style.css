@@ -7,8 +7,18 @@ body {
 
 /* ---------- NAVBAR ---------- */
 
-nav{
-    background-color: #e8d4af;
+nav {
+    background: #092756;
+    background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -moz-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -webkit-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -o-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -ms-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), linear-gradient(135deg, #670d10 0%, #092756 100%);
+}
+
+.logoNavbar{
+    width: 6rem;
+    height: 3rem;
 }
 
 .webSiteTitle {
@@ -37,22 +47,22 @@ nav{
     background-color: black;
 }
 
-.buttonSignIn{
+.buttonSignIn {
     color: white;
 }
 
-.buttonSignIn:hover{
+.buttonSignIn:hover {
     background-color: #1266F1;
     color: white;
 }
 
 /* ---------- FOOTER ---------- */
 
-.socialIcon{
+.socialIcon {
     justify-content: space-between;
 }
 
-.socialLogo{
+.socialLogo {
     margin-right: 1.5rem;
 }
 
@@ -85,7 +95,7 @@ nav{
     margin-top: 2rem;
 } */
 
-.titleFoodIndex{
+.titleFoodIndex {
     margin-left: 15rem;
     padding-top: 3rem;
     margin-bottom: 2rem;
@@ -106,7 +116,7 @@ nav{
     font-family: 'Cinzel', serif;
 }
 
-.gastronomieSection{
+.gastronomieSection {
     background-image: url('../img/gastronomie/ramen-gastronomie.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -122,36 +132,36 @@ nav{
 .seeMore:hover {
     text-decoration: underline !important;
     color: red !important;
-    
+
 }
 
 /* City Card */
-.titleCardSize{
+.titleCardSize {
     font-size: 1.5rem !important;
     color: black !important;
     font-family: 'Amatic SC', cursive;
     font-weight: bold !important;
 }
 
-.fontSizeCard{
+.fontSizeCard {
     font-size: 1.5rem !important;
     color: black !important;
     font-family: 'Amatic SC', cursive;
     /* font-weight: bold !important;*/
 }
 
-.vocabularyCard:hover{
+.vocabularyCard:hover {
     transform: scale(1.1);
 }
 
-.vocabularyCard{
+.vocabularyCard {
     transition: transform 0.2s ease;
     margin-right: 1.5rem;
 }
 
 /* ---------- PAGE OSAKA ----------  */
 
-.osakaPageParalax{
+.osakaPageParalax {
     background-image: url('../img/osaka/osakaPage2.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -159,7 +169,7 @@ nav{
     background-size: cover;
 }
 
-.osakaTitlePageParalax{
+.osakaTitlePageParalax {
     color: white;
     font-weight: bold;
     padding-left: 18rem;
@@ -167,7 +177,7 @@ nav{
     font-family: 'Cinzel', serif;
 }
 
-.textOsakaParalax{
+.textOsakaParalax {
     width: 50rem;
     padding-left: 20rem;
     color: white;
@@ -176,37 +186,37 @@ nav{
     font-family: 'Cinzel', serif;
 }
 
-.textPageOsaka{
+.textPageOsaka {
     text-align: justify;
     font-size: 0.9rem;
 }
 
-.glicoImgOsaka{
+.glicoImgOsaka {
     height: 40rem;
     width: 18rem;
 }
 
-.legoImgOsaka{
+.legoImgOsaka {
     height: 25rem;
     width: 15rem;
 }
 
-.makiSushi{
+.makiSushi {
     height: 12rem;
     width: 30rem;
 }
 
-.giftTemple{
+.giftTemple {
     height: 12.5rem;
     width: 30rem;
 }
 
-.imgPageOsaka{
+.imgPageOsaka {
     margin-left: 10rem;
 }
 
 /* ---------- PAGE KYOTO ----------  */
-.kyotoPageParalax{
+.kyotoPageParalax {
     background-image: url('../img/kyoto/jizoKyoto2.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -214,7 +224,7 @@ nav{
     background-size: cover;
 }
 
-.kyotoTitlePageParalax{
+.kyotoTitlePageParalax {
     color: white;
     font-weight: bold;
     padding-left: 18rem;
@@ -222,7 +232,7 @@ nav{
     font-family: 'Cinzel', serif;
 }
 
-.textKyotoParalax{
+.textKyotoParalax {
     width: 50rem;
     padding-left: 20rem;
     color: white;
@@ -231,18 +241,18 @@ nav{
     font-family: 'Cinzel', serif;
 }
 
-.textPageKyoto{
+.textPageKyoto {
     text-align: justify;
     font-size: 0.9rem;
     margin-left: 1rem;
 }
 
-.lanterneImgKyoto{
+.lanterneImgKyoto {
     height: 13rem;
     width: 25rem;
 }
 
-.cimetiereImgKyoto{
+.cimetiereImgKyoto {
     height: 13rem;
     width: 25rem;
 }
@@ -263,26 +273,26 @@ nav{
     width: 110rem;
 }
 
-.imgRecipeSize{
+.imgRecipeSize {
     height: 20rem;
     width: 29rem;
 }
 
-li{
+li {
     text-align: justify;
 }
 
-.titleModalRecipe{
+.titleModalRecipe {
     text-decoration: underline;
     font-weight: bold;
 }
 
 .btnGastronomieRecipe {
-    background-color:#B71C1C;
+    background-color: #B71C1C;
     color: white;
 }
 
-.btnGastronomieRecipe:hover{
+.btnGastronomieRecipe:hover {
     background-color: #00695C;
     color: white;
     transform: scale(1.2);
@@ -314,7 +324,35 @@ li{
     transition: 0.5s;
 } */
 
-.galleryTitle{
+.galleryTitle {
     font-family: 'Bodoni Moda', serif;
     font-weight: bold;
+}
+
+/* ---------- PAGE ERROR 404 ---------- */
+.kasaObakeImg{
+    height: 30rem;
+    width: 20rem;
+}
+
+.errorTitle{
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+}
+
+.textError{
+    font-family: 'Crimson Text', serif;
+    font-size: 1.5rem;
+}
+
+.indexReturn{
+    color: #B71C1C;
+    font-family: 'Crimson Text', serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.indexReturn:hover{
+    text-decoration: underline;
+    color: #00695C;
 }
