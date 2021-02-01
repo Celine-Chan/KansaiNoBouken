@@ -1,35 +1,92 @@
-<footer class="page-footer font-small special-color-dark pt-4 mt-5">
+<footer class="bg-dark text-white text-center text-lg-start mt-5">
+    <!-- Grid container -->
+    <div class="container p-4 footFont">
+        <!--Grid row-->
+        <div class="row">
 
-    <div class="d-flex flex-row justify-content-center mb-3">
-        <a class="nav-link navFont text-light" href="galerie.php">Galerie
-            <span class="sr-only">(current)</span>
-        </a>
-        <a class="nav-link dropdown-toggle navFont text-light" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kansai
-        </a>
-        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-            <a class="dropdown-item hoverBackgroundNav text-dark" href="../kansai.php">Kansai</a>
-            <a class="dropdown-item hoverBackgroundNav text-dark" href="../osaka.php">Osaka</a>
-            <a class="dropdown-item hoverBackgroundNav text-dark" href="../kyoto.php">Kyoto</a>
-            <a class="dropdown-item hoverBackgroundNav text-dark" href="../nara.php">Nara</a>
-            <a class="dropdown-item hoverBackgroundNav text-dark" href="../kobe.php">Kobe</a>
-            <a class="dropdown-item hoverBackgroundNav text-dark" href="../wakayama.php">Wakayama</a>
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Menu</h5>
+
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="../../view/galerie.php" class="text-white fontHover">Gallerie</a>
+                    </li>
+                    <li>
+                        <a href="../../view/gastronomie.php" class="text-white fontHover">Gastronomie</a>
+                    </li>
+                    <li>
+                        <a href="../../view/vocabulaire.php" class="text-white fontHover">Vocabulaire</a>
+                    </li>
+                    <li>
+                        <a href="../../view/contact.php" class="text-white fontHover">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-0">Région / Ville</h5>
+
+                <ul class="list-unstyled mt-2">
+                    <li>
+                        <a href="../../view/kansai.php" class="text-white fontHover">Kansai</a>
+                    </li>
+                    <li>
+                        <a href="../../view/osaka.php" class="text-white fontHover">Osaka</a>
+                    </li>
+                    <li>
+                        <a href="../../view/kyoto.php" class="text-white fontHover">Kyoto</a>
+                    </li>
+                    <li>
+                        <a href="../../view/Nara.php" class="text-white fontHover">Nara</a>
+                    </li>
+                    <li>
+                        <a href="../../view/kobe.php" class="text-white fontHover">Kobe</a>
+                    </li>
+                    <li>
+                        <a href="../../view/wakayama.php" class="text-white fontHover">Wakayama</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-0">Réseaux sociaux</h5>
+
+                <ul class="list-unstyled mt-4">
+                    <a href="https://www.facebook.com/nihonnobouken"><img src="../../assets/img/facebook.svg" alt="facebook" class="socialIcon socialLogo"></a>
+                    <a href="https://www.instagram.com/"><img src="../../assets/img/instagram.svg" alt="instagram" class="socialIcon socialLogo"></a>
+                    <a href="https://www.linkedin.com/in/c%C3%A9line-louvel/"><img src="../../assets/img/linkedin.svg" alt="linkedin" class="socialIcon socialLogo"></a>
+                    <a href="https://github.com/Celine-chan"><img src="../../assets/img/signe-github.svg" alt="github" class="socialIcon socialLogo"></a>
+                </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-0">Mentions Légales</h5>
+
+                <ul class="list-unstyled mt-2">
+                    <li>
+                        <a href="../../view/cgu.php" class="text-white fontHover">CGU</a>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
         </div>
-        <a class="nav-link navFont text-light" href="../gastronomie.php">Gastronomie</a>
-        <a class="nav-link navFont text-light" href="../vocabulaire.php">Vocabulaire</a>
-        <a class="nav-link navFont text-light justify-content-end" href="../contact.php">Contact</a>
+        <!--Grid row-->
     </div>
+    <!-- Grid container -->
 
-    <div class="d-flex flex-row justify-content-center socialIcon mb-3">
-        <a href="https://www.facebook.com/nihonnobouken"><i class="fab fa-facebook fa-2x socialLogo"></i></a>
-        <i class="fab fa-instagram fa-2x socialLogo"></i>
-        <i class="fab fa-linkedin fa-2x socialLogo"></i>
-        <i class="fab fa-github-square fa-2x"></i>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright :
+        <a class="text-white fontHover" href="https://github.com/Celine-chan"> Céline Louvel</a>
     </div>
-
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-        <a href="https://github.com/Celine-chan"> Céline Louvel</a>
-    </div>
-
+    <!-- Copyright -->
 </footer>
 
 <!-- Optional JavaScript -->

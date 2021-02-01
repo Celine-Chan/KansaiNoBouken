@@ -9,7 +9,7 @@ require_once "controllers/controller_index.php";
 
 <head>
     <title> Kansai no bouken - 関西の冒険 - Accueil</title>
-    
+
     <?php include('view/pagePortion/header.php') ?>
 </head>
 
@@ -54,12 +54,12 @@ require_once "controllers/controller_index.php";
         </div>
     </div>
 
-    <h1 class="text-center mt-5">Présentation du site Kansai No Bouken</h1>
+    <h1 class="text-center mt-5 titleIndexPres">Présentation du site Kansai No Bouken</h1>
 
-    <div class="d-flex flex-row mt-5 container">
-        <div>
-            <img src="assets/img/osaka/tanuki.jpg" alt="tanuki" class="tanukiSize">
-        </div>
+    <div class="text-center mt-5">
+        <img src="assets/img/osaka/tanuki.jpg" alt="tanuki" class="tanukiSize">
+    </div>
+    <div class="d-flex mt-5 container">
         <div>
             <p class="textAccueil">Bienvenue sur Kansai no bouken, spécialisé sur la région du Kansai, au centre du Japon.
                 Ce site a pour objectif de vous informer sur les grandes villes de la région du kansai ainsi que des actualités liées à ces villes,
@@ -78,7 +78,7 @@ require_once "controllers/controller_index.php";
     </div>
 
     <div class="text-center mt-5">
-        <img src="assets/img/la-carte-de-la-région-de-kansai.png">
+        <img src="assets/img/la-carte-de-la-région-de-kansai.png" class="img-fluid">
     </div>
 
     <div class="text-center mt-5">
@@ -86,7 +86,7 @@ require_once "controllers/controller_index.php";
     </div>
 
     <!-- Card -->
-    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 cityCard">
+    <div class="container-fluid mx-auto row row-cols-1 row-cols-md-3 g-4 mt-5 cityCard">
         <!-- first card -->
         <div class="col mt-5 OsakaCard">
             <div class="card h-100">
@@ -102,7 +102,7 @@ require_once "controllers/controller_index.php";
                         Découvrez la ville d'Osaka qui est la 3ème plus grande ville du Japon derrière Tokyo et
                         Yokohama.
                         osaka est connu pour son hospitalité, ses animations et sa gastronomie typique.
-                        <p><a href="view/osaka.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
+                    <p><a href="view/osaka.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
                     </p>
                 </div>
             </div>
@@ -123,7 +123,7 @@ require_once "controllers/controller_index.php";
                         Japon.
                         Vous serez captivés par ses palais impériaux, ses milliers de sanctuaires shinto et temples
                         bouddhistes.
-                        <p><a href="view/kyoto.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
+                    <p><a href="view/kyoto.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
                     </p>
                 </div>
             </div>
@@ -142,7 +142,7 @@ require_once "controllers/controller_index.php";
                     <p class="card-text fontSizeCard">
                         Découvrez Nara dont les monuments historiques de l'ancienne ville sont inscrits à l'UNESCO.
                         Laissez-vous transporté par l'ambiance de la ville où les cerfs en libertés flânent à vos côtés.
-                        <p><a href="view/nara.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
+                    <p><a href="view/nara.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
                     </p>
 
                 </div>
@@ -163,7 +163,7 @@ require_once "controllers/controller_index.php";
                         Découvrez Kobe "la porte des esprits", connue pour sa célèbre viande de boeuf et son quartier
                         européen.
                         Elle offre une vue incroyable la nuit si vous êtes adeptes des ballades nocturnes.
-                        <p><a href="view/kobe.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
+                    <p><a href="view/kobe.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
                     </p>
                 </div>
             </div>
@@ -182,7 +182,7 @@ require_once "controllers/controller_index.php";
                     <p class="card-text fontSizeCard">
                         This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
-                        <p><a href="view/kobe.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
+                    <p><a href="view/kobe.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
                     </p>
                 </div>
             </div>
@@ -201,7 +201,7 @@ require_once "controllers/controller_index.php";
                     <p class="card-text fontSizeCard">
                         This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
-                        <p><a href="view/kansai.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
+                    <p><a href="view/kansai.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
                     </p>
 
                 </div>
@@ -213,9 +213,9 @@ require_once "controllers/controller_index.php";
         <img src="assets/img/separator.svg" alt="separator" class="w-25">
     </div>
 
-    <div class="gastronomieSection mt-5">
+    <div class="container-fluid gastronomieSection mt-5">
         <h2 class="titleFoodIndex">La Cuisine du kansai</h2>
-        <p class="textGastronomie">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        <p class="container textGastronomie">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
@@ -240,7 +240,7 @@ require_once "controllers/controller_index.php";
 
     <!-- Vocabulaire card -->
 
-    <div class="container-fluid row text-center justify-content-center">
+    <div class="container-fluid mx-auto row text-center justify-content-center">
         <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
             <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">

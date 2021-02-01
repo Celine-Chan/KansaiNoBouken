@@ -8,12 +8,12 @@ body {
 /* ---------- NAVBAR ---------- */
 
 nav {
-    background: #092756;
-    background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -moz-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
-    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -webkit-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
-    background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -o-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
-    background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), -ms-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
-    background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104, 128, 138, .4) 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), linear-gradient(135deg, #670d10 0%, #092756 100%);
+    background: #EF5350;
+    background: -moz-radial-gradient(0% 100%, ellipse cover, #D32F2F 10%, rgba(138, 114, 76, 0) 40%), -moz-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, #D32F2F 10%, rgba(138, 114, 76, 0) 40%), -webkit-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -o-radial-gradient(0% 100%, ellipse cover, #D32F2F 10%, rgba(138, 114, 76, 0) 40%), -o-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -ms-radial-gradient(0% 100%, ellipse cover, #D32F2F 10%, rgba(138, 114, 76, 0) 40%), -ms-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+    background: -webkit-radial-gradient(0% 100%, ellipse cover, #D32F2F 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), linear-gradient(135deg, #670d10 0%, #092756 100%);
 }
 
 .logoNavbar{
@@ -57,13 +57,27 @@ nav {
 }
 
 /* ---------- FOOTER ---------- */
-
-.socialIcon {
-    justify-content: space-between;
+.socialLogo {
+    margin-right: 1.2rem;
 }
 
-.socialLogo {
-    margin-right: 1.5rem;
+.socialIcon{
+    width: 2rem;
+    height: 2rem;
+}
+
+.socialIcon:hover{
+    color: #2D88FF;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.footFont{
+    font-family: 'Saira Condensed', sans-serif;
+}
+
+.fontHover:hover{
+    text-decoration: underline;
 }
 
 /* ---------- PAGE ACCUEIL ---------- */
@@ -75,6 +89,13 @@ nav {
     object-position: center;
 }
 
+.titleIndexPres{
+    font-family: 'Bodoni Moda', serif;
+    font: 1.5rem;
+    color: black;
+    font-weight: bold;
+}
+
 .tanukiSize {
     width: 15rem;
     height: 15rem;
@@ -82,21 +103,14 @@ nav {
 
 .textAccueil {
     text-align: justify;
-    font-family: 'Crimson Text', serif;
     font-size: 1.2rem;
     margin-left: 1rem;
     font-family: 'Bodoni Moda', serif;
+    color: black;
+    font-weight: bold;
 }
 
-/* .textAccueil2{
-    text-align: justify;
-    font-family: 'Crimson Text', serif;
-    font-size: 1.2rem;
-    margin-top: 2rem;
-} */
-
 .titleFoodIndex {
-    margin-left: 15rem;
     padding-top: 3rem;
     margin-bottom: 2rem;
     color: white;
@@ -109,8 +123,6 @@ nav {
     font-size: 1.1rem;
     text-align: center;
     text-align: justify;
-    margin-left: 18rem;
-    margin-right: 8rem;
     padding-bottom: 3rem;
     text-shadow: black 1px 1px;
     font-family: 'Cinzel', serif;
@@ -123,11 +135,6 @@ nav {
     background-position: center;
     background-size: cover;
 }
-
-/* .foodSize {
-    width: 35rem;
-    height: 20rem;
-} */
 
 .seeMore:hover {
     text-decoration: underline !important;
@@ -147,7 +154,6 @@ nav {
     font-size: 1.5rem !important;
     color: black !important;
     font-family: 'Amatic SC', cursive;
-    /* font-weight: bold !important;*/
 }
 
 .vocabularyCard:hover {

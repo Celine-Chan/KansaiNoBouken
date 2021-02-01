@@ -1,6 +1,6 @@
-<nav class="navbar fixed-top navbar-expand-lg red-600">
+<nav class="navbar fixed-top navbar-expand-lg navbar-collapse red-600">
     <div class="container-fluid">
-        <a class="navbar-brand text-dark webSiteTitle" href="../../index.php"><img src="../../assets/img/kansaiNoBouken.png" alt="logo kansai no bouken" class="logoNavbar"></a>
+        <a class="navbar-brand text-dark webSiteTitle" href="../../index.php">Kansai no Bouken</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"><img src="https://img.icons8.com/emoji/48/000000/white-flower.png"/></i></span>
         </button>
@@ -38,10 +38,10 @@
                     <a class="nav-link text-dark navFont" data-bs-toggle="modal" data-bs-target="#modalLoginForm">Connexion</a>
                 </li>
             </ul>
-            <form class="d-flex">
+            <!-- <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="mot-clé" aria-label="Search">
                 <button class="btn btn-outline-danger" type="submit">Rechercher</button>
-            </form>
+            </form> -->
         </div>
     </div>
 </nav>
