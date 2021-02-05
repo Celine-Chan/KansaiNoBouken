@@ -1,10 +1,10 @@
 <?php
 
-$adminName = 'Céline';
-$adminPassword = 'Nihonnoboukenadmin';
+// $adminName = 'Céline';
+// $adminPassword = 'Nihonnoboukenadmin';
 
-if ($adminName == 'Céline' && $adminPassword == 'Nihonnoboukenadmin') {
+// if ($adminName == 'Céline' && $adminPassword == 'Nihonnoboukenadmin') {
     
-} else {
+// } else {
     
-}
+// }
