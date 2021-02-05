@@ -85,6 +85,7 @@
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © 2020 Copyright :
         <a class="text-white fontHover" href="https://github.com/Celine-chan"> Céline Louvel</a>
+        <p class="text-white"><?php echo date('F j, Y, g:i a') ?></p>
     </div>
     <!-- Copyright -->
 </footer>

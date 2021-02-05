@@ -54,7 +54,7 @@ require_once "controllers/controller_index.php";
         </div>
     </div>
 
-    <h1 class="text-center mt-5 titleIndexPres">Présentation du site Kansai No Bouken</h1>
+    <h1 class="text-center mt-5 titleIndexPres"><img src="assets/img/saison-de-floraison.svg" alt="earthSakura" class="earthSakura"> Présentation du site Kansai No Bouken</h1>
 
     <div class="text-center mt-5">
         <img src="assets/img/osaka/tanuki.jpg" alt="tanuki" class="tanukiSize">
@@ -78,6 +78,7 @@ require_once "controllers/controller_index.php";
     </div>
 
     <div class="text-center mt-5">
+    <img src="assets/img/japonmap.svg" alt="japanMap" class="japanMap">
         <img src="assets/img/la-carte-de-la-région-de-kansai.png" class="img-fluid">
     </div>
 
@@ -241,35 +242,35 @@ require_once "controllers/controller_index.php";
     <!-- Vocabulaire card -->
 
     <div class="container-fluid mx-auto row text-center justify-content-center">
-        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 shadow-lg" style="max-width: 16rem">
             <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
                 <h5 class="card-title"><strong>Bonjour</strong></h5>
                 <p class="card-text white-text"><strong>おはよう</strong></p>
             </div>
         </div>
-        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 shadow-lg" style="max-width: 16rem">
             <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
                 <h5 class="card-title"><strong>Merci</strong></h5>
                 <p class="card-text white-text"><strong>ありがとう</strong></p>
             </div>
         </div>
-        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 shadow-lg" style="max-width: 16rem">
             <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
                 <h5 class="card-title"><strong>Au revoir</strong></h5>
                 <p class="card-text white-text"><strong>さようなら</strong></p>
             </div>
         </div>
-        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 shadow-lg" style="max-width: 16rem">
             <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
                 <h5 class="card-title"><strong>Bienvenue</strong></h5>
                 <p class="card-text white-text"><strong>ようこそ</strong></p>
             </div>
         </div>
-        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5" style="max-width: 16rem">
+        <div class="card vocabularyCard text-white red darken-1 mb-3 mt-5 shadow-lg" style="max-width: 16rem">
             <div class="card-header"><i class="fas fa-language fa-2x"></i></div>
             <div class="card-body">
                 <h5 class="card-title"><strong>S'il vous plaît</strong></h5>

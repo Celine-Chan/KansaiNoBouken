@@ -40,7 +40,7 @@ if (isset($_FILES["fileToUpload"]) && $_FILES["fileToUpload"]["error"] == 0) {
 }
 
 if (count(scandir('../assets/img/galerieUpload')) > 0) {
-    $numberCount = count(scandir('../assets/img/galerieUpload/')) -2; //élimine les 2 fichiers '.' et '..'
+    $numberCount = count(scandir('../assets/img/galerieUpload/')) - 2; //élimine les 2 fichiers '.' et '..'
 } else {
     $numberCount = 0;
 }
@@ -65,65 +65,65 @@ if (count(scandir('../assets/img/galerieUpload')) > 0) {
         <img src="../assets/img/banniere/banniereAdmin.jpg" alt="admin" class="img-fluid adminImg">
     </div>
 
-    <h1 class="text-center">Page administrateur</h1>
-
-
-    <form action="osaka.php" method="POST" class="container col-10 row g-3 mx-auto">
-
-        <h2>Article Osaka</h2>
-
-        <textarea name="osakaArticle">Welcome to TinyMCE!</textarea>
-
-        <div class="col-12 text-center mb-3">
-            <input type="submit" name="submit" value="envoyer">
-        </div>
-    </form>
-
-    <form action="kyoto.php" method="POST" class="container col-10 row g-3 mx-auto">
-
-        <h2>Article Kyoto</h2>
-
-        <textarea name="kyotoArticle">Welcome to TinyMCE!</textarea>
-
-        <div class="col-12 text-center mb-3">
-            <input type="submit" name="submit" value="envoyer">
-        </div>
-    </form>
-
-
 
     <div class="container">
+        <h1 class="text-center">Page administrateur</h1>
 
-        <form action="admin.php" method="POST" enctype="multipart/form-data" class="mt-5">
+        <div class="mt-5">
+            <form action="osaka.php" method="POST" class="container col-10 row g-3 mx-auto border border-danger">
 
-            <h2>Upload Galerie</h2>
+                <h2 class="mt-3">Article Osaka</h2>
 
-            <div class="form-group">
-                <label class="form-label" for="fileToUpload" id="Choix">Choisissez votre image :</label>
-                <input type="file" name="fileToUpload" id="fileToUpload" class="form-control">
-            </div>
+                <textarea name="osakaArticle">Welcome to TinyMCE!</textarea>
 
-            <div class="form-group mt-3 text-center">
-                <!-- <input type="submit" name="submit" value="Envoyer"> -->
-                <button type="submit" name="submit" class="btn" id="bouton">Upload</button>
-            </div>
+                <div class="col-12 text-center mb-3">
+                    <input type="submit" name="submit" value="envoyer">
+                </div>
+            </form>
+        </div>
 
-            <?= (!empty($message))  ? " <p class='messagePHP'>  $message  </p>" : "" ?>
+        <div>
+            <form action="kyoto.php" method="POST" class="container col-10 row g-3 mx-auto border border-danger mt-5">
 
-            <?= (!empty($messageSecond)) ? " <p class='messagePHP'>  $messageSecond  </p>" : "" ?>
+                <h2 class="mt-3">Article Kyoto</h2>
 
-            <?= (!empty($messageOk)) ? " <p class='messagePHP'>  $messageOk  </p>" : "" ?>
+                <textarea name="kyotoArticle">Welcome to TinyMCE!</textarea>
 
-            <?= (!empty($messageNoFormat)) ? " <p class='messagePHP'>  $messageNoFormat  </p>" : "" ?>
+                <div class="col-12 text-center mb-3">
+                    <input type="submit" name="submit" value="envoyer">
+                </div>
+            </form>
+        </div>
 
+        <div>
+            <form action="admin.php" method="POST" enctype="multipart/form-data" class="mt-5 border border-danger">
 
-            <p class="note note-danger"><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .jpeg, .gif, .png sont autorisés jusqu'à une taille maximale de 1 Mo.</p>
+                <h2 class="mt-3 ms-4">Upload Galerie</h2>
 
-        </form>
+                <div class="form-group mx-4">
+                    <label class="form-label" for="fileToUpload" id="Choix">Choisissez votre image :</label>
+                    <input type="file" name="fileToUpload" id="fileToUpload" class="form-control">
+                </div>
+
+                <div class="form-group mt-3 text-center">
+                    <!-- <input type="submit" name="submit" value="Envoyer"> -->
+                    <button type="submit" name="submit" class="btn" id="bouton">Envoyer photo</button>
+                </div>
+
+                <?= (!empty($message))  ? " <p class='messagePHP'>  $message  </p>" : "" ?>
+
+                <?= (!empty($messageSecond)) ? " <p class='messagePHP'>  $messageSecond  </p>" : "" ?>
+
+                <?= (!empty($messageOk)) ? " <p class='messagePHP'>  $messageOk  </p>" : "" ?>
+
+                <?= (!empty($messageNoFormat)) ? " <p class='messagePHP'>  $messageNoFormat  </p>" : "" ?>
+
+                <p class="note note-danger mt-3 mx-4"><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .jpeg, .gif, .png sont autorisés jusqu'à une taille maximale de 1 Mo.</p>
+
+            </form>
+        </div>
+
     </div>
-
-
-
 
 
 

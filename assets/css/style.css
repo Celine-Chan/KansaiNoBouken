@@ -3,17 +3,17 @@ body {
     overflow-x: hidden;
     height: auto;
     width: 100%;
+    background-color: #f5f0f1;
 }
 
 /* ---------- NAVBAR ---------- */
+.searchNavBar{
+    height: 2rem;
+    width: 3rem;
+}
 
 nav {
-    background: #EF5350;
-    background: -moz-radial-gradient(0% 100%, ellipse cover, #D32F2F 10%, rgba(138, 114, 76, 0) 40%), -moz-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
-    background: -webkit-radial-gradient(0% 100%, ellipse cover, #D32F2F 10%, rgba(138, 114, 76, 0) 40%), -webkit-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
-    background: -o-radial-gradient(0% 100%, ellipse cover, #D32F2F 10%, rgba(138, 114, 76, 0) 40%), -o-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
-    background: -ms-radial-gradient(0% 100%, ellipse cover, #D32F2F 10%, rgba(138, 114, 76, 0) 40%), -ms-linear-gradient(top, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
-    background: -webkit-radial-gradient(0% 100%, ellipse cover, #D32F2F 10%, rgba(138, 114, 76, 0) 40%), linear-gradient(to bottom, rgba(57, 173, 219, .25) 0%, rgba(42, 60, 87, .4) 100%), linear-gradient(135deg, #670d10 0%, #092756 100%);
+    background-color: white;
 }
 
 .logoNavbar{
@@ -28,6 +28,8 @@ nav {
 .navFont {
     font-family: 'Saira Condensed', sans-serif;
     font-size: 1.2rem;
+    color: #B71C1C !important;
+    font-weight: bold;
 }
 
 .navFont:hover {
@@ -35,8 +37,7 @@ nav {
 }
 
 .hoverBackgroundNav:hover {
-    background-color: #C62828;
-    color: white !important;
+    background-color: #EFDCB6;
 }
 
 .hoverBackgroundNav {
@@ -52,8 +53,20 @@ nav {
 }
 
 .buttonSignIn:hover {
-    background-color: #1266F1;
+    background-color: #00695C !important;
     color: white;
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.searchButton:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.darumaSvg{
+    height: 2rem;
+    width: 2rem;
 }
 
 /* ---------- FOOTER ---------- */
@@ -94,6 +107,12 @@ nav {
     font: 1.5rem;
     color: black;
     font-weight: bold;
+    font-style: italic;
+}
+
+.earthSakura{
+    height: 3rem;
+    width: 3rem;
 }
 
 .tanukiSize {
@@ -108,6 +127,11 @@ nav {
     font-family: 'Bodoni Moda', serif;
     color: black;
     font-weight: bold;
+}
+
+.japanMap{
+    height: 7rem;
+    width: 7rem;
 }
 
 .titleFoodIndex {
@@ -178,14 +202,14 @@ nav {
 .osakaTitlePageParalax {
     color: white;
     font-weight: bold;
-    padding-left: 18rem;
+    /* padding-left: 18rem; */
     font-size: 3rem;
     font-family: 'Cinzel', serif;
 }
 
 .textOsakaParalax {
-    width: 50rem;
-    padding-left: 20rem;
+    /* width: 50rem;
+    padding-left: 20rem; */
     color: white;
     padding-bottom: 10rem;
     font-size: 1.5rem;
@@ -233,14 +257,14 @@ nav {
 .kyotoTitlePageParalax {
     color: white;
     font-weight: bold;
-    padding-left: 18rem;
+    /* padding-left: 18rem; */
     font-size: 3rem;
     font-family: 'Cinzel', serif;
 }
 
 .textKyotoParalax {
-    width: 50rem;
-    padding-left: 20rem;
+    /* width: 50rem; */
+    /* padding-left: 20rem; */
     color: white;
     padding-bottom: 10rem;
     font-size: 1.5rem;

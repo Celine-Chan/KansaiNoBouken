@@ -22,6 +22,14 @@ if (isset($_POST['submit'])) {
             $errorMessages['lastName'] = 'Veuillez saisir votre nom.';
         }
     }
+    if (isset($_POST['pseudo'])) {
+        if (!preg_match($regexName, $_POST['pseudo'])) {
+            $errorMessages['pseudo'] = 'Veuillez saisir un pseudo valide.';
+        }
+        if (empty($_POST['pseudo'])) {
+            $errorMessages['pseudo'] = 'Veuillez saisir votre pseudo.';
+        }
+    }
     if (isset($_POST['birthDate'])) {
         if (!preg_match($regexBirthDate, $_POST['birthDate'])) {
             $errorMessages['birthDate'] = 'Veuillez saisir une date valide.';
@@ -108,9 +116,9 @@ if (isset($_POST['submit'])) {
             <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Mot de passe" aria-describedby="defaultRegisterFormPasswordHelpBlock">
             <input type="password" id="defaultRegisterFormPassword" class="form-control mb-4" placeholder="Comfirmer votre mot de passe" aria-describedby="defaultRegisterFormPasswordHelpBlock">
 
-            <button class="btn btn-info my-4 btn-block red darken-4" type="submit" name="submit">S'inscrire</button>
+            <button class="btn btn-info my-4 red darken-4 mx-auto" type="submit" name="submit">S'inscrire</button>
 
-            <p class="text-center">En cliquant sur <em>s'inscrire</em> vous acceptez nos <a href="" target="_blank">terms of service</a></p>
+            <p>En cliquant sur <em>s'inscrire</em> vous acceptez nos <a href="cgu.php" target="_blank">terms of service</a></p>
 
         </form>
     </div>

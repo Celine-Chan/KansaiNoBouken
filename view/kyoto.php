@@ -12,8 +12,8 @@
     <?php include('../view/pagePortion/navbar.php') ?>
 
     <div class="kyotoPageParalax">
-        <h1 class="pt-5 kyotoTitlePageParalax">KYOTO</h1>
-        <div class="textKyotoParalax mt-5">
+        <h1 class="pt-5 ms-5 kyotoTitlePageParalax">KYOTO</h1>
+        <div class="textKyotoParalax mt-5 ms-3">
             <p>Découvrez Kyoto, ancienne capitale du
                 Japon, le coeur culturel et religieux du
                 Japon.
@@ -24,7 +24,7 @@
 
     <div class="fullTextPageKyoto container d-flex">
         <div class="mt-5">
-            <img src="../assets/img/kyoto/lanterne.jpg" alt="lanterne" class="img-fluid lanterneImgKyoto">
+            <img src="../assets/img/kyoto/lanterne.jpg" alt="lanterne" class="img-fluid lanterneImgKyoto img-fluid">
         </div>
         <div class="textPageKyoto mt-5 col">
             <p>At vero eos et accusam et justo duo dolores et ea rebum.

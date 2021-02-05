@@ -11,8 +11,8 @@
     <?php include('../view/pagePortion/navbar.php') ?>
 
     <div class="osakaPageParalax">
-        <h1 class="pt-5 osakaTitlePageParalax">OSAKA</h1>
-        <div class="textOsakaParalax mt-5">
+        <h1 class="pt-5 ms-5 osakaTitlePageParalax">OSAKA</h1>
+        <div class="textOsakaParalax mt-5 ms-3">
             <p>Découvrez la ville d'Osaka qui est la 3ème plus grande ville du Japon derrière Tokyo et
                 Yokohama.
                 osaka est connu pour son hospitalité, ses animations et sa gastronomie typique.</p>
