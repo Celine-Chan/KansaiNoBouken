@@ -21,32 +21,32 @@ require_once "../controllers/controller_inscription.php";
     </div>
 
     <div class="container">
-        <form class=" border border-danger p-5" method="POST" action="inscription.php">
+        <form class="border border-danger p-5" method="POST" action="inscription.php">
 
             <p class="h4 mb-5 text-center">Inscription</p>
 
             <div class="form-row mb-4">
                 <div class="col">
-                    <input type="text" id="defaultRegisterFormFirstName" class="form-control" name="firstName" placeholder="Prénom">
+                    <input type="text" id="firstName" class="form-control" name="firstName" placeholder="Prénom" value="<?= isset($_POST['firstName']) ? htmlspecialchars($_POST['firstName']) : '' ?>">
                     <div class="text-danger">
                         <span><?= isset($errorMessages['firstName']) ? $errorMessages['firstName'] : '' ?></span>
                     </div>
                 </div>
                 <div class="col mt-4">
-                    <input type="text" id="defaultRegisterFormLastName" class="form-control" name="lastName" placeholder="Nom">
+                    <input type="text" id="lastName" class="form-control" name="lastName" placeholder="Nom" value="<?= isset($_POST['lastName']) ? $_POST['lastName'] : '' ?>">
                     <div class="text-danger">
                         <span><?= isset($errorMessages['lastName']) ? $errorMessages['lastName'] : '' ?></span>
                     </div>
                 </div>
                 <div class="col mt-4">
-                    <input type="text" id="defaultRegisterFormLastName" class="form-control" name="pseudo" placeholder="Pseudo">
+                    <input type="text" id="pseudo" class="form-control" name="pseudo" placeholder="Pseudo" value="<?= isset($_POST['pseudo']) ? htmlspecialchars($_POST['pseudo']) : '' ?>">
                     <div class="text-danger">
                         <span><?= isset($errorMessages['pseudo']) ? $errorMessages['pseudo'] : '' ?></span>
                     </div>
                 </div>
                 <div class="col mt-4">
                     <label for="birthDate" class="form-label">Votre date de naissance :</label>
-                    <input type="date" class="form-control" id="birthDate" name="birthDate" placeholder="05/12/1990">
+                    <input type="date" class="form-control" id="birthDate" name="birthDate" placeholder="05/12/1990" value="<?= isset($_POST['birthDate']) ? $_POST['birthDate'] : '' ?>">
                     <div class="text-danger">
                         <span><?= isset($errorMessages['birthDate']) ? $errorMessages['birthDate'] : '' ?></span>
                     </div>

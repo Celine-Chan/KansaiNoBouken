@@ -63,19 +63,6 @@ if (isset($_POST['submit'])) {
         } else if ($_POST['confirmPassword'] != $_POST['password']) {
             $errorMessages['confirmPassword'] = 'Vos mots de passe doivent être identique !';
         } 
-    }
-    // if (isset($_POST['confirmPassword'])) {
-    //     // if (!preg_match($regexPassword, $_POST['confirmPassword'])) {
-    //     //     $errorMessages['confirmPassword'] = 'Veuillez saisir un mot de passe valide';
-    //     // }
-        
-    //     if (empty($_POST['confirmPassword'])) {
-    //         $errorMessages['confirmPassword'] = 'Veuillez saisir un mot de passe';
-    //     }
-    //     var_dump($_POST['confirmPassword']);
-    //     var_dump($_POST['password']);
-        
-    // }
-    
+    } 
 }
 ?>

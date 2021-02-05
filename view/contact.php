@@ -1,3 +1,8 @@
+<?php
+
+require_once "../controllers/controller_contact.php";
+
+?>
 <!doctype html>
 <html lang="fr">
 
@@ -5,7 +10,6 @@
     <title>Kansai no bouken - 関西の冒険 - Contact</title>
     <?php include('pagePortion/header.php') ?>
 </head>
-
 
 <body>
 
@@ -16,29 +20,54 @@
     </div>
 
     <div class="container mt-5">
-        <form class="border border-danger p-5" action="#!" method="POST">
+        <form class="border border-danger p-5" action="contact.php" method="POST">
 
             <p class="h4 mb-4 text-center">Contact</p>
 
-            <input type="text" id="defaultContactFormName" class="form-control mb-4" placeholder="Nom">
-
-            <input type="email" id="defaultContactFormEmail" class="form-control mb-4" placeholder="E-mail">
-
-            <label>Sujet</label>
-            <select class="browser-default custom-select mb-4">
-                <option value="" disabled>Sélectionner une option</option>
-                <option value="1" selected>Article</option>
-                <option value="2">Gallerie</option>
-                <option value="3">Gastronomie</option>
-                <option value="4">Vocabulaire</option>
-                <option value="5">Autres</option>
-            </select>
-
-            <div class="form-group">
-                <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows=7 placeholder="Message"></textarea>
+            <div class="mb-4">
+                <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Nom" value="<?= isset($_POST['lastName']) ? $_POST['lastName'] : '' ?>">
+                <div class="text-danger">
+                    <span><?= isset($errorMessages['lastName']) ? $errorMessages['lastName'] : '' ?></span>
+                </div>
             </div>
 
-            <button class="btn btn-info red darken-4 mt-5" type="submit">Envoyer</button>
+            <div class="mb-4">
+                <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Prénom" value="<?= isset($_POST['firstname']) ? $_POST['firstname'] : '' ?>">
+                <div class="text-danger">
+                    <span><?= isset($errorMessages['firstName']) ? $errorMessages['firstName'] : '' ?></span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <input type="email" id="mail" name="mail" class="form-control" placeholder="E-mail" value="<?= isset($_POST['mail']) ? $_POST['mail'] : '' ?>">
+                <div class="text-danger">
+                    <span><?= isset($errorMessages['mail']) ? $errorMessages['mail'] : '' ?></span>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="subjectContact">Sujet</label>
+                <select class="browser-default custom-select" aria-label="Default select example" name="subjectContact">
+                    <option selected disabled>Sélectionner une option :</option>
+                    <?php foreach ($subjectContact as $keySubject => $valueSubject) { ?>
+                        <option value="<?= $keySubject ?>" <?= isset($_POST['subjectContact']) && $_POST['subjectContact'] == $keySubject ? 'selected'  : '' ?>><?= $valueSubject ?></option>
+                    <?php } ?>
+                </select>
+                <div class="text-danger">
+                    <span><?= isset($errorMessages['subjectContact']) ? $errorMessages['subjectContact'] : '' ?></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <textarea class="form-control rounded-0" id="textContact" name="textContact" rows=7 placeholder="Votre message"><?= isset($_POST['textContact']) ? $_POST['textContact'] : '' ?></textarea>
+                <div class="text-danger">
+                    <span><?= isset($errorMessages['textContact']) ? $errorMessages['textContact'] : '' ?></span>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <button class="btn btn-info red darken-4" type="submit">Envoyer</button>
+            </div>
 
         </form>
     </div>
