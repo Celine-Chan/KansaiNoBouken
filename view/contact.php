@@ -22,7 +22,7 @@ require_once "../controllers/controller_contact.php";
     <div class="container mt-5">
         <form class="border border-danger p-5" action="contact.php" method="POST">
 
-            <p class="h4 mb-4 text-center">Contact</p>
+            <h1 class="mb-4 text-center">Contact</h1>
 
             <div class="mb-4">
                 <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Nom" value="<?= isset($_POST['lastName']) ? $_POST['lastName'] : '' ?>">
@@ -32,7 +32,7 @@ require_once "../controllers/controller_contact.php";
             </div>
 
             <div class="mb-4">
-                <input type="text" id="firstname" name="firstname" class="form-control" placeholder="Prénom" value="<?= isset($_POST['firstname']) ? $_POST['firstname'] : '' ?>">
+                <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Prénom" value="<?= isset($_POST['firstName']) ? $_POST['firstName'] : '' ?>">
                 <div class="text-danger">
                     <span><?= isset($errorMessages['firstName']) ? $errorMessages['firstName'] : '' ?></span>
                 </div>
@@ -48,7 +48,7 @@ require_once "../controllers/controller_contact.php";
             <div class="mb-4">
                 <label for="subjectContact">Sujet</label>
                 <select class="browser-default custom-select" aria-label="Default select example" name="subjectContact">
-                    <option selected disabled>Sélectionner une option :</option>
+                    <option selected disabled>Sélectionner une option</option>
                     <?php foreach ($subjectContact as $keySubject => $valueSubject) { ?>
                         <option value="<?= $keySubject ?>" <?= isset($_POST['subjectContact']) && $_POST['subjectContact'] == $keySubject ? 'selected'  : '' ?>><?= $valueSubject ?></option>
                     <?php } ?>
@@ -65,8 +65,8 @@ require_once "../controllers/controller_contact.php";
                 </div>
             </div>
 
-            <div class="mt-5">
-                <button class="btn btn-info red darken-4" type="submit">Envoyer</button>
+            <div class="mt-4">
+                <button class="btn btn-info red darken-4" type="submit" name="submit">Envoyer</button>
             </div>
 
         </form>

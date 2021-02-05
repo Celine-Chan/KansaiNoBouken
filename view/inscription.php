@@ -23,7 +23,7 @@ require_once "../controllers/controller_inscription.php";
     <div class="container">
         <form class="border border-danger p-5" method="POST" action="inscription.php">
 
-            <p class="h4 mb-5 text-center">Inscription</p>
+            <h1 class="mb-5 text-center">Inscription</h1>
 
             <div class="form-row mb-4">
                 <div class="col">

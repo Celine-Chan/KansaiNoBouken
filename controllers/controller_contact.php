@@ -40,13 +40,13 @@ if (isset($_POST['submit'])) {
             $errorMessages['mail'] = 'Veuillez saisir une adresse email.';
         }
     }
-    if (!isset($_POST['badge'])) {
-        $errorMessages['badge'] = 'veuillez faire un choix.';
+    if (!isset($_POST['subjectContact'])) {
+        $errorMessages['subjectContact'] = 'veuillez faire un choix.';
     }
     // sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
-    if (isset($_POST['badge'])) {
-        if (!array_key_exists($_POST['badge'], $badgeArray)) {
-            $errorMessages['badge'] = 'Veuillez choisir un chiffre.';
+    if (isset($_POST['subjectContact'])) {
+        if (!array_key_exists($_POST['subjectContact'], $subjectContact)) {
+            $errorMessages['subjectContact'] = 'Veuillez choisir un sujet.';
         }
     }
     if (isset($_POST['textContact'])) {
@@ -58,3 +58,4 @@ if (isset($_POST['submit'])) {
         }
     }
 }
+?>
