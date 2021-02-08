@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
     }
     if (isset($_POST['password'])) {
         if (!preg_match($regexPassword, $_POST['password'])) {
-            $errorMessages['password'] = 'Votre mot de passe doit contenir minimum 8 caractères, une lettre majuscule, un chiffre et un caractère spécial (!@#$%^&*-)';
+            $errorMessages['password'] = 'Votre mot de passe doit contenir au minimum 8 caractères, une lettre majuscule, un chiffre et un caractère spécial (!@#$%^&*-)';
         }
         if (empty($_POST['password'])) {
             $errorMessages['password'] = 'Veuillez saisir un mot de passe';
