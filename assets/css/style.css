@@ -218,7 +218,10 @@ nav {
 
 .textPageOsaka {
     text-align: justify;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    font-family: 'Bodoni Moda', serif;
+    color: black;
+    font-weight: bold;
 }
 
 .glicoImgOsaka {
