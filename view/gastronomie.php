@@ -118,7 +118,7 @@
         </div>
 
         <!-- Card recipe 2 -->
-        <div class="card mb-3" style="max-width: 480px">
+        <div class="card mb-3 ms-2" style="max-width: 480px">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../assets/img/gastronomie/pexels-ponyo-sakana-4193842.jpg" alt="ramen" class="img-fluid" />
@@ -188,7 +188,7 @@
         </div>
 
         <!-- Card recipe 3 -->
-        <div class="card mb-3" style="max-width: 480px">
+        <div class="card mb-3 ms-2" style="max-width: 480px">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../assets/img/gastronomie/yamayoshiOkonomiyaki2.jpg" alt="okonomiyaki" class="img-fluid" />

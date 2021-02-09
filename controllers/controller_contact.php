@@ -2,9 +2,9 @@
 
 $errorMessages = [];
 
-$regexName = '/^[a-zA-Z]+$/'; //rajouter les accents et tirets
+$regexName = '/^[a-zA-ZéèàêâùïüëçæœÉÈÇÙÆŒ-]+$/';
 $regexMail = '/^[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+.[a-zA-Z]{2,4}+$/';
-$regexTextArea = '/^[a-z0-9]+$/'; //ponctuation a rajouter dans la regex
+$regexTextArea = '/^[a-zA-Z0-9éèàêâùïüëçæœÉÈÇÙÆŒ .;:,_!?()=*&\"\'$€~-]+$/';
 
 $subjectContact = [
     1 => 'Article',

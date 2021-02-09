@@ -293,6 +293,17 @@ nav {
     background-color: #ff8a80;
 }
 
+.contactBorder{
+    border-radius: 2rem;
+}
+
+.contactTitle{
+    font-family: 'Bodoni Moda', serif;
+    font: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
 /* ---------- PAGE VOCABULAIRE ---------- */
 
 
@@ -385,4 +396,20 @@ li {
 .indexReturn:hover{
     text-decoration: underline;
     color: #00695C;
+}
+
+/* ---------- PAGE INSCRIPTION ---------- */
+.inscriptionForm{
+    color: black;
+}
+
+.inscriptionTitle{
+    font-family: 'Bodoni Moda', serif;
+    font: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.inscriptionBorder{
+    border-radius: 2rem;
 }

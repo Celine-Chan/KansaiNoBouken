@@ -16,14 +16,14 @@ require_once "../controllers/controller_inscription.php";
 
     <?php include('../view/pagePortion/navbar.php') ?>
 
-    <div class="banniereInscriptionImg mb-5">
+    <div class="banniereInscriptionImg">
         <img src="../assets/img/banniere/osakaPortKansai2.jpg" alt="takoyaki" class="img-fluid takoyakiImg">
     </div>
 
-    <div class="container">
-        <form class="border border-danger p-5" method="POST" action="inscription.php">
+    <div class="container mt-5 col-6 row g-3 mx-auto">
+        <form class="border border-danger p-5 inscriptionForm inscriptionBorder" method="POST" action="inscription.php">
 
-            <h1 class="mb-5 text-center">Inscription</h1>
+            <h1 class="mb-5 text-center inscriptionTitle">Inscription</h1>
 
             <div class="form-row mb-4">
                 <div class="col">
@@ -45,7 +45,7 @@ require_once "../controllers/controller_inscription.php";
                     </div>
                 </div>
                 <div class="col mt-4">
-                    <label for="birthDate" class="form-label">Votre date de naissance :</label>
+                    <label for="birthDate" class="form-label text-dark">Votre date de naissance :</label>
                     <input type="date" class="form-control" id="birthDate" name="birthDate" placeholder="05/12/1990" value="<?= isset($_POST['birthDate']) ? $_POST['birthDate'] : '' ?>">
                     <div class="text-danger">
                         <span><?= isset($errorMessages['birthDate']) ? $errorMessages['birthDate'] : '' ?></span>
@@ -54,18 +54,33 @@ require_once "../controllers/controller_inscription.php";
             </div>
 
             <div class="mb-3">
-                <label for="travelJapan" class="form-label">Avez-vous déjà effectué un voyage au Japon</label>
+                <label for="gender" class="form-label text-dark">Précisez votre genre :</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="gender" value="femme" <?= isset($_POST['gender']) && $_POST['gender'] == 'femme' ? 'checked' : '' ?>>
+                    <label class="form-check-label" for="gender">Femme</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="gender" value="nohommen" <?= isset($_POST['gender']) && $_POST['gender'] == 'homme' ? 'checked' : '' ?>>
+                    <label class="form-check-label" for="gender">Homme</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="gender" value="non précisé" <?= isset($_POST['gender']) && $_POST['gender'] == 'non précisé' ? 'checked' : '' ?>>
+                    <label class="form-check-label" for="gender">Non précisé</label>
+                </div>
+                <div class="text-danger">
+                    <span><?= isset($errorMessages['gender']) ? $errorMessages['gender'] : '' ?></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="travelJapan" class="form-label text-dark">Avez-vous déjà effectué un voyage au Japon</label>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="travelJapan" id="flexRadioDefault1" value="oui" <?= isset($_POST['travelJapan']) && $_POST['travelJapan'] == 'oui' ? 'checked' : '' ?>>
-                    <label class="form-check-label" for="flexRadioDefault1">
-                        Oui
-                    </label>
+                    <label class="form-check-label" for="flexRadioDefault1">Oui</label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="travelJapan" id="flexRadioDefault2" value="non" <?= isset($_POST['travelJapan']) && $_POST['travelJapan'] == 'non' ? 'checked' : '' ?>>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                        Non
-                    </label>
+                    <label class="form-check-label" for="flexRadioDefault2">Non</label>
                 </div>
                 <div class="text-danger">
                     <span><?= isset($errorMessages['travelJapan']) ? $errorMessages['travelJapan'] : '' ?></span>

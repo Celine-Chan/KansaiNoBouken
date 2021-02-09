@@ -2,7 +2,7 @@
 
 $errorMessages = [];
 
-$regexName = '/^[a-zA-Z]+$/'; //rajouter les accents et tirets
+$regexName = '/^[a-zA-ZéèàêâùïüëçæœÉÈÇÙÆŒ-]+$/';
 $regexBirthDate = '/^\d{4}(-)(((0)[0-9])|((1)[0-2]))(-)([0-2][0-9]|(3)[0-1])$/';
 $regexPassword = '/^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-Z]).{8,20}$/';
 
@@ -41,6 +41,9 @@ if (isset($_POST['submit'])) {
         if (empty($_POST['birthDate'])) {
             $errorMessages['birthDate'] = 'Veuillez saisir une date.';
         }
+    }
+    if (!isset($_POST['gender'])) {
+        $errorMessages['gender'] = 'Veuillez faire un choix.';
     }
     if (!isset($_POST['travelJapan'])) {
         $errorMessages['travelJapan'] = 'Veuillez faire un choix.';

@@ -19,10 +19,10 @@ require_once "../controllers/controller_contact.php";
         <img src="../assets/img/osaka/osakajou2.jpg" alt="osakajou" class="img-fluid osakajouImg">
     </div>
 
-    <div class="container mt-5">
-        <form class="border border-danger p-5" action="contact.php" method="POST">
+    <div class="container mt-5 col-6 row g-3 mx-auto">
+        <form class="border border-danger p-5 contactBorder" action="post_contact.php" method="POST">
 
-            <h1 class="mb-4 text-center">Contact</h1>
+            <h1 class="mb-4 text-center text-dark contactTitle">Contact</h1>
 
             <div class="mb-4">
                 <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Nom" value="<?= isset($_POST['lastName']) ? $_POST['lastName'] : '' ?>">
@@ -46,7 +46,7 @@ require_once "../controllers/controller_contact.php";
             </div>
 
             <div class="mb-4">
-                <label for="subjectContact">Sujet</label>
+                <label for="subjectContact" class="text-dark">Sujet</label>
                 <select class="browser-default custom-select" aria-label="Default select example" name="subjectContact">
                     <option selected disabled>Sélectionner une option</option>
                     <?php foreach ($subjectContact as $keySubject => $valueSubject) { ?>

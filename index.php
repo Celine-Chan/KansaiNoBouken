@@ -103,7 +103,7 @@ require_once "controllers/controller_index.php";
                         Découvrez la ville d'Osaka qui est la 3ème plus grande ville du Japon derrière Tokyo et
                         Yokohama.
                         osaka est connu pour son hospitalité, ses animations et sa gastronomie typique.
-                    <p><a href="view/osaka.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
+                    <p><a href="view/osaka.php" class="black-text seeMore ml-3">Plus d'infos sur Osaka <i class="fas fa-plus-circle"></i></a></p>
                     </p>
                 </div>
             </div>
@@ -120,11 +120,10 @@ require_once "controllers/controller_index.php";
                 <div class="card-body">
                     <h5 class="card-title titleCardSize">Kyoto 京都</h5>
                     <p class="card-text fontSizeCard">Découvrez Kyoto, ancienne capitale du
-                        Japon, le coeur culturel et religieux du
-                        Japon.
-                        Vous serez captivés par ses palais impériaux, ses milliers de sanctuaires shinto et temples
+                        Japon, le coeur culturel et religieux duJapon.
+                        Vous serez captivés par ses palais impériaux, sanctuaires shinto et temples
                         bouddhistes.
-                    <p><a href="view/kyoto.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
+                    <p><a href="view/kyoto.php" class="black-text seeMore ml-3">Plus d'infos sur Kyoto <i class="fas fa-plus-circle"></i></a></p>
                     </p>
                 </div>
             </div>
@@ -141,9 +140,9 @@ require_once "controllers/controller_index.php";
                 <div class="card-body">
                     <h5 class="card-title titleCardSize">Nara 奈良</h5>
                     <p class="card-text fontSizeCard">
-                        Découvrez Nara dont les monuments historiques de l'ancienne ville sont inscrits à l'UNESCO.
+                        Découvrez Nara et ses monuments historiques inscrits à l'UNESCO.
                         Laissez-vous transporté par l'ambiance de la ville où les cerfs en libertés flânent à vos côtés.
-                    <p><a href="view/nara.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
+                    <p><a href="view/nara.php" class="black-text seeMore ml-3">Plus d'infos sur Nara <i class="fas fa-plus-circle"></i></a></p>
                     </p>
 
                 </div>
@@ -164,7 +163,7 @@ require_once "controllers/controller_index.php";
                         Découvrez Kobe "la porte des esprits", connue pour sa célèbre viande de boeuf et son quartier
                         européen.
                         Elle offre une vue incroyable la nuit si vous êtes adeptes des ballades nocturnes.
-                    <p><a href="view/kobe.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
+                    <p><a href="view/kobe.php" class="black-text seeMore ml-3">Plus d'infos sur Kobe <i class="fas fa-plus-circle"></i></a></p>
                     </p>
                 </div>
             </div>
@@ -181,9 +180,9 @@ require_once "controllers/controller_index.php";
                 <div class="card-body">
                     <h5 class="card-title titleCardSize">Wakayama 和歌山</h5>
                     <p class="card-text fontSizeCard">
-                        This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
-                    <p><a href="view/kobe.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
+                        Préfecture au plus au sud de Honshu, connu notamment pous ses sites sacrés et chemins 
+                        de pélerinage dans les monts KII classés aux patrimoine mondial de l'Unesco.
+                    <p><a href="view/kobe.php" class="black-text seeMore ml-3">Plus d'infos sur Wakayama <i class="fas fa-plus-circle"></i></a></p>
                     </p>
                 </div>
             </div>
@@ -202,7 +201,7 @@ require_once "controllers/controller_index.php";
                     <p class="card-text fontSizeCard">
                         This is a longer card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
-                    <p><a href="view/kansai.php" class="black-text seeMore ml-3">Voir plus <i class="fas fa-plus-circle"></i></a></p>
+                    <p><a href="view/kansai.php" class="black-text seeMore ml-3">Plus d'infos sur le Kansai <i class="fas fa-plus-circle"></i></a></p>
                     </p>
 
                 </div>
@@ -216,23 +215,16 @@ require_once "controllers/controller_index.php";
 
     <div class="container-fluid gastronomieSection mt-5">
         <h2 class="titleFoodIndex">La Cuisine du kansai</h2>
-        <p class="container textGastronomie">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum."
-        </p>
-
+        <p class="container textGastronomie">La <bold>gastronomie japonaise</bold> est l'une des cuisines la plus répandue dans le monde. 
+        De par sa qualité et à sa diversité. Chaque région du Japon possède sa cuisine locale, selon la disposition des ingrédients cultivés.
+        Cette grande diversité gastonomique est désignée sous le terme <em>kyoudo ryouri 郷土料理</em>. Certaines spécialités régionales 
+        sont devenues des plats nationaux tels que les <em>sushis</em> ou encore l'<em>okonomiyaki</em>.<br>
+        La <bold>cuisine du Kansai</bold> est une cuisine très street-food du côté d'</em>Osaka</em> et très raffinée à </em>Kyoto</em>.
+        Connue mondialement grâce, notamment, à l'</em>okonomiyaki</em>, aux <em>takoyaki</em> et, bien sûr, le <em>boeuf de Kobe</em>.</p>
     </div>
 
     <div class="container mt-4 text-center">
-        <a href="view/gastronomie.php" class="black-text seeMore">Voir plus <i class="fas fa-plus-circle"></i></a>
+        <a href="view/gastronomie.php" class="black-text seeMore">Voir la page gastronomie <i class="fas fa-plus-circle"></i></a>
     </div>
 
     <div class="text-center mt-5">
