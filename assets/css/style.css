@@ -343,6 +343,11 @@ li {
     transition: 0.5s;
 }
 
+.ramenGif{
+    height: 3rem;
+    width: 4rem;
+}
+
 /* arrow top */
 #scrollTop {
     position: fixed;

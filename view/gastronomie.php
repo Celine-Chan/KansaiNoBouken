@@ -146,7 +146,7 @@
             <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="recipeRamen">Ramen</h5>
+                        <h5 class="modal-title" id="recipeRamen">Ramen <img src="../assets/img/animatedDishes/icon_ramen.gif" class="ramenGif" alt="ramenGif"></h5>
                         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-center">
