@@ -433,6 +433,15 @@ li {
 /* ---------- PAGE INSCRIPTION ---------- */
 .inscriptionForm{
     color: black;
+    background-color: white;
+}
+
+.backBody{
+    background-image: url('../img/osaka/osaka_night.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .inscriptionTitle{

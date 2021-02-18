@@ -12,19 +12,19 @@ require_once "../controllers/controller_inscription.php";
 </head>
 
 
-<body>
+<body class="backBody">
 
     <?php include('../view/pagePortion/navbar.php') ?>
 
-    <div class="banniereInscriptionImg">
+    <!-- <div class="banniereInscriptionImg">
         <img src="../assets/img/banniere/osakaPortKansai2.jpg" alt="takoyaki" class="img-fluid takoyakiImg">
-    </div>
+    </div> -->
 
     <div class="container mt-5 col-6 row g-3 mx-auto">
 
         <p class="h3 text-info"><?= $messages['addUsers'] ?? '' ?></p>
 
-        <form class="border border-danger p-5 inscriptionForm inscriptionBorder" method="POST" action="inscription.php">
+        <form class="border border-danger shadow-lg p-5 inscriptionForm inscriptionBorder" method="POST" action="inscription.php">
 
             <h1 class="mb-5 text-center inscriptionTitle">Inscription</h1>
 
