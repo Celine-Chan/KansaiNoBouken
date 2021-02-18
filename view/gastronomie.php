@@ -15,10 +15,10 @@
         <img src="../assets/img/banniere/takoyaki2.jpg" alt="takoyaki" class="img-fluid takoyakiImg">
     </div>
 
-    <h1 class="text-center mt-5">Gastronomie du Kansai</h1>
+    <h1 class="text-center mt-5 titleGastronomie">Gastronomie du Kansai</h1>
 
     <div class="d-flex flex-row mt-5 container">
-        <div><img src="../assets/img/gastronomie/sushi.jpg" alt="ramenOsaka" class="img-fluid ramenOsaka"></div>
+        <div><img src="../assets/img/gastronomie/sushi.jpg" alt="sushiOsaka" class="img-fluid sushiOsaka rounded d-none d-sm-block"></div>
         <div>
             <p class="textGastronomyPage ml-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
                 eirmod tempor invidunt ut labore
@@ -41,7 +41,7 @@
         <img src="../assets/img/separator.svg" alt="separator" class="w-25">
     </div>
 
-    <h2>Quelques recettes...</h2>
+    <h2 class="subTitleGastronomie ms-5 mt-5">Quelques recettes...</h2>
     <div class="container-fluid mx-auto d-flex row mt-5 mx-auto">
         <!-- Card recipe 1 -->
         <div class="card mb-3" style="max-width: 480px">
@@ -252,7 +252,7 @@
             <img src="../assets/img/separator.svg" alt="separator" class="w-25">
         </div>
 
-        <h2>Quelques adresses...</h2>
+        <h2 class="subTitleGastronomie ms-5 mt-5">Quelques adresses...</h2>
         <div>
 
         </div>
