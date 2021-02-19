@@ -1,7 +1,7 @@
 <?php
 
-require_once '../models/database.php';
-require_once '../models/uploadImg.php';
+// require_once '../models/database.php';
+// require_once '../models/uploadImg.php';
 
 $messagesUpload = [];
 $errorMessages = [];
@@ -54,16 +54,16 @@ if (count(scandir('../assets/img/galerieUpload')) > 0) {
 //var_dump(scandir('img'));
 
 
-if (empty($errorMessages)) {
-    $uploadImgObj = new UploadImg;
+// if (empty($errorMessages)) {
+//     $uploadImgObj = new UploadImg;
 
-    if ($uploadImgObj->addImg()) {
-        $messages['addImg'] = 'Votre image a bien été enregistré !';
-    } else {
-        $messages['addImg'] = 'Erreur de connexion lors de l\'upload';
-    }
+//     if ($uploadImgObj->addImg()) {
+//         $messages['addImg'] = 'Votre image a bien été enregistré !';
+//     } else {
+//         $messages['addImg'] = 'Erreur de connexion lors de l\'upload';
+//     }
     
-}
+// }
 
 
 ?>

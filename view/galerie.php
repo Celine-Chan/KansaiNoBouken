@@ -1,8 +1,4 @@
-<?php
 
-require_once "../controllers/controller_galerie.php";
-
-?>
 <!doctype html>
 <html lang="fr">
 

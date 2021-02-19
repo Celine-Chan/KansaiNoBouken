@@ -12,4 +12,3 @@ for ($i = 0; $i < count($galleryUpload); $i++) { // count = compte tous les Ã©lÃ
     }
 }
 
-?>
