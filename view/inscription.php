@@ -22,9 +22,11 @@ require_once "../controllers/controller_inscription.php";
 
     <div class="container mt-5 col-6 row g-3 mx-auto">
 
-        <p class="h3 text-info"><?= $messages['addUsers'] ?? '' ?></p>
 
-        <form class="border border-danger shadow-lg p-5 inscriptionForm inscriptionBorder" method="POST" action="inscription.php">
+
+        <form class="shadow-lg p-5 inscriptionForm" method="POST" action="inscription.php">
+
+            <p class="h3 text-info"><?= $messages['addUsers'] ?? '' ?></p>
 
             <h1 class="mb-5 text-center inscriptionTitle">Inscription</h1>
 
@@ -58,15 +60,15 @@ require_once "../controllers/controller_inscription.php";
 
             <div class="mb-3">
                 <label for="gender" class="form-label text-dark">Précisez votre genre :</label>
-                <div class="form-check">
+                <div class="form-check ms-3">
                     <input class="form-check-input" type="radio" name="gender" id="gender" value="femme" <?= isset($_POST['gender']) && $_POST['gender'] == 'femme' ? 'checked' : '' ?>>
                     <label class="form-check-label" for="gender">Femme</label>
                 </div>
-                <div class="form-check">
+                <div class="form-check ms-3">
                     <input class="form-check-input" type="radio" name="gender" id="gender" value="homme" <?= isset($_POST['gender']) && $_POST['gender'] == 'homme' ? 'checked' : '' ?>>
                     <label class="form-check-label" for="gender">Homme</label>
                 </div>
-                <div class="form-check">
+                <div class="form-check ms-3">
                     <input class="form-check-input" type="radio" name="gender" id="gender" value="non précisé" <?= isset($_POST['gender']) && $_POST['gender'] == 'non précisé' ? 'checked' : '' ?>>
                     <label class="form-check-label" for="gender">Non précisé</label>
                 </div>
@@ -77,12 +79,12 @@ require_once "../controllers/controller_inscription.php";
 
             <div class="mb-3">
                 <label for="japanTrip" class="form-label text-dark">Avez-vous déjà effectué un voyage au Japon</label>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="japanTrip" id="flexRadioDefault1" value="oui" <?= isset($_POST['japanTrip']) && $_POST['japanTrip'] == 'oui' ? 'checked' : '' ?>>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="radio" name="japanTrip" id="flexRadioDefault1" value="0" <?= isset($_POST['japanTrip']) && $_POST['japanTrip'] == '0' ? 'checked' : '' ?>>
                     <label class="form-check-label" for="flexRadioDefault1">Oui</label>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="japanTrip" id="flexRadioDefault2" value="non" <?= isset($_POST['japanTrip']) && $_POST['japanTrip'] == 'non' ? 'checked' : '' ?>>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="radio" name="japanTrip" id="flexRadioDefault2" value="1" <?= isset($_POST['japanTrip']) && $_POST['japanTrip'] == '1' ? 'checked' : '' ?>>
                     <label class="form-check-label" for="flexRadioDefault2">Non</label>
                 </div>
                 <div class="text-danger">

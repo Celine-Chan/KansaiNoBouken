@@ -3,7 +3,7 @@
 require_once '../models/database.php';
 require_once '../models/users.php';
 
-var_dump($_POST);
+//var_dump($_POST);
 
 $errorMessages = [];
 
@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
         } 
     } 
 
-    var_dump($errorMessages);
+    //var_dump($errorMessages);
 
     //je vérifie s'il n'y a pas d'erreurs afin de lancer ma requête
     if (empty($errorMessages)) {
@@ -96,14 +96,13 @@ if (isset($_POST['submit'])) {
             'pseudo' => htmlspecialchars($_POST['pseudo']),
             'birthDate' => htmlspecialchars($_POST['birthDate']),
             'gender' => htmlspecialchars($_POST['gender']),
-            'japanTrip' => htmlspecialchars($_POST['japanTrip']),
+            'japanTrip' => intval(htmlspecialchars($_POST['japanTrip'])),
             'mail' => htmlspecialchars($_POST['mail']),
             'password' => htmlspecialchars($_POST['password']),
             'role' => 0
         ];
 
-        var_dump($usersDetails);
-        var_dump($usersObj->addUsers($usersDetails));
+        // var_dump($usersDetails);      
         
         if ($usersObj->addUsers($usersDetails)) {
             $messages['addUsers'] = 'Votre inscription a bien été enregistré !';
