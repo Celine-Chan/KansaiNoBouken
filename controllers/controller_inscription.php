@@ -10,6 +10,7 @@ $errorMessages = [];
 $messages = [];
 
 $regexName = '/^[a-zA-ZéèàêâùïüëçæœÉÈÇÙÆŒ-]+$/';
+$regexPseudo = '/^[a-zA-ZéèàêâùïüëçæœÉÈÇÙÆŒ\-0-9!@#$%^&\ _*]+$/';
 $regexBirthDate = '/^\d{4}(-)(((0)[0-9])|((1)[0-2]))(-)([0-2][0-9]|(3)[0-1])$/';
 $regexPassword = '/^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-Z]).{8,20}$/';
 
@@ -34,7 +35,7 @@ if (isset($_POST['submit'])) {
     }
 
     if (isset($_POST['pseudo'])) {
-        if (!preg_match($regexName, $_POST['pseudo'])) {
+        if (!preg_match($regexPseudo, $_POST['pseudo'])) {
             $errorMessages['pseudo'] = 'Veuillez saisir un pseudo valide.';
         }
         if (empty($_POST['pseudo'])) {
@@ -63,7 +64,7 @@ if (isset($_POST['submit'])) {
     }
 
     if (isset($_POST['mail'])) {
-        //filtre pour éviter une regex
+        //filtre pour éviter une regex 
         if (!filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL)) {
             $errorMessages['mail'] = 'Veuillez saisir une adresse mail valide';
         }

@@ -19,6 +19,8 @@ class Users extends DataBase
         //nous préparons notre requête à l'aide de la méthode prepare
         $addUsersQuery = $this->dataBase->prepare($query);
 
+        $password = password_hash($usersDetails['password'], PASSWORD_BCRYPT);
+
         // je bind mes valeurs à l'aide de la méthode bindValue() (=lier les valeurs)
         $addUsersQuery->bindValue(':users_firstname', $usersDetails['firstName'], PDO::PARAM_STR);
         $addUsersQuery->bindValue(':users_lastname', $usersDetails['lastName'], PDO::PARAM_STR);
@@ -27,7 +29,7 @@ class Users extends DataBase
         $addUsersQuery->bindValue(':users_gender', $usersDetails['gender'], PDO::PARAM_STR);
         $addUsersQuery->bindValue(':users_japantrip', $usersDetails['japanTrip'], PDO::PARAM_INT);
         $addUsersQuery->bindValue(':users_mail', $usersDetails['mail'], PDO::PARAM_STR);
-        $addUsersQuery->bindValue(':users_password', $usersDetails['password'], PDO::PARAM_STR);
+        $addUsersQuery->bindValue(':users_password', $password, PDO::PARAM_STR);
         $addUsersQuery->bindValue(':users_role', $usersDetails['role'], PDO::PARAM_INT);
         
         //tester et executer la requête pour afficher message erreur

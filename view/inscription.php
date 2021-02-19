@@ -32,26 +32,29 @@ require_once "../controllers/controller_inscription.php";
 
             <div class="form-row mb-4">
                 <div class="col">
-                    <input type="text" id="firstName" class="form-control" name="firstName" placeholder="Prénom" value="<?= isset($_POST['firstName']) ? htmlspecialchars($_POST['firstName']) : '' ?>">
+                    <label for="firstName">Votre prénom :</label>
+                    <input type="text" id="firstName" class="form-control ms-3" name="firstName" placeholder="ex : Jane" value="<?= isset($_POST['firstName']) ? htmlspecialchars($_POST['firstName']) : '' ?>">
                     <div class="text-danger">
                         <span><?= isset($errorMessages['firstName']) ? $errorMessages['firstName'] : '' ?></span>
                     </div>
                 </div>
                 <div class="col mt-4">
-                    <input type="text" id="lastName" class="form-control" name="lastName" placeholder="Nom" value="<?= isset($_POST['lastName']) ? $_POST['lastName'] : '' ?>">
+                    <label for="lastName">Votre nom :</label>
+                    <input type="text" id="lastName" class="form-control ms-3" name="lastName" placeholder="ex : Doe" value="<?= isset($_POST['lastName']) ? $_POST['lastName'] : '' ?>">
                     <div class="text-danger">
                         <span><?= isset($errorMessages['lastName']) ? $errorMessages['lastName'] : '' ?></span>
                     </div>
                 </div>
                 <div class="col mt-4">
-                    <input type="text" id="pseudo" class="form-control" name="pseudo" placeholder="Pseudo" value="<?= isset($_POST['pseudo']) ? htmlspecialchars($_POST['pseudo']) : '' ?>">
+                    <label for="pseudo">Votre pseudo :</label>
+                    <input type="text" id="pseudo" class="form-control ms-3" name="pseudo" placeholder="ex : Jane76" value="<?= isset($_POST['pseudo']) ? htmlspecialchars($_POST['pseudo']) : '' ?>">
                     <div class="text-danger">
                         <span><?= isset($errorMessages['pseudo']) ? $errorMessages['pseudo'] : '' ?></span>
                     </div>
                 </div>
                 <div class="col mt-4">
                     <label for="birthDate" class="form-label text-dark">Votre date de naissance :</label>
-                    <input type="date" class="form-control" id="birthDate" name="birthDate" placeholder="05/12/1990" value="<?= isset($_POST['birthDate']) ? $_POST['birthDate'] : '' ?>">
+                    <input type="date" class="form-control ms-3" id="birthDate" name="birthDate" placeholder="05/12/1990" value="<?= isset($_POST['birthDate']) ? $_POST['birthDate'] : '' ?>">
                     <div class="text-danger">
                         <span><?= isset($errorMessages['birthDate']) ? $errorMessages['birthDate'] : '' ?></span>
                     </div>
@@ -93,21 +96,25 @@ require_once "../controllers/controller_inscription.php";
             </div>
 
             <div class="mb-4">
-                <input type="email" id="mail" name="mail" class="form-control" placeholder="E-mail" value="<?= isset($_POST['mail']) ? $_POST['mail'] : '' ?>">
+                <label for="mail">Votre E-mail :</label>
+                <input type="email" id="mail" name="mail" class="form-control ms-3" placeholder="ex : janedoe@mail.com" value="<?= isset($_POST['mail']) ? $_POST['mail'] : '' ?>">
                 <div class="text-danger">
                     <span><?= isset($errorMessages['mail']) ? $errorMessages['mail'] : '' ?></span>
                 </div>
             </div>
 
-            <div class="mb-4">
-                <input type="password" id="password" name="password" class="form-control" placeholder="Mot de passe" aria-describedby="defaultRegisterFormPasswordHelpBlock" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
+            <div class="mb-2">
+                <label for="password">Saisissez un mot de passe :</label>
+                <input type="password" id="password" name="password" class="form-control ms-3" placeholder="ex : JaneDoe76*" aria-describedby="defaultRegisterFormPasswordHelpBlock" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
+                <div id="emailHelp" class="form-text ms-3 text-primary">Votre mot de passe doit contenir au minimum 8 caractères, une lettre majuscule, un chiffre et un caractère spécial (!@#$%^&*-)</div>
                 <div class="text-danger">
                     <span><?= isset($errorMessages['password']) ? $errorMessages['password'] : '' ?></span>
                 </div>
             </div>
 
             <div class="mb-4">
-                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Comfirmer votre mot de passe" aria-describedby="defaultRegisterFormPasswordHelpBlock" value="<?= isset($_POST['confirmPassword']) ? $_POST['confirmPassword'] : '' ?>">
+                <label for="confirmPasword">Comfirmer votre mot de passe :</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" class="form-control ms-3" placeholder="ex : JaneDoe76*" aria-describedby="defaultRegisterFormPasswordHelpBlock" value="<?= isset($_POST['confirmPassword']) ? $_POST['confirmPassword'] : '' ?>">
                 <div class="text-danger">
                     <span><?= isset($errorMessages['confirmPassword']) ? $errorMessages['confirmPassword'] : '' ?></span>
                 </div>

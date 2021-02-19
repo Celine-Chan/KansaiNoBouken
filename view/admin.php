@@ -67,6 +67,8 @@ require_once "../controllers/controller_admin.php";
         <div class="mx-auto col-8">
             <form action="admin.php" method="POST" enctype="multipart/form-data" class="mt-5">
 
+                <p class="h3 text-info"><?= $messages['addImg'] ?? '' ?></p>
+
                 <h2 class="mt-3 ms-4 text-center mb-3 subTitleAdmin">Upload Galerie</h2>
 
                 <div class="form-group mx-4">
@@ -75,7 +77,6 @@ require_once "../controllers/controller_admin.php";
                 </div>
 
                 <div class="form-group mt-3 text-center">
-                    <!-- <input type="submit" name="submit" value="Envoyer"> -->
                     <button type="submit" name="submit" class="btn btn-primary" id="bouton">Envoyer photo</button>
                 </div>
 

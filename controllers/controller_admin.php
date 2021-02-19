@@ -1,5 +1,11 @@
 <?php
 
+require_once '../models/database.php';
+require_once '../models/uploadImg.php';
+
+$messagesUpload = [];
+$errorMessages = [];
+
 $message = "";
 $messageSecond = "";
 $messageOk = "";
@@ -35,7 +41,7 @@ if (isset($_FILES["fileToUpload"]) && $_FILES["fileToUpload"]["error"] == 0) {
             $messageOk = 'Le fichier ' . $filename . ' a bien été uploadé.';
         }
     } else {
-        $messageNoFormat = 'Erreur : Mr Mime #122 !!';
+        $messageNoFormat = 'Erreur !!';
     }
 }
 
@@ -46,5 +52,18 @@ if (count(scandir('../assets/img/galerieUpload')) > 0) {
 }
 //si count(scandir()) est plus grand que 0 on enlève 2 sinon le nombre d'image est 0.
 //var_dump(scandir('img'));
+
+
+if (empty($errorMessages)) {
+    $uploadImgObj = new UploadImg;
+
+    if ($uploadImgObj->addImg()) {
+        $messages['addImg'] = 'Votre image a bien été enregistré !';
+    } else {
+        $messages['addImg'] = 'Erreur de connexion lors de l\'upload';
+    }
+    
+}
+
 
 ?>
