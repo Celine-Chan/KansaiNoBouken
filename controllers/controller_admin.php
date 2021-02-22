@@ -1,7 +1,7 @@
 <?php
 
-// require_once '../models/database.php';
-// require_once '../models/uploadImg.php';
+require_once '../models/database.php';
+require_once '../models/osakaArticle.php';
 
 $messagesUpload = [];
 $errorMessages = [];
@@ -54,16 +54,30 @@ if (count(scandir('../assets/img/galerieUpload')) > 0) {
 //var_dump(scandir('img'));
 
 
-// if (empty($errorMessages)) {
-//     $uploadImgObj = new UploadImg;
+//PDO Article Osaka
 
-//     if ($uploadImgObj->addImg()) {
-//         $messages['addImg'] = 'Votre image a bien été enregistré !';
-//     } else {
-//         $messages['addImg'] = 'Erreur de connexion lors de l\'upload';
-//     }
-    
-// }
+$messages = [];
+
+if (isset($_POST['addArticleOsaka']) && empty($errorMessages)) {
+    $osakaArtObj = new Osaka;
+
+
+    //création d'un tableau associatif contenant toutes les infos du form
+    $osakaArtDetails = [
+        'article_title' => htmlspecialchars($_POST['osakaTitle']),
+        'article_contenu' => htmlspecialchars($_POST['osakaArticle']),
+        'article_date' => htmlspecialchars($_POST['osakaDate']),
+        'city_id' => 2
+    ];
+
+    var_dump($osakaArtDetails);
+
+    if ($osakaArtObj->addOsakaArticle($osakaArtDetails)) {
+        $messages['addArticle'] = 'article enregistré';
+    } else {
+        $messages['addArticle'] = 'Erreur de connexion lors de l\'enregistrement';
+    }
+}
 
 
 ?>

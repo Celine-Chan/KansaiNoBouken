@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
         }
         if (empty($_POST['pseudo'])) {
             $errorMessages['pseudo'] = 'Veuillez saisir votre pseudo.';
-        }
+        } 
     }
 
     if (isset($_POST['birthDate'])) {
@@ -81,8 +81,8 @@ if (isset($_POST['submit'])) {
             $errorMessages['password'] = 'Veuillez saisir un mot de passe';
         } else if ($_POST['confirmPassword'] != $_POST['password']) {
             $errorMessages['confirmPassword'] = 'Vos mots de passe doivent être identique !';
-        } 
-    } 
+        }
+    }
 
     //var_dump($errorMessages);
 
@@ -104,13 +104,11 @@ if (isset($_POST['submit'])) {
         ];
 
         // var_dump($usersDetails);      
-        
+
         if ($usersObj->addUsers($usersDetails)) {
             $messages['addUsers'] = 'Votre inscription a bien été enregistré !';
         } else {
             $messages['addUsers'] = 'Erreur de connexion lors de l\'inscription';
         }
-        
     }
 }
-?>

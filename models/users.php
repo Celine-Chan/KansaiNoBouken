@@ -31,13 +31,12 @@ class Users extends DataBase
         $addUsersQuery->bindValue(':users_mail', $usersDetails['mail'], PDO::PARAM_STR);
         $addUsersQuery->bindValue(':users_password', $password, PDO::PARAM_STR);
         $addUsersQuery->bindValue(':users_role', $usersDetails['role'], PDO::PARAM_INT);
-        
+
         //tester et executer la requête pour afficher message erreur
         if ($addUsersQuery->execute()) {
             return true;
         } else {
             return false;
         }
-        
-    }
+    } 
 }

@@ -1,3 +1,9 @@
+<?php
+
+require_once '../controllers/controller_index.php';
+
+?>
+
 <!doctype html>
 <html lang="fr">
 
@@ -26,13 +32,13 @@
         <div class="col">
             <div class="container textPageOsaka mt-5">
                 <p>La ville d'Osaka se situe dans la préfecture du même nom situé au centre-ouest de l'île de Honshu.
-                Elle est la troisième plus grande ville du Japon derrière Tokyo et Yokohama. Littéralement, Osaka signifie
-                "grande pente".
-                Sa construction remonte au IIIème siècle et devient un atout majeur dans les relations entre la Corée et la Chine.
-                Le célèbre Toyotomi Hideyoshi décida en 1583 d'y construire un chateau, le fameux Osaka-jo. Cette construction permettra
-                à la ville d'Osaka de devenir un lieu de commerce réputé.</p>
+                    Elle est la troisième plus grande ville du Japon derrière Tokyo et Yokohama. Littéralement, Osaka signifie
+                    "grande pente".
+                    Sa construction remonte au IIIème siècle et devient un atout majeur dans les relations entre la Corée et la Chine.
+                    Le célèbre Toyotomi Hideyoshi décida en 1583 d'y construire un chateau, le fameux Osaka-jo. Cette construction permettra
+                    à la ville d'Osaka de devenir un lieu de commerce réputé.</p>
                 <p>Cependant, pendant la 2nd guerre mondiale, la ville a été fortement impacté par les bombardements. La reconstruction
-                s'est effectué très rapidement, d'où une archtecture très diversifiée mélant traditions et modernité.</p>
+                    s'est effectué très rapidement, d'où une archtecture très diversifiée mélant traditions et modernité.</p>
             </div>
             <div class="container row imgPageOsaka">
                 <img src="../assets/img/osaka/legoGirafe.jpg" alt="lego girafe" class="img-fluid legoImgOsaka">
@@ -45,9 +51,22 @@
     </div>
 
     <div>
-        <h2 class="mt-5">Article</h2>
+        <h2 class="mt-5 text-dark ms-5 mb-5">Derniers articles...</h2>
 
-        <?= (isset($_POST['osakaArticle'])) ? $_POST['osakaArticle'] : '' ?>
+        <div class="card container">
+            
+                <div class="card-body">
+                    <p class="card-text">
+                    <p><?= (isset($_POST['osakaTitle'])) ? $_POST['osakaTitle'] : '' ?></p>
+                    <p><?= (isset($_POST['osakaArticle'])) ? $_POST['osakaArticle'] : '' ?></p>
+                    <p>Date de création : <?= (isset($_POST['osakaDate'])) ? $_POST['osakaDate'] : '' ?></p>
+                    <p>Ville : <?= (isset($_POST['cityId'])) ? $_POST['cityId'] : '' ?></p>
+                    </p>
+                    
+                </div>
+            
+        </div>
+
     </div>
 
 

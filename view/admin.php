@@ -25,14 +25,20 @@ require_once "../controllers/controller_admin.php";
         <h1 class="text-center mb-5 adminTitle">Compte administrateur</h1>
 
         <div class="mt-5 text-center">
-            <form action="osaka.php" method="POST" class="container col-10 row g-3 mx-auto">
+            <form action="admin.php" method="POST" class="container col-10 row g-3 mx-auto">
+
+                <p class="h3 text-info"><?= $messages['addArticle'] ?? '' ?></p>
 
                 <h2 class="mt-3 mb-3 subTitleAdmin">Article Osaka</h2>
 
-                <textarea name="osakaArticle">Welcome to TinyMCE!</textarea>
+                <input type="text" name="osakaTitle" placeholder="Titre de l'article">
+                <input type="date" name="osakaDate" placeholder="Date de l'article">
+                <input type="text" name="cityId" placeholder="Ville de l'article">
+
+                <textarea name="osakaArticle" id="editor">Welcome to TinyMCE!</textarea>
 
                 <div class="col-12 text-center mb-3">
-                    <input class="btn btn-primary" type="submit" name="submit" value="envoyer">
+                    <input class="btn btn-primary" type="submit" name="addArticleOsaka" value="envoyer">
                 </div>
             </form>
 
@@ -49,7 +55,7 @@ require_once "../controllers/controller_admin.php";
 
                 <h2 class="mt-3 mb-3 subTitleAdmin">Article Kyoto</h2>
 
-                <textarea name="kyotoArticle">Welcome to TinyMCE!</textarea>
+                <textarea name="kyotoArticle" id="editor">Welcome to TinyMCE!</textarea>
 
                 <div class="col-12 text-center mb-3">
                     <input class="btn btn-primary" type="submit" name="submit" value="envoyer">
@@ -100,10 +106,67 @@ require_once "../controllers/controller_admin.php";
     </div>
 
     <script>
+        // tinymce.init({
+        //     selector: 'textarea',
+        //     plugins: 'advlist autolink lists link style image emoticons media table charmap print preview hr anchor pagebreak',
+        //     toolbar_mode: 'floating',
+        // });
+
         tinymce.init({
-            selector: 'textarea',
-            plugins: 'advlist autolink lists link image media table charmap print preview hr anchor pagebreak',
-            toolbar_mode: 'floating',
+            selector: 'textarea#editor',
+            plugins: 'image code advlist autolink lists link style image emoticons media table charmap print preview hr anchor pagebreak',
+            toolbar: 'undo redo | link image | code',
+            /* enable title field in the Image dialog*/
+            image_title: true,
+            /* enable automatic uploads of images represented by blob or data URIs*/
+            automatic_uploads: true,
+            /*
+            URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
+            images_upload_url: 'postAcceptor.php',
+            here we add custom filepicker only to Image dialog
+            */
+            file_picker_types: 'image',
+            /* and here's our custom image picker*/
+            file_picker_callback: function(cb, value, meta) {
+                var input = document.createElement('input');
+                input.setAttribute('type', 'file');
+                input.setAttribute('accept', 'image/*');
+
+                /*
+                Note: In modern browsers input[type="file"] is functional without
+                even adding it to the DOM, but that might not be the case in some older
+                or quirky browsers like IE, so you might want to add it to the DOM
+                just in case, and visually hide it. And do not forget do remove it
+                once you do not need it anymore.
+                */
+
+                input.onchange = function() {
+                    var file = this.files[0];
+
+                    var reader = new FileReader();
+                    reader.onload = function() {
+                        /*
+                        Note: Now we need to register the blob in TinyMCEs image blob
+                        registry. In the next release this part hopefully won't be
+                        necessary, as we are looking to handle it internally.
+                        */
+                        var id = 'blobid' + (new Date()).getTime();
+                        var blobCache = tinymce.activeEditor.editorUpload.blobCache;
+                        var base64 = reader.result.split(',')[1];
+                        var blobInfo = blobCache.create(id, file, base64);
+                        blobCache.add(blobInfo);
+
+                        /* call the callback and populate the Title field with the file name */
+                        cb(blobInfo.blobUri(), {
+                            title: file.name
+                        });
+                    };
+                    reader.readAsDataURL(file);
+                };
+
+                input.click();
+            },
+            content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
         });
     </script>
     <?php include('../view/pagePortion/footer.php') ?>
