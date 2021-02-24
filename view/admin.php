@@ -27,18 +27,28 @@ require_once "../controllers/controller_admin.php";
         <div class="mt-5 text-center">
             <form action="admin.php" method="POST" class="container col-10 row g-3 mx-auto">
 
-                <p class="h3 text-info"><?= $messages['addArticle'] ?? '' ?></p>
+                <p class="h3 text-info"><?= $messages['addArt'] ?? '' ?></p>
 
-                <h2 class="mt-3 mb-3 subTitleAdmin">Article Osaka</h2>
+                <h2 class="mt-3 mb-3 subTitleAdmin">Ajout d'article</h2>
 
-                <input type="text" name="osakaTitle" placeholder="Titre de l'article">
-                <input type="date" name="osakaDate" placeholder="Date de l'article">
-                <input type="text" name="cityId" placeholder="Ville de l'article">
+                <input type="text" name="article_title" placeholder="Titre de l'article">
+                <input name="article_date" value="<?php date_default_timezone_set('Europe/Paris');
+                                                setlocale(LC_TIME, 'fr.utf8');
+                                                echo strftime('%d %B %G') ?>">
 
-                <textarea name="osakaArticle" id="editor">Welcome to TinyMCE!</textarea>
+                <!-- <input type="text" name="cityId" placeholder="Ville de l'article"> -->
+
+                <select class="form-select" name="city_id" aria-label="Default select example">
+                    <option selected disabled>Sélection de la ville</option>
+                    <?php foreach ($chooseCity as $keyCity => $valueCity) { ?>
+                        <option value="<?= $keyCity ?>" <?= isset($_POST['chooseCity']) && $_POST['chooseCity'] == $keyCity ? 'selected' : '' ?>><?= $valueCity ?></option>
+                    <?php } ?>
+                </select>
+
+                <textarea name="article_contenu" id="editor">Welcome to TinyMCE!</textarea>
 
                 <div class="col-12 text-center mb-3">
-                    <input class="btn btn-primary" type="submit" name="addArticleOsaka" value="envoyer">
+                    <input class="btn btn-primary" type="submit" name="addArticle" value="envoyer">
                 </div>
             </form>
 
@@ -46,7 +56,7 @@ require_once "../controllers/controller_admin.php";
             <button type="button" class="btn btn-danger btn-rounded"><i class="fas fa-trash-alt"></i> Supprimer l'article</button>
         </div>
 
-        <div class="text-center mt-5">
+        <!-- <div class="text-center mt-5">
             <img src="../assets/img/separator.svg" alt="separator" class="w-25">
         </div>
 
@@ -64,7 +74,7 @@ require_once "../controllers/controller_admin.php";
 
             <button type="button" class="btn btn-success btn-rounded"><i class="fas fa-edit"></i> Modifier l'article</button>
             <button type="button" class="btn btn-danger btn-rounded"><i class="fas fa-trash-alt"></i> Supprimer l'article</button>
-        </div>
+        </div> -->
 
         <div class="text-center mt-5">
             <img src="../assets/img/separator.svg" alt="separator" class="w-25">

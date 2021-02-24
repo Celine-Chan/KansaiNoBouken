@@ -57,10 +57,10 @@ require_once '../controllers/controller_index.php';
             
                 <div class="card-body">
                     <p class="card-text">
-                    <p><?= (isset($_POST['osakaTitle'])) ? $_POST['osakaTitle'] : '' ?></p>
-                    <p><?= (isset($_POST['osakaArticle'])) ? $_POST['osakaArticle'] : '' ?></p>
-                    <p>Date de création : <?= (isset($_POST['osakaDate'])) ? $_POST['osakaDate'] : '' ?></p>
-                    <p>Ville : <?= (isset($_POST['cityId'])) ? $_POST['cityId'] : '' ?></p>
+                    <p><?= (isset($_POST['article_title'])) ? $_POST['article_title'] : '' ?></p>
+                    <p><?= (isset($_POST['article_contenu'])) ? $_POST['article_contenu'] : '' ?></p>
+                    <p>Date de création : <?= (isset($_POST['article_date'])) ? $_POST['article_date'] : '' ?></p>
+                    <p>Ville : <?= (isset($_POST['city_id'])) ? $_POST['city_id'] : '' ?></p>
                     </p>
                     
                 </div>
