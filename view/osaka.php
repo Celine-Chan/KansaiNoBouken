@@ -1,6 +1,7 @@
 <?php
 
-require_once '../controllers/controller_index.php';
+require_once '../controllers/controller_osaka.php';
+
 
 ?>
 
@@ -58,22 +59,21 @@ require_once '../controllers/controller_index.php';
             <button type="button" class="btn btn-danger btn-rounded"><i class="fas fa-trash-alt"></i> Supprimer l'article</button>
         </div>
 
-        <div class="card container">
-            <div class="card-body">
-                <p class="card-text">
+        <?php foreach ($osakaArticles as $articles) { ?>
 
-                    <?php if (isset($_POST['city_id']) == 2) { ?>
 
-                <p><?= (isset($_POST['article_title'])) ? $_POST['article_title'] : '' ?></p>
-                <p><?= (isset($_POST['article_contenu'])) ? $_POST['article_contenu'] : '' ?></p>
-                <p>Date de création : <?= (isset($_POST['article_date'])) ? $_POST['article_date'] : '' ?></p>
-                <p>Ville : <?= (isset($_POST['city_id'])) ? $_POST['city_id'] : '' ?></p>
-
-            <?php } ?>
-
-            </p>
+            <div class="card container">
+                <div class="h3"><?= $articles['article_title'] ?></div><span class="ms-2 fst-italic"><?= $articles['article_date'] ?></span>
+                <div class="card-body">
+                    <p class="card-text">
+                    ><?= $articles['article_contenu'] ?>
+                    </p>
+                </div>
             </div>
-        </div>
+        <?php } ?>
+
+
+
     </div>
 
 
