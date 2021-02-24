@@ -25,23 +25,22 @@ require_once "../controllers/controller_admin.php";
         <h1 class="text-center mb-5 adminTitle">Compte administrateur</h1>
 
         <div class="mt-5 text-center">
-            <form action="admin.php" method="POST" class="container col-10 row g-3 mx-auto">
+            <form action="admin.php" method="POST" class="container col-10 row g-3 mx-auto border border-danger rounded">
 
                 <p class="h3 text-info"><?= $messages['addArt'] ?? '' ?></p>
 
                 <h2 class="mt-3 mb-3 subTitleAdmin">Ajout d'article</h2>
 
-                <input type="text" name="article_title" placeholder="Titre de l'article">
+                <input type="text" id="article_title" name="article_title" placeholder="Titre de l'article">
+
                 <input name="article_date" value="<?php date_default_timezone_set('Europe/Paris');
-                                                setlocale(LC_TIME, 'fr.utf8');
-                                                echo strftime('%d %B %G') ?>">
+                                                    setlocale(LC_TIME, 'fr.utf8');
+                                                    echo strftime('%Y-%m-%d') ?>" type="date">
 
-                <!-- <input type="text" name="cityId" placeholder="Ville de l'article"> -->
-
-                <select class="form-select" name="city_id" aria-label="Default select example">
+                <select class="form-select text-dark" name="city_id" aria-label="Default select example">
                     <option selected disabled>Sélection de la ville</option>
-                    <?php foreach ($chooseCity as $keyCity => $valueCity) { ?>
-                        <option value="<?= $keyCity ?>" <?= isset($_POST['chooseCity']) && $_POST['chooseCity'] == $keyCity ? 'selected' : '' ?>><?= $valueCity ?></option>
+                    <?php foreach ($articleArray as $valueCity) { ?>
+                        <option value="<?= $valueCity['city_id'] ?>" <?= isset($_POST['city_id']) && $_POST['city_id'] == $valueCity['city_id'] ? 'selected' : '' ?>><?= $valueCity['city_name'] ?></option>
                     <?php } ?>
                 </select>
 
@@ -50,42 +49,31 @@ require_once "../controllers/controller_admin.php";
                 <div class="col-12 text-center mb-3">
                     <input class="btn btn-primary" type="submit" name="addArticle" value="envoyer">
                 </div>
-            </form>
 
-            <button type="button" class="btn btn-success btn-rounded"><i class="fas fa-edit"></i> Modifier l'article</button>
-            <button type="button" class="btn btn-danger btn-rounded"><i class="fas fa-trash-alt"></i> Supprimer l'article</button>
+            </form>
         </div>
 
-        <!-- <div class="text-center mt-5">
-            <img src="../assets/img/separator.svg" alt="separator" class="w-25">
-        </div>
-
-        <div class="mt-5 text-center">
-            <form action="kyoto.php" method="POST" class="container col-10 row g-3 mx-auto mt-5">
-
-                <h2 class="mt-3 mb-3 subTitleAdmin">Article Kyoto</h2>
-
-                <textarea name="kyotoArticle" id="editor">Welcome to TinyMCE!</textarea>
-
-                <div class="col-12 text-center mb-3">
-                    <input class="btn btn-primary" type="submit" name="submit" value="envoyer">
-                </div>
-            </form>
-
-            <button type="button" class="btn btn-success btn-rounded"><i class="fas fa-edit"></i> Modifier l'article</button>
-            <button type="button" class="btn btn-danger btn-rounded"><i class="fas fa-trash-alt"></i> Supprimer l'article</button>
-        </div> -->
 
         <div class="text-center mt-5">
             <img src="../assets/img/separator.svg" alt="separator" class="w-25">
         </div>
 
-        <div class="mx-auto col-8">
-            <form action="admin.php" method="POST" enctype="multipart/form-data" class="mt-5">
+        <div class="mt-5">
+            <form action="admin.php" method="POST" enctype="multipart/form-data" class="container mx-auto col-10 row g-3 mt-5 border border-danger rounded">
 
                 <p class="h3 text-info"><?= $messages['addImg'] ?? '' ?></p>
 
                 <h2 class="mt-3 ms-4 text-center mb-3 subTitleAdmin">Upload Galerie</h2>
+
+                <div class="ms-4">
+                    <label class="form-label text-dark" for="gallery_name" id="gallery_name">Titre de l'image :</label>
+                    <input type="text" id="gallery_name" name="gallery_name" placeholder="Titre de l'image">
+                </div>
+
+                <div class="mt-3 ms-4">
+                    <label class="form-label text-dark" for="gallery_textalt" id="gallery_textalt">alt :</label>
+                    <input type="text" id="gallery_textalt" name="gallery_textalt" placeholder="alt">
+                </div>
 
                 <div class="form-group mx-4">
                     <label class="form-label text-dark" for="fileToUpload" id="Choix">Choisissez votre image :</label>
@@ -130,6 +118,10 @@ require_once "../controllers/controller_admin.php";
             image_title: true,
             /* enable automatic uploads of images represented by blob or data URIs*/
             automatic_uploads: true,
+
+            forced_root_block: false,
+            force_br_newlines: true,
+            force_p_newlines: false,
             /*
             URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
             images_upload_url: 'postAcceptor.php',

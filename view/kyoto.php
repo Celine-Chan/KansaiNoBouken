@@ -49,9 +49,26 @@
     </div>
 
     <div>
-        <h2 class="mt-5">Article</h2>
+        <h2 class="mt-5 text-dark ms-5 mb-5">Derniers articles...</h2>
 
-        <?= (isset($_POST['kyotoArticle'])) ? $_POST['kyotoArticle'] : '' ?>
+        <div class="card container">
+
+            <div class="card-body">
+                <p class="card-text">
+
+                <?php if (isset($_POST['city_id']) == 3) { ?>
+
+                    <p><?= (isset($_POST['article_title'])) ? $_POST['article_title'] : '' ?></p>
+                    <p><?= (isset($_POST['article_contenu'])) ? $_POST['article_contenu'] : '' ?></p>
+                    <p>Date de création : <?= (isset($_POST['article_date'])) ? $_POST['article_date'] : '' ?></p>
+                    <p>Ville : <?= (isset($_POST['city_id'])) ? $_POST['city_id'] : '' ?></p>
+
+                <?php } ?>
+
+                </p>
+            </div>
+
+        </div>
     </div>
 
     <div>

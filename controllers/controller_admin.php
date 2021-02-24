@@ -56,14 +56,6 @@ if (count(scandir('../assets/img/galerieUpload')) > 0) {
 
 //PDO Article
 
-$chooseCity = [
-    1 => 'Osaka',
-    2 => 'Kyoto',
-    3 => 'Nara',
-    4 => 'Kobe',
-    5 => 'Wakayama'
-];
-
 $messages = [];
 
 if (isset($_POST['addArticle']) && empty($errorMessages)) {
@@ -78,7 +70,7 @@ if (isset($_POST['addArticle']) && empty($errorMessages)) {
         'city_id' => htmlspecialchars($_POST['city_id'])
     ];
 
-    // var_dump($ArticleDetails);
+    var_dump($ArticleDetails);
 
     if ($ArticleObj->addArticle($ArticleDetails)) {
         $messages['addArticle'] = 'article enregistré';
@@ -87,31 +79,7 @@ if (isset($_POST['addArticle']) && empty($errorMessages)) {
     }
 }
 
-
-//PDO Article Osaka
-
-// $messages = [];
-
-// if (isset($_POST['addArticleOsaka']) && empty($errorMessages)) {
-//     $osakaArtObj = new Osaka;
-
-
-//     //création d'un tableau associatif contenant toutes les infos du form
-//     $osakaArtDetails = [
-//         'article_title' => htmlspecialchars($_POST['osakaTitle']),
-//         'article_contenu' => htmlspecialchars($_POST['osakaArticle']),
-//         'article_date' => htmlspecialchars($_POST['osakaDate']),
-//         'city_id' => 2
-//     ];
-
-//     var_dump($osakaArtDetails);
-
-//     if ($osakaArtObj->addOsakaArticle($osakaArtDetails)) {
-//         $messages['addArticle'] = 'article enregistré';
-//     } else {
-//         $messages['addArticle'] = 'Erreur de connexion lors de l\'enregistrement';
-//     }
-// }
-
+$article = new Article;
+$articleArray = $article->getSelectCity();
 
 ?>
