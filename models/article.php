@@ -26,7 +26,7 @@ class Article extends DataBase
         $addArticleQuery->bindValue(':article_contenu', $ArticleDetails['article_contenu'], PDO::PARAM_STR);
         $addArticleQuery->bindValue(':article_date', $ArticleDetails['article_date'], PDO::PARAM_STR);
         $addArticleQuery->bindValue(':city_id', $ArticleDetails['city_id'], PDO::PARAM_INT);
-
+        
         //tester et executer la requête pour afficher message erreur
         if ($addArticleQuery->execute()) {
             return true;

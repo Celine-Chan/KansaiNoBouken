@@ -65,7 +65,7 @@ if (isset($_POST['addArticle']) && empty($errorMessages)) {
     //création d'un tableau associatif contenant toutes les infos du form
     $ArticleDetails = [
         'article_title' => htmlspecialchars($_POST['article_title']),
-        'article_contenu' => htmlspecialchars($_POST['article_contenu']),
+        'article_contenu' => $_POST['article_contenu'],
         'article_date' => htmlspecialchars($_POST['article_date']),
         'city_id' => htmlspecialchars($_POST['city_id'])
     ];

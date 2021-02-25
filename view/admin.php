@@ -122,6 +122,9 @@ require_once "../controllers/controller_admin.php";
             forced_root_block: false,
             force_br_newlines: true,
             force_p_newlines: false,
+            encoding: "UTF-8",
+            entity_encoding : "raw",
+            
             /*
             URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
             images_upload_url: 'postAcceptor.php',
