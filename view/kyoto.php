@@ -1,3 +1,8 @@
+<?php
+
+require_once '../controllers/controller_kyoto.php';
+
+?>
 <!doctype html>
 <html lang="fr">
 
@@ -51,24 +56,24 @@
     <div>
         <h2 class="mt-5 text-dark ms-5 mb-5">Derniers articles...</h2>
 
-        <div class="card container">
+        <?php foreach ($kyotoArticles as $articles) { ?>
 
-            <div class="card-body">
-                <p class="card-text">
-
-                <?php if (isset($_POST['city_id']) == 3) { ?>
-
-                    <p><?= (isset($_POST['article_title'])) ? $_POST['article_title'] : '' ?></p>
-                    <p><?= (isset($_POST['article_contenu'])) ? $_POST['article_contenu'] : '' ?></p>
-                    <p>Date de création : <?= (isset($_POST['article_date'])) ? $_POST['article_date'] : '' ?></p>
-                    <p>Ville : <?= (isset($_POST['city_id'])) ? $_POST['city_id'] : '' ?></p>
-
-                <?php } ?>
-
-                </p>
+            <div class="container d-flex flex-row-reverse col-12 mb-3">
+                <button type="button" class="btn btn-success btn-rounded"><i class="fas fa-edit"></i> Modifier l'article</button>
+                <button type="button" class="btn btn-danger btn-rounded"><i class="fas fa-trash-alt"></i> Supprimer l'article</button>
             </div>
 
-        </div>
+            <div class="card container mb-5">
+                <div class="h3"><?= $articles['article_title'] ?></div><span class="ms-2 fst-italic"><?= $articles['article_date'] ?></span>
+                <div class="card-body">
+                    <p class="card-text">
+                        <?= $articles['article_contenu'] ?>
+                    </p>
+                </div>
+            </div>
+
+        <?php } ?>
+
     </div>
 
     <div>
