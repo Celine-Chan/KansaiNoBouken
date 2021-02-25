@@ -55,31 +55,59 @@ if (count(scandir('../assets/img/galerieUpload')) > 0) {
 
 
 //PDO Article
-
+$regexArticleTitle = '/^[a-zA-ZéèàêâùïüëçæœÉÈÇÙÆŒ-]+$/';
 $messages = [];
+$errorMessages = [];
 
-if (isset($_POST['addArticle']) && empty($errorMessages)) {
-    $ArticleObj = new Article;
+//sécurité ajout d'article
+// if (isset($_POST['addArticle'])) {
+
+    // if (isset($_POST['article_title'])) {
+    //     if (!preg_match($regexArticleTitle, $_POST['article_title'])) {
+    //         $errorMessages['article_title'] = 'Veuillez saisir un titre valide.';
+    //     }
+    //     if (empty($_POST['article_title'])) {
+    //         $errorMessages['article_title'] = 'Veuillez saisir un titre.';
+    //     }
+    // }
+
+    // if (!isset($_POST['city_id'])) {
+    //     $errorMessages['city_id'] = 'veuillez faire un choix.';
+    // }
+    // // sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
+    // if (isset($_POST['city_id'])) {
+    //     if (!array_key_exists($_POST['city_id'], $certificateArray)) {
+    //         $errorMessages['city_id'] = 'Veuillez choisir une ville.';
+    //     }
+    // }
+
+    // var_dump($errorMessages);
 
 
-    //création d'un tableau associatif contenant toutes les infos du form
-    $ArticleDetails = [
-        'article_title' => htmlspecialchars($_POST['article_title']),
-        'article_contenu' => $_POST['article_contenu'],
-        'article_date' => htmlspecialchars($_POST['article_date']),
-        'city_id' => htmlspecialchars($_POST['city_id'])
-    ];
 
-    var_dump($ArticleDetails);
+//je vérifie s'il n'y a pas d'erreurs afin de lancer ma requête
+    if (isset($_POST['addArticle']) && empty($errorMessages)) {
+        $ArticleObj = new Article;
 
-    if ($ArticleObj->addArticle($ArticleDetails)) {
-        $messages['addArticle'] = 'article enregistré';
-    } else {
-        $messages['addArticle'] = 'Erreur de connexion lors de l\'enregistrement';
+
+        //création d'un tableau associatif contenant toutes les infos du form
+        $ArticleDetails = [
+            'article_title' => htmlspecialchars($_POST['article_title']),
+            'article_contenu' => $_POST['article_contenu'],
+            'article_date' => htmlspecialchars($_POST['article_date']),
+            'city_id' => htmlspecialchars($_POST['city_id'])
+        ];
+
+        var_dump($ArticleDetails);
+
+        if ($ArticleObj->addArticle($ArticleDetails)) {
+            $messages['addArticle'] = 'Article enregistré';
+        } else {
+            $messages['addArticle'] = 'Erreur de connexion lors de l\'enregistrement';
+        }
     }
-}
+
+// }
 
 $article = new Article;
-$articleArray = $article->getSelectCity();
-
-?>
+    $articleArray = $article->getSelectCity();

@@ -477,3 +477,23 @@ li {
     font-family: 'Cinzel', serif;
     color: black;
 }
+
+.addArticleForm{
+    color: black;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.uploadImgForm{
+    color: black;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.backAdmin{
+    background-image: url('../img/lanterns.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

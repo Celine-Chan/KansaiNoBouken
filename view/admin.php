@@ -12,91 +12,100 @@ require_once "../controllers/controller_admin.php";
     <?php include('../view/pagePortion/header.php') ?>
 </head>
 
-<body>
+<body class="backAdmin">
 
     <?php include('../view/pagePortion/navbar.php') ?>
 
-    <div class="banniereInscriptionImg mb-5">
+    <!-- <div class="banniereInscriptionImg mb-5">
         <img src="../assets/img/banniere/banniereAdmin.jpg" alt="admin" class="img-fluid adminImg">
-    </div>
+    </div> -->
 
+    <h1 class="text-center mb-5 mt-5 adminTitle text-light">Compte administrateur</h1>
 
-    <div class="container">
-        <h1 class="text-center mb-5 adminTitle">Compte administrateur</h1>
+    <div class="container mt-5 col-10 row g-3 mx-auto">
 
-        <div class="mt-5 text-center">
-            <form action="admin.php" method="POST" class="container col-10 row g-3 mx-auto border border-danger rounded">
+        <form action="admin.php" method="POST" class="shadow-lg p-5 addArticleForm">
+            <p class="h3 text-info text-center"><?= $messages['addArticle'] ?? '' ?></p>
 
-                <p class="h3 text-info"><?= $messages['addArt'] ?? '' ?></p>
+            <h2 class="mt-3 mb-5 subTitleAdmin text-center">Ajout d'article</h2>
 
-                <h2 class="mt-3 mb-3 subTitleAdmin">Ajout d'article</h2>
+            <div class="form-row mb-4">
 
-                <input type="text" id="article_title" name="article_title" placeholder="Titre de l'article">
+                <div class="form-outline mb-4 col-md-6">
+                    <input type="text" id="article_title" class="form-control" name="article_title" />
+                    <label class="form-label" for="article_title">Titre de l'article :</label>
+                </div>
 
-                <input name="article_date" value="<?php date_default_timezone_set('Europe/Paris');
-                                                    setlocale(LC_TIME, 'fr.utf8');
-                                                    echo strftime('%Y-%m-%d') ?>" type="date">
+                <div class="mb-4">
+                    <input name="article_date" type="date" value="<?php date_default_timezone_set('Europe/Paris');
+                                                                    setlocale(LC_TIME, 'fr.utf8');
+                                                                    echo strftime('%Y-%m-%d') ?>">
+                </div>
 
-                <select class="form-select text-dark" name="city_id" aria-label="Default select example">
-                    <option selected disabled>Sélection de la ville</option>
-                    <?php foreach ($articleArray as $valueCity) { ?>
-                        <option value="<?= $valueCity['city_id'] ?>" <?= isset($_POST['city_id']) && $_POST['city_id'] == $valueCity['city_id'] ? 'selected' : '' ?>><?= $valueCity['city_name'] ?></option>
-                    <?php } ?>
-                </select>
+                <div class="mb-4 col-md-6">
+                    <select class="form-select text-dark" name="city_id" aria-label="Default select example">
+                        <option selected disabled>Sélection de la ville</option>
+                        <?php foreach ($articleArray as $valueCity) { ?>
+                            <option value="<?= $valueCity['city_id'] ?>" <?= isset($_POST['city_id']) && $_POST['city_id'] == $valueCity['city_id'] ? 'selected' : '' ?>><?= $valueCity['city_name'] ?></option>
+                        <?php } ?>
+                    </select>
+                    <div class="text-danger">
+                        <span><?= isset($errorMessages['city_id']) ? $errorMessages['city_id'] : '' ?></span>
+                    </div>
+                </div>
 
-                <textarea name="article_contenu" id="editor">Welcome to TinyMCE!</textarea>
+                <div>
+                    <textarea name="article_contenu" id="editor" placeholder="Insertion article"></textarea>
+                </div>
 
-                <div class="col-12 text-center mb-3">
+                <div class="col-12 text-center mt-3">
                     <input class="btn btn-primary" type="submit" name="addArticle" value="envoyer">
                 </div>
+            </div>
+        </form>
+    </div>
 
-            </form>
-        </div>
+    <div class="text-center mt-5">
+        <img src="../assets/img/separator.svg" alt="separator" class="w-25">
+    </div>
 
+    <div class="mt-5">
+        <form action="admin.php" method="POST" enctype="multipart/form-data" class="container mx-auto col-10 row g-3 mt-5 uploadImgForm">
 
-        <div class="text-center mt-5">
-            <img src="../assets/img/separator.svg" alt="separator" class="w-25">
-        </div>
+            <p class="h3 text-info"><?= $messages['addImg'] ?? '' ?></p>
 
-        <div class="mt-5">
-            <form action="admin.php" method="POST" enctype="multipart/form-data" class="container mx-auto col-10 row g-3 mt-5 border border-danger rounded">
+            <h2 class="mt-3 ms-4 text-center mb-3 subTitleAdmin">Upload Galerie</h2>
 
-                <p class="h3 text-info"><?= $messages['addImg'] ?? '' ?></p>
+            <div class="ms-4">
+                <label class="form-label text-dark" for="gallery_name" id="gallery_name">Titre de l'image :</label>
+                <input type="text" id="gallery_name" name="gallery_name" placeholder="Titre de l'image">
+            </div>
 
-                <h2 class="mt-3 ms-4 text-center mb-3 subTitleAdmin">Upload Galerie</h2>
+            <div class="mt-3 ms-4">
+                <label class="form-label text-dark" for="gallery_textalt" id="gallery_textalt">alt :</label>
+                <input type="text" id="gallery_textalt" name="gallery_textalt" placeholder="alt">
+            </div>
 
-                <div class="ms-4">
-                    <label class="form-label text-dark" for="gallery_name" id="gallery_name">Titre de l'image :</label>
-                    <input type="text" id="gallery_name" name="gallery_name" placeholder="Titre de l'image">
-                </div>
+            <div class="form-group mx-4">
+                <label class="form-label text-dark" for="fileToUpload" id="Choix">Choisissez votre image :</label>
+                <input type="file" name="fileToUpload" id="fileToUpload" class="form-control">
+            </div>
 
-                <div class="mt-3 ms-4">
-                    <label class="form-label text-dark" for="gallery_textalt" id="gallery_textalt">alt :</label>
-                    <input type="text" id="gallery_textalt" name="gallery_textalt" placeholder="alt">
-                </div>
+            <div class="form-group mt-3 text-center">
+                <button type="submit" name="submit" class="btn btn-primary" id="bouton">Envoyer photo</button>
+            </div>
 
-                <div class="form-group mx-4">
-                    <label class="form-label text-dark" for="fileToUpload" id="Choix">Choisissez votre image :</label>
-                    <input type="file" name="fileToUpload" id="fileToUpload" class="form-control">
-                </div>
+            <?= (!empty($message))  ? " <p class='messagePHP'>  $message  </p>" : "" ?>
 
-                <div class="form-group mt-3 text-center">
-                    <button type="submit" name="submit" class="btn btn-primary" id="bouton">Envoyer photo</button>
-                </div>
+            <?= (!empty($messageSecond)) ? " <p class='messagePHP'>  $messageSecond  </p>" : "" ?>
 
-                <?= (!empty($message))  ? " <p class='messagePHP'>  $message  </p>" : "" ?>
+            <?= (!empty($messageOk)) ? " <p class='messagePHP'>  $messageOk  </p>" : "" ?>
 
-                <?= (!empty($messageSecond)) ? " <p class='messagePHP'>  $messageSecond  </p>" : "" ?>
+            <?= (!empty($messageNoFormat)) ? " <p class='messagePHP'>  $messageNoFormat  </p>" : "" ?>
 
-                <?= (!empty($messageOk)) ? " <p class='messagePHP'>  $messageOk  </p>" : "" ?>
+            <p class="note note-danger mt-3 text-dark"><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .jpeg, .gif, .png sont autorisés jusqu'à une taille maximale de 1 Mo.</p>
 
-                <?= (!empty($messageNoFormat)) ? " <p class='messagePHP'>  $messageNoFormat  </p>" : "" ?>
-
-                <p class="note note-danger mt-3 mx-4 text-dark"><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .jpeg, .gif, .png sont autorisés jusqu'à une taille maximale de 1 Mo.</p>
-
-            </form>
-        </div>
-
+        </form>
     </div>
 
     <div>
@@ -123,8 +132,8 @@ require_once "../controllers/controller_admin.php";
             force_br_newlines: true,
             force_p_newlines: false,
             encoding: "UTF-8",
-            entity_encoding : "raw",
-            
+            entity_encoding: "raw",
+
             /*
             URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)
             images_upload_url: 'postAcceptor.php',
