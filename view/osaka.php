@@ -55,12 +55,13 @@ require_once '../controllers/controller_osaka.php';
         <?php foreach ($osakaArticles as $articles) { ?>
 
             <div class="container d-flex flex-row-reverse col-12 mb-3">
-                <button type="button" class="btn btn-success btn-rounded"><i class="fas fa-edit"></i> Modifier l'article</button>
+                <button type="submit" class="btn btn-success btn-rounded" name="modifyArticle" value="<?= $detailsArticleArray['id'] ?>"><i class="fas fa-edit"></i> Modifier l'article</button>
                 <button type="button" class="btn btn-danger btn-rounded"><i class="fas fa-trash-alt"></i> Supprimer l'article</button>
             </div>
 
             <div class="card container mb-5">
-                <div class="h3"><?= $articles['article_title'] ?></div><span class="ms-2 fst-italic"><?= $articles['article_date'] ?></span>
+                <div class="h3"><?= $articles['article_title'] ?></div>
+                <span class="ms-2 fst-italic"><?= $articles['article_date'] ?></span>
                 <div class="card-body">
                     <p class="card-text">
                         <?= $articles['article_contenu'] ?>
@@ -70,11 +71,7 @@ require_once '../controllers/controller_osaka.php';
 
         <?php } ?>
 
-
-
     </div>
-
-
 
     <div>
         <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>

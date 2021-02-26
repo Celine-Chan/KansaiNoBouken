@@ -16,10 +16,6 @@ require_once "../controllers/controller_admin.php";
 
     <?php include('../view/pagePortion/navbar.php') ?>
 
-    <!-- <div class="banniereInscriptionImg mb-5">
-        <img src="../assets/img/banniere/banniereAdmin.jpg" alt="admin" class="img-fluid adminImg">
-    </div> -->
-
     <h1 class="text-center mb-5 mt-5 adminTitle text-light">Compte administrateur</h1>
 
     <div class="container mt-5 col-10 row g-3 mx-auto">
@@ -31,9 +27,12 @@ require_once "../controllers/controller_admin.php";
 
             <div class="form-row mb-4">
 
-                <div class="form-outline mb-4 col-md-6">
-                    <input type="text" id="article_title" class="form-control" name="article_title" />
+                <div class="form-outline col-md-6">
+                    <input type="text" id="article_title" class="form-control" name="article_title" value="<?= isset($_POST['article_title']) ? $_POST['article_title'] : '' ?>" />
                     <label class="form-label" for="article_title">Titre de l'article :</label>
+                </div>
+                <div class="text-danger mb-4">
+                    <span><?= isset($errorMessages['article_title']) ? $errorMessages['article_title'] : '' ?></span>
                 </div>
 
                 <div class="mb-4">
