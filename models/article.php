@@ -25,7 +25,7 @@ class Article extends DataBase
         $addArticleQuery->bindValue(':article_title', $ArticleDetails['article_title'], PDO::PARAM_STR);
         $addArticleQuery->bindValue(':article_contenu', $ArticleDetails['article_contenu'], PDO::PARAM_STR);
         $addArticleQuery->bindValue(':article_date', $ArticleDetails['article_date'], PDO::PARAM_STR);
-        $addArticleQuery->bindValue(':city_id', $ArticleDetails['city_id'], PDO::PARAM_INT);
+        $addArticleQuery->bindValue(':city_id', $ArticleDetails['city_id'], PDO::PARAM_STR);
 
         //tester et executer la requête pour afficher message erreur
         if ($addArticleQuery->execute()) {
@@ -54,7 +54,17 @@ class Article extends DataBase
     public function getDetailsArticle(string $idArticle)
     {
         // requete me permettant de recup infos article
-        $query = 'SELECT * FROM `article` WHERE article_id = :article_id';
+        $query = 'SELECT 
+        `article_id`, 
+        `article_title`, 
+        `article_contenu`,  
+        `article_date`, 
+        `city`.`city_id`,
+        `city_name` 
+        FROM `article`
+        INNER JOIN city
+        ON city.city_id = article.city_id 
+        WHERE `article_id` = :article_id';
 
         // je prepare requête à l'aide de la methode prepare pour me premunir des injections SQL
         $getDetailsArticleQuery = $this->dataBase->prepare($query);
@@ -92,7 +102,15 @@ class Article extends DataBase
         $updateArticleQuery->bindValue(':article_title', $ArticleDetails['article_title'], PDO::PARAM_STR);
         $updateArticleQuery->bindValue(':article_contenu', $ArticleDetails['article_contenu'], PDO::PARAM_STR);
         $updateArticleQuery->bindValue(':article_date', $ArticleDetails['article_date'], PDO::PARAM_STR);
-        $updateArticleQuery->bindValue(':city_id', $ArticleDetails['city_id'], PDO::PARAM_INT);
-        $updateArticleQuery->bindValue(':article_id', $ArticleDetails['article_id'], PDO::PARAM_INT);
+        $updateArticleQuery->bindValue(':city_id', $ArticleDetails['city_id'], PDO::PARAM_STR);
+        $updateArticleQuery->bindValue(':article_id', $ArticleDetails['article_id'], PDO::PARAM_STR);
+
+        // test et execution de la requête pour afficher message erreur
+        if ($updateArticleQuery->execute()) {
+            // je retourne le resultat sous forme de tableau via la methode fetch car une seule ligne comme résultat
+            return true;
+        } else {
+            return false;
+        }
     }
 }

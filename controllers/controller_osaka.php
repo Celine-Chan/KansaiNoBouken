@@ -5,7 +5,7 @@ require_once '../models/article.php';
 
 $articleObj = new Article;
 $osakaArticles = $articleObj->getArticle(2);
-var_dump($_POST);
+// var_dump($_POST);
 
 if (isset($_POST['modifyArticle'])) {
     $detailsArticleArray = $articleObj->getDetailsArticle($_POST['modifyArticle']);

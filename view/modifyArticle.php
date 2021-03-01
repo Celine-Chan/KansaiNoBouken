@@ -18,16 +18,17 @@ require_once "../controllers/controller_modifyArticle.php";
 
     <div class="container mt-5 col-10 row g-3 mx-auto">
 
+    <p class="text-info"><?= $messages['addArticle'] ?? '' ?></p>
+
         <?php
         // Nous allons afficher le formulaire : 
         //    si modifyArticle n'est pas vide = nous venons bien de la page de la ville
         //    si le tableau d'erreurs n'est pas vide = le formulaire contient des erreurs
-        
+
         if (!empty($_POST['modifyArticle']) || !empty($errors)) { ?>
             <h5 class="text-center text-danger"><?= $messages['updateArticle'] ?? '' ?></h5>
 
-            <form action="modifyArticle.php" method="POST" class="shadow-lg p-5 addArticleForm">
-                <p class="h3 text-info text-center"><?= $messages['addArticle'] ?? '' ?></p>
+            <form action="" method="POST" class="shadow-lg p-5 addArticleForm">
 
                 <h2 class="mt-3 mb-5 subTitleAdmin text-center">Modification d'article</h2>
 
@@ -44,11 +45,14 @@ require_once "../controllers/controller_modifyArticle.php";
                     <div class="mb-4">
                         <input name="article_date" type="date" value="<?= $detailsArticleArray['article_date'] ?>">
                     </div>
-
+                    
                     <div class="mb-4 col-md-6">
                         <select class="form-select text-dark" name="city_id" aria-label="Default select example">
                             <option selected disabled>Sélection de la ville</option>
-                                <option value="<?= $detailsArticleArray['city_id'] ?>"><?= $valueCity['city_name'] ?></option>
+
+                            <?php foreach ($articleArray as $valueCity) { ?>
+                                <option value="<?= $valueCity['city_id'] ?>" <?= $valueCity['city_id'] == $detailsArticleArray['city_id'] ? 'selected' : '' ?>><?= $valueCity['city_name'] ?></option>
+                            <?php } ?>
                         </select>
                         <div class="text-danger">
                             <span><?= isset($errorMessages['city_id']) ? $errorMessages['city_id'] : '' ?></span>
@@ -61,22 +65,21 @@ require_once "../controllers/controller_modifyArticle.php";
 
                     <div class="col-12 text-center mt-3">
                         <input class="btn btn-primary" type="submit" name="updateArticleBtn" value="Enregistrer les modifications">
-                        <a type="button" href="" class="btn btn-sm btn-outline-danger">Annuler</a>
+                        <a type="button" href="osaka.php" class="btn btn-sm btn-outline-danger">Annuler</a>
                     </div>
                 </div>
             </form>
-            
-        <?php 
-        // si la requête d'update passe, nous l'indiquons à l'utilisateur via un message
-        } else if($updateArticleInBase) { ?>
 
-        <h5 class="text-center text-info">Les modifications ont bien été prises en compte</h5>
-        <div class="text-center mt-4">
-        <a type="button" href="" class="btn btn-sm btn-outline-secondary">Retour Article</a>
-        </div>
+        <?php
+            // si la requête d'update passe, nous l'indiquons à l'utilisateur via un message
+        } else { ?>
+
+            <h5 class="text-center text-info">Les modifications ont bien été prises en compte</h5>
+            <div class="text-center mt-4">
+                <a type="button" href="osaka.php" btn btn-sm btn-outline-secondary>Retour Article</a>
+            </div>
 
         <?php } ?>
-
 
     </div>
 
@@ -148,7 +151,7 @@ require_once "../controllers/controller_modifyArticle.php";
                         });
                     };
                     reader.readAsDataURL(file);
-                };  
+                };
 
                 input.click();
             },

@@ -121,6 +121,7 @@ require_once "../controllers/controller_admin.php";
         tinymce.init({
             selector: 'textarea#editor',
             plugins: 'image code advlist autolink lists link style image emoticons media table charmap print preview hr anchor pagebreak',
+            height: 500,
             toolbar: 'undo redo | link image | code',
             /* enable title field in the Image dialog*/
             image_title: true,

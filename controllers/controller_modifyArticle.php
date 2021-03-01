@@ -1,13 +1,19 @@
 <?php
 session_start();
 
+
+
 require_once '../models/database.php';
 require_once '../models/article.php';
+
+
 
 $regexArticleTitle = '/^[a-zA-ZéèàêâùïüëçæœÉÈÇÙÆŒ-]+$/';
 $messages = [];
 $errorMessages = [];
 $errors = [];
+
+$articleArray = $articleObj->getSelectCity();
 
 
 // mise en place d'une variable permettant de savoir si nous avons inscrit l'article dans la base
@@ -23,13 +29,11 @@ if (!empty($_POST['modifyArticle'])) {
     $_SESSION['idArticleToUpdate'] = $detailsArticleArray['article_id'];
 }
 
-$articleObj = new Article;
-$osakaArticles = $articleObj->getArticle(2);
-var_dump($_POST);
+// var_dump($_POST);
 
 if (isset($_POST['modifyArticle'])) {
     $detailsArticleArray = $articleObj->getDetailsArticle($_POST['modifyArticle']);
-    var_dump($detailsArticleArray);
+    // var_dump($detailsArticleArray);
 } else {
     $detailsArticleArray = false;
 }
@@ -46,15 +50,15 @@ if (isset($_POST['updateArticleBtn'])) {
         }
     }
 
-    if (!isset($_POST['city_id'])) {
-        $errorMessages['city_id'] = 'veuillez faire un choix.';
-    }
-    // sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
-    if (isset($_POST['city_id'])) {
-        if (!array_key_exists($_POST['city_id'], $articleArray)) {
-            $errorMessages['city_id'] = 'Veuillez choisir une ville.';
-        }
-    }
+    // if (!isset($_POST['city_id'])) {
+    //     $errorMessages['city_id'] = 'veuillez faire un choix.';
+    // }
+    // // sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
+    // if (isset($_POST['city_id'])) {
+    //     if (!array_key_exists($_POST['city_id'], $articleArray)) {
+    //         $errorMessages['city_id'] = 'Veuillez choisir une ville.';
+    //     }
+    // }
 
     // var_dump($errorMessages);
 
