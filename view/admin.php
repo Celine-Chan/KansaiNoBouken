@@ -28,7 +28,7 @@ require_once "../controllers/controller_admin.php";
             <div class="form-row mb-4">
 
                 <div class="form-outline col-md-6">
-                    <input type="text" id="article_title" class="form-control" name="article_title" value="<?= isset($_POST['article_title']) ? $_POST['article_title'] : '' ?>" />
+                    <input type="text" id="article_title" class="form-control text-dark" name="article_title" value="<?= isset($_POST['article_title']) ? $_POST['article_title'] : '' ?>" />
                     <label class="form-label" for="article_title">Titre de l'article :</label>
                 </div>
                 <div class="text-danger mb-4">

@@ -6,7 +6,7 @@ class Article extends DataBase
      */
     public function getArticle($city_id)
     {
-        $query = 'SELECT `article_title`, `article_contenu`, DATE_FORMAT(`article_date`, \'%d-%m-%Y\') AS `article_date`, `city_id` FROM `article` WHERE `city_id` = ' . $city_id;
+        $query = 'SELECT `article_id`, `article_title`, `article_contenu`, DATE_FORMAT(`article_date`, \'%d-%m-%Y\') AS `article_date`, `city_id` FROM `article` WHERE `city_id` = ' . $city_id;
         $queryObj = $this->dataBase->query($query);
         $result = $queryObj->fetchAll();
         return $result;
@@ -49,12 +49,12 @@ class Article extends DataBase
     /**
      * 
      * @param string $id article
-     * @return array ou false si la requête n epasse pas
+     * @return array ou false si la requête ne passe pas
      */
     public function getDetailsArticle(string $idArticle)
     {
         // requete me permettant de recup infos article
-        $query = 'SELECT * FROM `article` WHERE `id` = :article_id';
+        $query = 'SELECT * FROM `article` WHERE article_id = :article_id';
 
         // je prepare requête à l'aide de la methode prepare pour me premunir des injections SQL
         $getDetailsArticleQuery = $this->dataBase->prepare($query);

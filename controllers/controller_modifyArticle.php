@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+require_once '../models/database.php';
+require_once '../models/article.php';
+
 $regexArticleTitle = '/^[a-zA-ZéèàêâùïüëçæœÉÈÇÙÆŒ-]+$/';
 $messages = [];
 $errorMessages = [];
@@ -17,7 +20,18 @@ if (!empty($_POST['modifyArticle'])) {
     // Nous allons récupérer les informations de notre article nous permettant de pré-remplir le formulaire
     $detailsArticleArray = $articleObj->getDetailsArticle($_POST['modifyArticle']);
     // Pour plus de sécurité, je stock l'id de l'article à modifier dans une variable de session
-    $_SESSION['idArticleToUpdate'] = $detailsArticleArray['id'];
+    $_SESSION['idArticleToUpdate'] = $detailsArticleArray['article_id'];
+}
+
+$articleObj = new Article;
+$osakaArticles = $articleObj->getArticle(2);
+var_dump($_POST);
+
+if (isset($_POST['modifyArticle'])) {
+    $detailsArticleArray = $articleObj->getDetailsArticle($_POST['modifyArticle']);
+    var_dump($detailsArticleArray);
+} else {
+    $detailsArticleArray = false;
 }
 
 //sécurité ajout d'article
@@ -37,14 +51,15 @@ if (isset($_POST['updateArticleBtn'])) {
     }
     // sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
     if (isset($_POST['city_id'])) {
-        if (!array_key_exists($_POST['city_id'], $certificateArray)) {
+        if (!array_key_exists($_POST['city_id'], $articleArray)) {
             $errorMessages['city_id'] = 'Veuillez choisir une ville.';
         }
     }
 
+    // var_dump($errorMessages);
 
     //je vérifie s'il n'y a pas d'erreurs afin de lancer ma requête
-    if (empty($errors)) {
+    if (empty($errorMessages) && $_POST['updateArticleBtn']) {
         $ArticleObj = new Article;
 
 
