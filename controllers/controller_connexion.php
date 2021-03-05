@@ -29,5 +29,7 @@ if (isset($_POST['btnConnexion'])) {
         }
     }
 
-    
+    if (isset($_SESSION['users_login'])) {
+        # code...
+    }
 }

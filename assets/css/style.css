@@ -39,6 +39,7 @@ nav {
 
 .navFont:hover {
     text-decoration: underline;
+    color: black;
 }
 
 .hoverBackgroundNav:hover {

@@ -57,24 +57,5 @@ class Users extends DataBase
         } else {
             return false;
         }
-
-        // $result = $queryObj->fetchAll();
-        // return $result;
-
-        //comparaison du password envoyé
-        // $isPasswordCorrect = password_verify($_POST['passConnexion'], $result['passConnexion']);
-
-        // if (!$result) {
-        //     echo 'Mauvais identifiant ou mot de passe !';
-        // } else {
-        //     if ($isPasswordCorrect) {
-        //         session_start();
-        //         $_SESSION['users_id'] = $result['users_id'];
-        //         $_SESSION['users_pseudo'] = $result['users_pseudo'];
-        //         echo 'Vous êtes connecté !';
-        //     } else {
-        //         echo 'Mauvais identifiant ou mot de passe !';
-        //     }
-        // }
     }
 }
