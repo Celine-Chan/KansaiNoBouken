@@ -38,13 +38,13 @@ require_once '../controllers/controller_osaka.php';
                 <p>Cependant, pendant la 2nd guerre mondiale, la ville a été fortement impacté par les bombardements. La reconstruction
                     s'est effectué très rapidement, d'où une archtecture très diversifiée mélant traditions et modernité.</p>
             </div>
-            <div class="container row imgPageOsaka">
+            <!-- <div class="container row imgPageOsaka">
                 <img src="../assets/img/osaka/legoGirafe.jpg" alt="lego girafe" class="img-fluid legoImgOsaka">
                 <div class="col">
                     <img src="../assets/img/osaka/makiSushi.jpg" alt="maki sushi" class="img-fluid makiSushi mb-2">
                     <img src="../assets/img/osaka/giftTemple.jpg" alt="Gift Temple" class="img-fluid giftTemple">
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -56,29 +56,52 @@ require_once '../controllers/controller_osaka.php';
             <form action="modifyArticle.php" method="POST">
                 <div class="container d-flex flex-row-reverse col-12 mb-3">
                     <button type="submit" class="btn btn-success btn-rounded" name="modifyArticle" value="<?= $articles['article_id'] ?>"><i class="fas fa-edit"></i> Modifier l'article</button>
-                    <button type="button" class="btn btn-danger btn-rounded"><i class="fas fa-trash-alt"></i> Supprimer l'article</button>
-                </div>
             </form>
 
-            <div class="card container mb-5">
-                <div class="h3"><?= $articles['article_title'] ?></div>
-                <span class="ms-2 fst-italic"><?= $articles['article_date'] ?></span>
-                <div class="card-body">
-                    <p class="card-text">
-                        <?= $articles['article_contenu'] ?>
-                    </p>
+
+            <button type="button" class="btn btn-danger btn-rounded" data-bs-toggle="modal" data-bs-target="#deleteArticle<?php echo $articles['article_id'] ?>"><i class="fas fa-trash-alt"></i> Supprimer l'article</button>
+            <!-- Modal -->
+            <div class="modal fade" id="deleteArticle<?php echo $articles['article_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-danger" id="exampleModalLabel"><img src="../assets/img/deux-katanas.svg" class="deleteIcon" alt="deleteIcon"> Supprimer l'article</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        Voulez-vous vraiment supprimer cet article?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                            <form action="osaka.php" method="POST">
+                                <button type="submit" name="deleteArticle" value="<?php echo $articles['article_id'] ?>" class="btn btn-danger">Supprimer</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-        <?php } ?>
-
     </div>
 
-    <div>
-        <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+
+    <div class="card container mb-5">
+        <div class="h3"><?= $articles['article_title'] ?></div>
+        <span class="ms-2 fst-italic"><?= $articles['article_date'] ?></span>
+        <div class="card-body">
+            <p class="card-text">
+                <?= $articles['article_contenu'] ?>
+            </p>
+        </div>
     </div>
 
-    <?php include('../view/pagePortion/footer.php') ?>
+<?php } ?>
+
+</div>
+
+<div>
+    <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+</div>
+
+<?php include('../view/pagePortion/footer.php') ?>
 </body>
 
 </html>

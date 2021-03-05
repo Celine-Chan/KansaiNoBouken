@@ -77,12 +77,12 @@ require_once "../controllers/controller_admin.php";
 
             <div class="ms-4">
                 <label class="form-label text-dark" for="gallery_name" id="gallery_name">Titre de l'image :</label>
-                <input type="text" id="gallery_name" name="gallery_name" placeholder="Titre de l'image">
+                <input type="text" id="gallery_name" name="gallery_name" placeholder="ex : Port d'Osaka">
             </div>
 
             <div class="mt-3 ms-4">
                 <label class="form-label text-dark" for="gallery_textalt" id="gallery_textalt">alt :</label>
-                <input type="text" id="gallery_textalt" name="gallery_textalt" placeholder="alt">
+                <input type="text" id="gallery_textalt" name="gallery_textalt" placeholder="ex : geisha">
             </div>
 
             <div class="form-group mx-4">
@@ -133,6 +133,11 @@ require_once "../controllers/controller_admin.php";
             force_p_newlines: false,
             encoding: "UTF-8",
             entity_encoding: "raw",
+
+            //permet de modifier les articles avec image
+            relative_urls: false,
+            remove_script_host: false,
+            convert_urls: false,
 
             /*
             URL of our upload handler (for more details check: https://www.tiny.cloud/docs/configure/file-image-upload/#images_upload_url)

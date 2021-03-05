@@ -9,7 +9,13 @@ $osakaArticles = $articleObj->getArticle(2);
 
 if (isset($_POST['modifyArticle'])) {
     $detailsArticleArray = $articleObj->getDetailsArticle($_POST['modifyArticle']);
-    var_dump($detailsArticleArray);
+    // var_dump($detailsArticleArray);
 } else {
     $detailsArticleArray = false;
+}
+
+if (isset($_POST['deleteArticle'])) {
+    $idArticle = $_POST['deleteArticle'];
+    $deleteArticle = $articleObj->DeleteArticle($idArticle);
+    header("Refresh: 0");
 }

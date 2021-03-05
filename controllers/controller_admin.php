@@ -98,7 +98,7 @@ if (isset($_POST['addArticle'])) {
             'city_id' => htmlspecialchars($_POST['city_id'])
         ];
 
-        var_dump($ArticleDetails);
+        //var_dump($ArticleDetails);
 
         if ($ArticleObj->addArticle($ArticleDetails)) {
             $messages['addArticle'] = 'Article enregistré';

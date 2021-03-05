@@ -113,4 +113,25 @@ class Article extends DataBase
             return false;
         }
     }
+
+    public function DeleteArticle($articleId)
+    {
+
+        $query = 'DELETE FROM `article` 
+        WHERE article_id = :articleId';
+
+        // je prepare requête à l'aide de la methode prepare pour me premunir des injections SQL
+        $deleteArticleQuery = $this->dataBase->prepare($query);
+
+        // On bind les values pour renseigner les marqueurs nominatifs
+        $deleteArticleQuery->bindValue(':articleId', $articleId , PDO::PARAM_STR);
+
+        // test et execution de la requête pour afficher message erreur
+        if ($deleteArticleQuery->execute()) {
+            // je retourne le resultat sous forme de tableau via la methode fetch car une seule ligne comme résultat
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

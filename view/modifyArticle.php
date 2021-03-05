@@ -18,7 +18,7 @@ require_once "../controllers/controller_modifyArticle.php";
 
     <div class="container mt-5 col-10 row g-3 mx-auto">
 
-    <p class="text-info"><?= $messages['addArticle'] ?? '' ?></p>
+        <p class="text-info"><?= $messages['addArticle'] ?? '' ?></p>
 
         <?php
         // Nous allons afficher le formulaire : 
@@ -28,24 +28,22 @@ require_once "../controllers/controller_modifyArticle.php";
         if (!empty($_POST['modifyArticle']) || !empty($errors)) { ?>
             <h5 class="text-center text-danger"><?= $messages['updateArticle'] ?? '' ?></h5>
 
-            <form action="" method="POST" class="shadow-lg p-5 addArticleForm">
+            <form action="modifyArticle.php" method="POST" class="shadow-lg p-5 addArticleForm">
 
                 <h2 class="mt-3 mb-5 subTitleAdmin text-center">Modification d'article</h2>
 
                 <div class="form-row mb-4">
 
                     <div class="form-outline col-md-6">
-                        <input type="text" id="article_title" class="form-control text-dark" name="article_title" value="<?= $detailsArticleArray['article_title'] ?>" />
+                        <input type="text" id="article_title" class="form-control text-dark" name="article_title" value="<?= $detailsArticleArray['article_title'] ?? (isset($_POST['article_title']) ? htmlspecialchars($_POST['article_title']) : '') ?>" />
                         <label class="form-label" for="article_title">Titre de l'article :</label>
-                    </div>
-                    <div class="text-danger mb-4">
-                        <span><?= isset($errorMessages['article_title']) ? $errorMessages['article_title'] : '' ?></span>
+                        <span class="error"><?= $errors['article_title'] ?? '' ?></span>
                     </div>
 
-                    <div class="mb-4">
+                    <div class="mb-4 mt-4">
                         <input name="article_date" type="date" value="<?= $detailsArticleArray['article_date'] ?>">
                     </div>
-                    
+
                     <div class="mb-4 col-md-6">
                         <select class="form-select text-dark" name="city_id" aria-label="Default select example">
                             <option selected disabled>Sélection de la ville</option>
@@ -54,33 +52,36 @@ require_once "../controllers/controller_modifyArticle.php";
                                 <option value="<?= $valueCity['city_id'] ?>" <?= $valueCity['city_id'] == $detailsArticleArray['city_id'] ? 'selected' : '' ?>><?= $valueCity['city_name'] ?></option>
                             <?php } ?>
                         </select>
-                        <div class="text-danger">
-                            <span><?= isset($errorMessages['city_id']) ? $errorMessages['city_id'] : '' ?></span>
-                        </div>
                     </div>
 
                     <div>
                         <textarea name="article_contenu" id="editor" placeholder="Insertion article"><?= $detailsArticleArray['article_contenu'] ?></textarea>
                     </div>
 
-                    <div class="col-12 text-center mt-3">
+                    <!-- <div class="col-12 text-center mt-3">
                         <input class="btn btn-primary" type="submit" name="updateArticleBtn" value="Enregistrer les modifications">
                         <a type="button" href="osaka.php" class="btn btn-sm btn-outline-danger">Annuler</a>
-                    </div>
+                    </div> -->
+                    <button type="submit" class="btn btn-sm btn-success" name="updateArticleBtn" value="<?= $_POST['modifyArticle'] ?>">Enregistrer les modifications</button>
+
                 </div>
             </form>
 
         <?php
             // si la requête d'update passe, nous l'indiquons à l'utilisateur via un message
-        } else { ?>
-
+        } else if ($updateArticleInBase) { ?>
             <h5 class="text-center text-info">Les modifications ont bien été prises en compte</h5>
             <div class="text-center mt-4">
-                <a type="button" href="osaka.php" btn btn-sm btn-outline-secondary>Retour Article</a>
+                <a type="button" href="<?php  ?>" btn btn-sm btn-outline-secondary>Retour Article</a>
+            </div>
+
+        <?php } else { ?>
+            <p class="h5 text-center text-info">Veuillez selectionner un article</p>
+            <div class="text-center mt-4">
+                <a type="button" href="osaka.php" class="btn btn-sm btn-warning">Retour Article</a>
             </div>
 
         <?php } ?>
-
     </div>
 
     <div>
@@ -97,6 +98,7 @@ require_once "../controllers/controller_modifyArticle.php";
         tinymce.init({
             selector: 'textarea#editor',
             plugins: 'image code advlist autolink lists link style image emoticons media table charmap print preview hr anchor pagebreak',
+            height: 500,
             toolbar: 'undo redo | link image | code',
             /* enable title field in the Image dialog*/
             image_title: true,

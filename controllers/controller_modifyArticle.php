@@ -1,14 +1,12 @@
 <?php
 session_start();
 
-
-
 require_once '../models/database.php';
 require_once '../models/article.php';
 
+$articleObj = new Article;
 
-
-$regexArticleTitle = '/^[a-zA-ZéèàêâùïüëçæœÉÈÇÙÆŒ-]+$/';
+$regexArticleTitle = '/^[a-zA-ZéèàêâùïüëçæœÉÈÇÙÆŒ -]+$/';
 $messages = [];
 $errorMessages = [];
 $errors = [];
@@ -63,7 +61,7 @@ if (isset($_POST['updateArticleBtn'])) {
     // var_dump($errorMessages);
 
     //je vérifie s'il n'y a pas d'erreurs afin de lancer ma requête
-    if (empty($errorMessages) && $_POST['updateArticleBtn']) {
+    if (empty($errorMessages) && isset($_POST['updateArticleBtn'])) {
         $ArticleObj = new Article;
 
 
@@ -74,10 +72,8 @@ if (isset($_POST['updateArticleBtn'])) {
             'article_date' => htmlspecialchars($_POST['article_date']),
             'city_id' => htmlspecialchars($_POST['city_id']),
             //je récupère mon id que j'ai stocké dans ma variable de session
-            'article_id' => $_SESSION['idArticleToUpdate']
+            'article_id' => $_POST['updateArticleBtn']
         ];
-
-        // var_dump($ArticleDetails);
 
         if ($ArticleObj->UpdateArticle($ArticleDetails)) {
             $updateArticleInBase = true;
@@ -85,4 +81,8 @@ if (isset($_POST['updateArticleBtn'])) {
             $messages['updateArticle'] = 'Erreur de connexion lors de la modification';
         }
     }
+    var_dump($errorMessages);
+    var_dump($ArticleObj->UpdateArticle($ArticleDetails));
+    
+
 }
