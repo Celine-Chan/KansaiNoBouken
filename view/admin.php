@@ -112,12 +112,6 @@ require_once "../controllers/controller_admin.php";
     </div>
 
     <script>
-        // tinymce.init({
-        //     selector: 'textarea',
-        //     plugins: 'advlist autolink lists link style image emoticons media table charmap print preview hr anchor pagebreak',
-        //     toolbar_mode: 'floating',
-        // });
-
         tinymce.init({
             selector: 'textarea#editor',
             plugins: 'image code advlist autolink lists link style image emoticons media table charmap print preview hr anchor pagebreak',

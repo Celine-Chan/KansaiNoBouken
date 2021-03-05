@@ -38,18 +38,32 @@ class Users extends DataBase
         } else {
             return false;
         }
-    } 
+    }
 
     //récupération de l'user dans la base de données
-    // public function connexionUser(){
+    public function connexionUser()
+    {
 
-    //     $query = 'SELECT users_id, users_password FROM users WHERE users_pseudo = :users_pseudo';
+        $query = 'SELECT `users_id`, `users_password` FROM `users` WHERE `users_pseudo` = :users_pseudo';
 
-    //     $queryObj = $this->dataBase->query($query);
-    //     $result = $queryObj->fetchAll();
-    //     return $result;
+        $queryObj = $this->dataBase->query($query);
+        $result = $queryObj->fetchAll();
+        return $result;
 
-    //     //comparaison du password envoyé
-    //     $isPasswordCorrect = password_verify($_POST[''])
-    // }
+        //comparaison du password envoyé
+        $isPasswordCorrect = password_verify($_POST['passConnexion'], $result['passConnexion']);
+
+        if (!$result) {
+            echo 'Mauvais identifiant ou mot de passe !';
+        } else {
+            if ($isPasswordCorrect) {
+                session_start();
+                $_SESSION['users_id'] = $result['users_id'];
+                $_SESSION['users_pseudo'] = $result['users_pseudo'];
+                echo 'Vous êtes connecté !';
+            } else {
+                echo 'Mauvais identifiant ou mot de passe !';
+            }
+        }
+    }
 }
