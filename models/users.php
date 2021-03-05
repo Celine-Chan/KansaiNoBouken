@@ -39,4 +39,17 @@ class Users extends DataBase
             return false;
         }
     } 
+
+    //récupération de l'user dans la base de données
+    // public function connexionUser(){
+
+    //     $query = 'SELECT users_id, users_password FROM users WHERE users_pseudo = :users_pseudo';
+
+    //     $queryObj = $this->dataBase->query($query);
+    //     $result = $queryObj->fetchAll();
+    //     return $result;
+
+    //     //comparaison du password envoyé
+    //     $isPasswordCorrect = password_verify($_POST[''])
+    // }
 }

@@ -35,7 +35,7 @@
                     <a class="nav-link text-dark navFont" href="../../view/inscription.php">Inscription</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark navFont" data-bs-toggle="modal" data-bs-target="#modalLoginForm">Connexion</a>
+                    <a class="nav-link text-dark navFont" href="../../view/connexion.php">Connexion</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -47,7 +47,7 @@
 </nav>
 
 <!-- Modal -->
-<div class="modal fade" id="modalLoginForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="modalLoginForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -55,10 +55,10 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                    <form>
+                    <form method="POST" action="../../index.php">
                         <div class="form-outline mb-4">
-                            <input type="email" id="form1Example1" name="mailConnexion" class="form-control" />
-                            <label class="form-label" for="form1Example1">Adresse mail</label>
+                            <input type="text" id="form1Example1" name="pseudoConnexion" class="form-control" />
+                            <label class="form-label" for="form1Example1">Pseudo</label>
                         </div>
                         <div class="form-outline mb-4">
                             <input type="password" id="form1Example2" name="passConnexion" class="form-control" />
@@ -71,4 +71,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

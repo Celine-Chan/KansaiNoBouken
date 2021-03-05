@@ -5,7 +5,7 @@ require_once '../controllers/controller_disconnection.php';
 <html lang="fr">
 
 <head>
-    <title>Kansai no bouken - 関西の冒険 - Utilisateur</title>
+    <title>Kansai no bouken - 関西の冒険 - Déconnexion</title>
     <?php include('pagePortion/header.php') ?>
 </head>
 
@@ -13,12 +13,12 @@ require_once '../controllers/controller_disconnection.php';
 
     <?php include('pagePortion/navbar.php') ?>
 
-    <div class="banniereInscriptionImg mb-5">
-        <img src="../assets/img/banniere/banniereAdmin.jpg" alt="admin" class="img-fluid adminImg">
-    </div>
 
-    <div class="container">
-        <h1 class="text-center">Page utilisateur</h1>
+
+    <div class="container mt-5">
+        <a href="../index.php" class="text-dark backIndex mt-5">Retour a l'accueil</a>
+        <h1 class="text-center text-danger mt-5">Vous avez bien été déconnecté !</h1>
+
     </div>
 
 

@@ -496,3 +496,20 @@ li {
     height: 2rem;
     width: 2rem;
 }
+
+.backIndex:hover{
+    text-decoration: underline;
+}
+
+.connexionForm{
+        border-radius: 2rem;
+        background-color: white;
+}
+
+.connexionBack{
+    background-image: url('../img/geisha.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
