@@ -8,11 +8,11 @@
     <title>Kansai no bouken - 関西の冒険 - Galerie</title>
     <link rel="stylesheet" href="../view/lightbox2-2.11.3/dist/css/lightbox.min.css">
     <script src="../view/lightbox2-2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
-    <?php include('../view/pagePortion/header.php') ?>
+    <?php include('../view/include/header.php') ?>
 </head>
 
 <body>
-    <?php include('../view/pagePortion/navbar.php') ?>
+    <?php include('../view/include/navbar.php') ?>
 
     <div class="container">
         <h1 class="text-center galleryTitle mt-5 mb-5">Galerie</h1>
@@ -36,7 +36,7 @@
         <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
     </div>
 
-    <?php include('../view/pagePortion/footer.php') ?>
+    <?php include('../view/include/footer.php') ?>
 
     <script src="../view/lightbox2-2.11.3/dist/js/lightbox.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>

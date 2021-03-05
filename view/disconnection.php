@@ -6,12 +6,12 @@ require_once '../controllers/controller_disconnection.php';
 
 <head>
     <title>Kansai no bouken - 関西の冒険 - Déconnexion</title>
-    <?php include('pagePortion/header.php') ?>
+    <?php include('include/header.php') ?>
 </head>
 
 <body>
 
-    <?php include('pagePortion/navbar.php') ?>
+    <?php include('include/navbar.php') ?>
 
 
 
@@ -29,7 +29,7 @@ require_once '../controllers/controller_disconnection.php';
         <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
     </div>
 
-    <?php include('pagePortion/footer.php') ?>
+    <?php include('include/footer.php') ?>
 </body>
 
 </html>

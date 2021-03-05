@@ -9,12 +9,12 @@ require_once "../controllers/controller_admin.php";
 <head>
     <title>Kansai no bouken - 関西の冒険 - Administrateur</title>
     <script src="https://cdn.tiny.cloud/1/75w0aspes5o1fsfrwo2wxkidqu37998magwy5f44mnuk9ytq/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-    <?php include('../view/pagePortion/header.php') ?>
+    <?php include('../view/include/header.php') ?>
 </head>
 
 <body class="backAdmin">
 
-    <?php include('../view/pagePortion/navbar.php') ?>
+    <?php include('../view/include/navbar.php') ?>
 
     <h1 class="text-center mb-5 mt-5 adminTitle text-light">Compte administrateur</h1>
 
@@ -182,7 +182,7 @@ require_once "../controllers/controller_admin.php";
             content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
         });
     </script>
-    <?php include('../view/pagePortion/footer.php') ?>
+    <?php include('../view/include/footer.php') ?>
 </body>
 
 </html>

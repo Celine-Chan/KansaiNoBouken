@@ -3,14 +3,14 @@
 
 <head>
     <title>Kansai no bouken - 関西の冒険 - Nara</title>
-    <?php include('assets/pagePortion/header.php') ?>
+    <?php include('../view/include/header.php') ?>
 </head>
 
 
 <body>
 
     <!--Navbar -->
-    <?php include('assets/pagePortion/navbar.php') ?>
+    <?php include('../view/include/navbar.php') ?>
 
 
 
@@ -23,7 +23,7 @@
         <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
     </div>
 
-    <?php include('assets/pagePortion/footer.php') ?>
+    <?php include('../view/include/footer.php') ?>
 
     <!-- Optional JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

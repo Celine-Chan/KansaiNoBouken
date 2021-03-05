@@ -8,13 +8,13 @@ require_once "../controllers/controller_inscription.php";
 
 <head>
     <title>Kansai no bouken - 関西の冒険 - Inscription</title>
-    <?php include('../view/pagePortion/header.php') ?>
+    <?php include('../view/include/header.php') ?>
 </head>
 
 
 <body class="backBody">
 
-    <?php include('../view/pagePortion/navbar.php') ?>
+    <?php include('../view/include/navbar.php') ?>
 
     <!-- <div class="banniereInscriptionImg">
         <img src="../assets/img/banniere/osakaPortKansai2.jpg" alt="takoyaki" class="img-fluid takoyakiImg">
@@ -131,7 +131,7 @@ require_once "../controllers/controller_inscription.php";
         <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
     </div>
 
-    <?php include('../view/pagePortion/footer.php') ?>
+    <?php include('../view/include/footer.php') ?>
 </body>
 
 </html>

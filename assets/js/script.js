@@ -7,3 +7,16 @@
     behavior: 'smooth',
     }));
 
+// Afficher le mot de passe
+function maskPassword() {
+
+    var showPassword = document.getElementById("passConnexion");
+
+    if (showPassword.type === "password") {
+        showPassword.type = "text";
+    } else {
+        showPassword.type = "password";
+    }
+}
+
+

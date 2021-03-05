@@ -3,12 +3,12 @@
 
 <head>
     <title>Kansai no bouken - 関西の冒険 - kansai</title>
-    <?php include('../view/pagePortion/header.php') ?>
+    <?php include('../view/include/header.php') ?>
 </head>
 
 <body>
 
-    <?php include('../view/pagePortion/navbar.php') ?>
+    <?php include('../view/include/navbar.php') ?>
 
 
 
@@ -17,7 +17,7 @@
         <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
     </div>
 
-    <?php include('../view/pagePortion/footer.php') ?>
+    <?php include('../view/include/footer.php') ?>
 
 </body>
 

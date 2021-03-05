@@ -6,12 +6,12 @@ require_once '../controllers/controller_connexion.php';
 
 <head>
     <title>Kansai no bouken - 関西の冒険 - Connexion</title>
-    <?php include('pagePortion/header.php') ?>
+    <?php include('include/header.php') ?>
 </head>
 
 <body class="connexionBack">
 
-    <?php include('pagePortion/navbar.php') ?>
+    <?php include('include/navbar.php') ?>
 
     <div class="text-dark container mt-5 col-4 row g-3 mx-auto">
 
@@ -26,15 +26,19 @@ require_once '../controllers/controller_connexion.php';
                     <span><?= isset($errorMessages['pseudoConnexion']) ? $errorMessages['pseudoConnexion'] : '' ?></span>
                 </div>
             </div>
+
             <div class="form-outline mb-4">
-                <input type="password" id="passConnexion" name="passConnexion" class="form-control" value="<?= isset($_POST['passConnexion']) ? $_POST['passConnexion'] : '' ?>"/>
+                <input type="password" id="passConnexion" name="passConnexion" class="form-control" value="<?= isset($_POST['passConnexion']) ? $_POST['passConnexion'] : '' ?>" />
                 <label class="form-label" for="passConnexion">Mot de passe</label>
                 <div class="text-danger">
                     <span><?= isset($errorMessages['passConnexion']) ? $errorMessages['passConnexion'] : '' ?></span>
                 </div>
             </div>
+            <div class="marginInput">
+                <input type="checkbox" onclick="maskPassword()">Show Password
+            </div>
 
-            <div class="row mb-4">
+            <div class="row mb-4 mt-3">
                 <div class="col d-flex justify-content-center">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
@@ -59,7 +63,7 @@ require_once '../controllers/controller_connexion.php';
         <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
     </div>
 
-    <?php include('pagePortion/footer.php') ?>
+    <?php include('include/footer.php') ?>
 </body>
 
 </html>

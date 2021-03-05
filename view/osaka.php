@@ -7,12 +7,12 @@ require_once '../controllers/controller_osaka.php';
 
 <head>
     <title>Kansai no bouken - 関西の冒険 - Osaka</title>
-    <?php include('../view/pagePortion/header.php') ?>
+    <?php include('../view/include/header.php') ?>
 </head>
 
 <body>
 
-    <?php include('../view/pagePortion/navbar.php') ?>
+    <?php include('../view/include/navbar.php') ?>
 
     <div class="osakaPageParalax">
         <h1 class="pt-5 ms-5 osakaTitlePageParalax">OSAKA</h1>
@@ -101,7 +101,7 @@ require_once '../controllers/controller_osaka.php';
     <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
 </div>
 
-<?php include('../view/pagePortion/footer.php') ?>
+<?php include('../view/include/footer.php') ?>
 </body>
 
 </html>

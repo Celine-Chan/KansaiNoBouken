@@ -7,8 +7,13 @@ body {
 }
 
 /* ---------- NAVBAR ---------- */
+/* .btnNavConnexion{
+    height: 1.5rem;
+    width: 8rem;
+} */
+
 .searchNavBar{
-    height: 2rem;
+    height: 1.5rem;
     width: 3rem;
 }
 
@@ -28,7 +33,7 @@ nav {
 .navFont {
     font-family: 'Saira Condensed', sans-serif;
     font-size: 1.2rem;
-    color: #B71C1C !important;
+    color: #B71C1C;
     font-weight: bold;
 }
 
@@ -153,11 +158,13 @@ nav {
 }
 
 .gastronomieSection {
+    background-color: rgb(87, 83, 83);
     background-image: url('../img/gastronomie/ramen-gastronomie.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-blend-mode: multiply;
 }
 
 .seeMore:hover {
@@ -168,16 +175,16 @@ nav {
 
 /* City Card */
 .titleCardSize {
-    font-size: 1.5rem !important;
+    font-size: 1.8rem !important;
     color: black !important;
     font-family: 'Amatic SC', cursive;
     font-weight: bold !important;
 }
 
 .fontSizeCard {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
     color: black !important;
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Nunito', sans-serif;
 }
 
 .vocabularyCard:hover {
@@ -512,4 +519,8 @@ li {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.marginInput{
+    margin-top: -1.5rem;
 }
