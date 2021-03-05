@@ -1,3 +1,6 @@
+<?php
+require_once '../controllers/controller_userAccount.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
