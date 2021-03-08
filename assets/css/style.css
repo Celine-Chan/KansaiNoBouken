@@ -7,10 +7,6 @@ body {
 }
 
 /* ---------- NAVBAR ---------- */
-/* .btnNavConnexion{
-    height: 1.5rem;
-    width: 8rem;
-} */
 
 .searchNavBar{
     height: 1.5rem;
@@ -68,11 +64,6 @@ nav {
 .searchButton:hover{
     transform: scale(1.2);
     transition: 0.5s;
-}
-
-.darumaSvg{
-    height: 2rem;
-    width: 2rem;
 }
 
 /* ---------- FOOTER ---------- */
@@ -509,9 +500,11 @@ li {
     text-decoration: underline;
 }
 
+/* ---------- PAGE CONNEXION ---------- */
 .connexionForm{
-        border-radius: 2rem;
-        background-color: white;
+    border-radius: 2rem;
+    background-color: white;
+    
 }
 
 .connexionBack{
@@ -524,4 +517,16 @@ li {
 
 .marginInput{
     margin-top: -1.5rem;
+}
+
+.daruma{
+    height: 2.5rem;
+    width: auto;
+}
+
+/* ---------- PAGE DECONNEXION ---------- */
+
+.Kaonashi{
+    height: 20rem;
+    width: auto;
 }

@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../controllers/controller_connexion.php';
 ?>
 <!DOCTYPE html>
@@ -7,17 +8,18 @@ require_once '../controllers/controller_connexion.php';
 <head>
     <title>Kansai no bouken - 関西の冒険 - Connexion</title>
     <?php include('include/header.php') ?>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body class="connexionBack">
 
     <?php include('include/navbar.php') ?>
 
-    <div class="text-dark container mt-5 col-4 row g-3 mx-auto">
+    <div class="text-dark container mt-5 col-12 col-md-6 col-xl-4 row g-3 mx-auto">
 
-        <form method="POST" action="connexion.php" class="shadow-lg p-5 connexionForm mb-5">
+        <form method="POST" action="" class="shadow-lg p-5 connexionForm mb-5">
 
-            <h1 class="text-center text-dark mb-5">Connexion</h1>
+            <h1 class="text-center text-dark mb-5"><img src="../assets/img/daruma.svg" alt="daruma" class="daruma"> Connexion</h1>
 
             <div class="form-outline mb-4">
                 <input type="text" id="pseudoConnexion" name="pseudoConnexion" class="form-control" value="<?= isset($_POST['pseudoConnexion']) ? htmlspecialchars($_POST['pseudoConnexion']) : '' ?>" />
@@ -35,7 +37,7 @@ require_once '../controllers/controller_connexion.php';
                 </div>
             </div>
             <div class="marginInput">
-                <input type="checkbox" onclick="maskPassword()">Show Password
+                <input type="checkbox" onclick="maskPassword()">Afficher le mot de passe
             </div>
 
             <div class="row mb-4 mt-3">
@@ -48,6 +50,13 @@ require_once '../controllers/controller_connexion.php';
 
                 <div class="col">
                     <a href="#!">Mot de passe oublié ?</a>
+                </div>
+            </div>
+
+            <div class="row mb-4 mt-3">
+                <div class="g-recaptcha mb-1" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" name="captcha"></div>
+                <div class="text-danger">
+                    <span><?= isset($errorMessages['captcha']) ? $errorMessages['captcha'] : '' ?></span>
                 </div>
             </div>
 
@@ -64,6 +73,11 @@ require_once '../controllers/controller_connexion.php';
     </div>
 
     <?php include('include/footer.php') ?>
+    <script type="text/javascript">
+        function onReCaptchaValid(token) {
+            document.getElementById('id_du_formulaire').submit();
+        }
+    </script>
 </body>
 
 </html>

@@ -1,6 +1,5 @@
 <?php
-
-require_once "controllers/controller_index.php";
+session_start();
 
 ?>
 
@@ -16,6 +15,8 @@ require_once "controllers/controller_index.php";
 <body>
 
     <?php include('view/include/navbar.php') ?>
+
+    <p class="text-center text-danger m-3 h2"><?= $messagesConnection  ?? '' ?></p>
 
     <div class="container-fluid">
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">

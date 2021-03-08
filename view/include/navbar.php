@@ -31,16 +31,22 @@
                 <li class="nav-item">
                     <a class="nav-link navFont" href="../../view/contact.php">Contact</a>
                 </li>
+                <!-- disparait quand l'user est connecté -->
                 <li class="nav-item">
                 <a class="nav-link navFont btnNavConnexion" href="../../view/inscription.php">Inscription</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link navFont btnNavConnexion" href="../../view/connexion.php">Connexion</a>
                 </li>
+                <!-- apparait quand l'user est connecté -->
+                <li class="nav-item">
+                    <a class="nav-link navFont btnNavConnexion" href="../../view/userAccount.php">Mon compte</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navFont btnNavConnexion" href="../../view/disconnection.php">Déconnexion</a>
+                </li>
             </ul>
             <form class="d-flex">
-            <!-- <button type="button" class="btn btn-danger btn-sm"><a class="nav-link text-light navFont btnNavConnexion" href="../../view/inscription.php">Inscription</a></button>
-            <button type="button" class="btn btn-danger btn-sm"><a class="nav-link text-light navFont btnNavConnexion ms-3" href="../../view/connexion.php">Connexion</a></button> -->
                 <input class="form-control me-2" type="search" placeholder="mot-clé" aria-label="Search">
                 <a type="submit" class="searchButton"><img src="../../assets/img/tambour.svg" alt="search" class="searchNavBar"></a>
             </form>

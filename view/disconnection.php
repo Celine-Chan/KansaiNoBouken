@@ -1,5 +1,11 @@
 <?php
-require_once '../controllers/controller_disconnection.php';
+session_start();
+
+require_once '../models/database.php';
+require_once '../models/users.php';
+
+//on détruit la session
+session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,9 +22,16 @@ require_once '../controllers/controller_disconnection.php';
 
 
     <div class="container mt-5">
-        <a href="../index.php" class="text-dark backIndex mt-5">Retour a l'accueil</a>
         <h1 class="text-center text-danger mt-5">Vous avez bien été déconnecté !</h1>
+    </div>
 
+    <div class="container mt-5 text-center">
+        <img src="../assets/img/fantome.svg" alt="yokai" class="Kaonashi">
+    </div>
+
+    <div class="container mt-5 text-center">
+        <a href="connexion.php" type="button" class="btn btn-danger">Se connecter</a>
+        <a href="../index.php" type="button" class="btn btn-primary">Retour a l'accueil</a>
     </div>
 
 

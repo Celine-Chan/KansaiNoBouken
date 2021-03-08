@@ -41,21 +41,46 @@ class Users extends DataBase
     }
 
     //récupération de l'user dans la base de données
-    public function connexionUser(string $idUsers)
+    public function connexionUser($usersPseudo)
     {
 
-        $query = 'SELECT `users_id`, `users_password` 
+        $query = 'SELECT * 
         FROM `users` 
         WHERE `users_pseudo` = :users_pseudo';
 
-        $connexionUserQuery = $this->dataBase->prepare($query);
+        $getInfoQuery = $this->dataBase->prepare($query);
 
-        $connexionUserQuery->bindValue(':users_pseudo', $idUsers, PDO::PARAM_STR);
+        $getInfoQuery->bindValue(':users_pseudo', $usersPseudo, PDO::PARAM_STR);
+        $getInfoQuery->execute();
+        $infosUsers = $getInfoQuery->fetch();
 
-        if ($connexionUserQuery->execute()) {
-            return $connexionUserQuery->fetch();
+        if ($infosUsers) {
+            return $infosUsers;
         } else {
             return false;
         }
+    }
+
+    public function verifyPassword($usersPseudo, $usersPassword)
+    {
+
+        $query = 'SELECT * 
+        FROM `users` 
+        WHERE `users_pseudo` = :users_pseudo';
+
+        $getInfoQuery = $this->dataBase->prepare($query);
+
+        $getInfoQuery->bindValue(':users_pseudo', $usersPseudo, PDO::PARAM_STR);
+        $getInfoQuery->execute();
+        $infosUsers = $getInfoQuery->fetch();
+
+        if ($infosUsers) {
+            $passwordInDb = $infosUsers['users_password'];
+            return password_verify($usersPassword, $passwordInDb);
+        } else {
+            return false;
+        }
+        
+        return $infosUsers;
     }
 }

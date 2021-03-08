@@ -1,5 +1,4 @@
 // Scroll To Top
-    
     const btn = document.getElementById('scrollTop');
 
     btn.addEventListener('click', () => window.scrollTo({
@@ -18,5 +17,6 @@ function maskPassword() {
         showPassword.type = "password";
     }
 }
+
 
 

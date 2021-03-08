@@ -13,12 +13,16 @@ require_once '../controllers/controller_userAccount.php';
 
     <?php include('include/navbar.php') ?>
 
-    <div class="banniereInscriptionImg mb-5">
+    <div class="banniereInscriptionImg">
         <img src="../assets/img/banniere/banniereAdmin.jpg" alt="admin" class="img-fluid adminImg">
     </div>
 
-    <div class="container">
-        <h1 class="text-center">Page utilisateur</h1>
+    <div class="d-flex justify-content-end">
+        <a href="disconnection.php" class="btn btn-danger btn-sm" type="button">Se déconnecter</a>
+    </div>
+
+    <div class="container mt-2">
+        <h1 class="text-center text-dark">Page utilisateur</h1>
     </div>
 
 
