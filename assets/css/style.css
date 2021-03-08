@@ -456,6 +456,15 @@ li {
 }
 
 /* ---------- PAGE ADMIN ---------- */
+.titleTable{
+    font-size: 2rem;
+    font-family: 'Cinzel', serif;
+}
+
+.fontAdmin{
+    font-family: 'Bodoni Moda', serif;
+    font-weight: bold;
+}
 
 .adminTitle{
     font-family: 'Bodoni Moda', serif;
@@ -500,11 +509,15 @@ li {
     text-decoration: underline;
 }
 
+.btnBack{
+    background-color: white;
+    border-radius: 2rem;
+}
+
 /* ---------- PAGE CONNEXION ---------- */
 .connexionForm{
     border-radius: 2rem;
     background-color: white;
-    
 }
 
 .connexionBack{

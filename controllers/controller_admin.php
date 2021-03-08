@@ -71,19 +71,21 @@ if (isset($_POST['addArticle'])) {
         }
     }
 
-    // if (!isset($_POST['city_id'])) {
-    //     $errorMessages['city_id'] = 'veuillez faire un choix.';
-    // }
-    // // sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
-    // if (isset($_POST['city_id'])) {
-    //     if (!array_key_exists($_POST['city_id'], $articleArray)) {
-    //         $errorMessages['city_id'] = 'Veuillez choisir une ville.';
-    //     }
-    // }
+    if (!isset($_POST['city_id'])) {
+        $errorMessages['city_id'] = 'veuillez faire un choix.';
+    }
+    // sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
+    if (isset($_POST['city_id'])) {
+        if (!array_key_exists($_POST['city_id'], $articleArray)) {
+            $errorMessages['city_id'] = 'Veuillez choisir une ville.';
+        }
+    }
 
-    // var_dump($errorMessages);
-
-
+    if (isset($_POST['article_contenu'])) {
+        if (empty($_POST['article_contenu'])) {
+            $errorMessages['article_contenu'] = 'Veuillez saisir un texte.';
+        }
+    }
 
 //je vérifie s'il n'y a pas d'erreurs afin de lancer ma requête
     if (isset($_POST['addArticle']) && empty($errorMessages)) {

@@ -15,7 +15,7 @@ require_once '../controllers/controller_connexion.php';
 
     <?php include('include/navbar.php') ?>
 
-    <div class="text-dark container mt-5 col-12 col-md-6 col-xl-4 row g-3 mx-auto">
+    <div class="text-dark container mt-5 col-12 col-md-8 col-xl-4 row g-3 mx-auto">
 
         <form method="POST" action="" class="shadow-lg p-5 connexionForm mb-5">
 

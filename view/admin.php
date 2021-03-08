@@ -18,6 +18,39 @@ require_once "../controllers/controller_admin.php";
 
     <h1 class="text-center mb-5 mt-5 adminTitle text-light">Compte administrateur</h1>
 
+    <div class="container text-dark btnBack mt-5 col-10">
+
+    <h2 class="text-center pt-5 titleTable">Tableau de bord</h2>
+
+        <div>
+            <h2 class="mt-5 fontAdmin">Article</h2>
+            <a href="#addArticle" class="btn btn-danger ms-5">Ajouter un article</a>
+        </div>
+
+        <div>
+            <h3 class="ms-3 mt-5 fontAdmin">Voir/Modifier/Supprimer les articles :</h3>
+            <a href="kansai.php" class="btn btn-primary ms-5">Kansai</a>
+            <a href="osaka.php" class="btn btn-primary">Osaka</a>
+            <a href="kyoto.php" class="btn btn-primary">Kyoto</a>
+            <a href="nara.php" class="btn btn-primary">Nara</a>
+            <a href="kobe.php" class="btn btn-primary">Kobe</a>
+            <a href="wakayama.php" class="btn btn-primary">Wakayama</a>
+        </div>
+
+        <div class="mt-5 pb-5">
+            <h2 class="fontAdmin">Galerie</h2>
+            <a href="#addImg" class="btn btn-danger ms-5 mt-3">Ajouter une photo</a>
+            <a href="galerie.php" class="btn btn-primary ms-3">Voir la Galerie</a>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <img src="../assets/img/separator.svg" alt="separator" class="w-25">
+    </div>
+
+
+    <div id="addArticle"></div>
+
     <div class="container mt-5 col-10 row g-3 mx-auto">
 
         <form action="admin.php" method="POST" class="shadow-lg p-5 addArticleForm">
@@ -54,7 +87,10 @@ require_once "../controllers/controller_admin.php";
                 </div>
 
                 <div>
-                    <textarea name="article_contenu" id="editor" placeholder="Insertion article"></textarea>
+                    <textarea name="article_contenu" id="editor" placeholder="Insertion article"><?= isset($_POST['article_contenu']) ? $_POST['article_contenu'] : '' ?></textarea>
+                    <div class="text-danger">
+                        <span><?= isset($errorMessages['article_contenu']) ? $errorMessages['article_contenu'] : '' ?></span>
+                    </div>
                 </div>
 
                 <div class="col-12 text-center mt-3">
@@ -67,6 +103,8 @@ require_once "../controllers/controller_admin.php";
     <div class="text-center mt-5">
         <img src="../assets/img/separator.svg" alt="separator" class="w-25">
     </div>
+
+    <div id="addImg"></div>
 
     <div class="mt-5">
         <form action="admin.php" method="POST" enctype="multipart/form-data" class="container mx-auto col-10 row g-3 mt-5 uploadImgForm">

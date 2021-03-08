@@ -9,6 +9,7 @@ require_once "../controllers/controller_inscription.php";
 <head>
     <title>Kansai no bouken - 関西の冒険 - Inscription</title>
     <?php include('../view/include/header.php') ?>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 
@@ -20,9 +21,7 @@ require_once "../controllers/controller_inscription.php";
         <img src="../assets/img/banniere/osakaPortKansai2.jpg" alt="takoyaki" class="img-fluid takoyakiImg">
     </div> -->
 
-    <div class="container mt-5 col-6 row g-3 mx-auto">
-
-
+    <div class="container mt-5 col-12 col-md-10 col-xl-6 row g-3 mx-auto">
 
         <form class="shadow-lg p-5 inscriptionForm" method="POST" action="inscription.php">
 
@@ -120,6 +119,13 @@ require_once "../controllers/controller_inscription.php";
                 </div>
             </div>
 
+            <div class="row mb-4 mt-3">
+                <div class="g-recaptcha mb-1" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" name="captcha"></div>
+                <div class="text-danger">
+                    <span><?= isset($errorMessages['captcha']) ? $errorMessages['captcha'] : '' ?></span>
+                </div>
+            </div>
+
             <button class="btn btn-info my-4 red darken-4 mx-auto" type="submit" name="submit">S'inscrire</button>
 
             <p>En cliquant sur <em>s'inscrire</em> vous acceptez nos <a href="cgu.php" target="_blank">terms of service</a></p>
@@ -132,6 +138,11 @@ require_once "../controllers/controller_inscription.php";
     </div>
 
     <?php include('../view/include/footer.php') ?>
+    <script type="text/javascript">
+        function onReCaptchaValid(token) {
+            document.getElementById('id_du_formulaire').submit();
+        }
+    </script>
 </body>
 
 </html>

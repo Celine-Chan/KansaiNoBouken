@@ -84,6 +84,23 @@ if (isset($_POST['submit'])) {
         }
     }
 
+    // sécurité captcha
+    require('../captcha/autoload.php');
+    if (isset($_POST['g-recaptcha-response'])) {
+        $recaptcha = new \ReCaptcha\ReCaptcha('6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe');
+        $resp = $recaptcha->verify($_POST['g-recaptcha-response']);
+        if ($resp->isSuccess()) {
+            // var_dump('Captcha Valide');
+        } else {
+            $errors = $resp->getErrorCodes();
+            $errorMessages['captcha'] = 'Erreur dans le Captcha';
+            // var_dump($errors);
+            // var_dump ($errorMessages['captcha'] = 'Erreur dans le Captcha');
+        }
+    } else {
+        $errorMessages['captcha'] = 'Erreur dans le Captcha';
+    }
+
     //var_dump($errorMessages);
 
     //je vérifie s'il n'y a pas d'erreurs afin de lancer ma requête
