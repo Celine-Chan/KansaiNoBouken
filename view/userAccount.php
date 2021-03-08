@@ -25,6 +25,8 @@ require_once '../controllers/controller_userAccount.php';
         <h1 class="text-center text-dark">Page utilisateur</h1>
     </div>
 
+    <p>Bienvenue <?php  ?></p>
+
 
 
 

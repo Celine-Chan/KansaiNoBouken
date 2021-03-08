@@ -105,6 +105,9 @@ require_once "../controllers/controller_inscription.php";
             <div class="mb-2">
                 <label for="password">Saisissez un mot de passe :</label>
                 <input type="password" id="password" name="password" class="form-control ms-3" placeholder="ex : JaneDoe76*" aria-describedby="defaultRegisterFormPasswordHelpBlock" value="<?= isset($_POST['password']) ? $_POST['password'] : '' ?>">
+                <div class="showPass ms-4">
+                    <input type="checkbox" onclick="showPassword()">Afficher le mot de passe
+                </div>
                 <div id="emailHelp" class="form-text ms-3 text-primary">Votre mot de passe doit contenir au minimum 8 caractères, une lettre majuscule, un chiffre et un caractère spécial (!@#$%^&*-)</div>
                 <div class="text-danger">
                     <span><?= isset($errorMessages['password']) ? $errorMessages['password'] : '' ?></span>
@@ -114,6 +117,9 @@ require_once "../controllers/controller_inscription.php";
             <div class="mb-4">
                 <label for="confirmPasword">Comfirmer votre mot de passe :</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" class="form-control ms-3" placeholder="ex : JaneDoe76*" aria-describedby="defaultRegisterFormPasswordHelpBlock" value="<?= isset($_POST['confirmPassword']) ? $_POST['confirmPassword'] : '' ?>">
+                <div class="showPass ms-4">
+                    <input type="checkbox" onclick="showConfirmPassword()">Afficher le mot de passe
+                </div>
                 <div class="text-danger">
                     <span><?= isset($errorMessages['confirmPassword']) ? $errorMessages['confirmPassword'] : '' ?></span>
                 </div>

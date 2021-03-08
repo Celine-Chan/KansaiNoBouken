@@ -45,6 +45,10 @@
                 <li class="nav-item">
                     <a class="nav-link navFont btnNavConnexion" href="../../view/disconnection.php">Déconnexion</a>
                 </li>
+                <!-- apparait quand l'admin est connecté -->
+                <li class="nav-item">
+                    <a class="nav-link navFont btnNavConnexion" href="../../view/admin.php">Admin</a>
+                </li>
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="mot-clé" aria-label="Search">

@@ -6,7 +6,7 @@
     behavior: 'smooth',
     }));
 
-// Afficher le mot de passe
+// Afficher le mot de passe connexion
 function maskPassword() {
 
     var showPassword = document.getElementById("passConnexion");
@@ -18,5 +18,28 @@ function maskPassword() {
     }
 }
 
+// Afficher le mot de passe inscription
+function showPassword() {
+
+    var showPassword = document.getElementById("password");
+
+    if (showPassword.type === "password") {
+        showPassword.type = "text";
+    } else {
+        showPassword.type = "password";
+    }
+}
+
+// Afficher confirmation de mot de passe inscription
+function showConfirmPassword() {
+
+    var showPassword = document.getElementById("confirmPassword");
+
+    if (showPassword.type === "password") {
+        showPassword.type = "text";
+    } else {
+        showPassword.type = "password";
+    }
+}
 
 

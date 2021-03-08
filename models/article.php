@@ -64,7 +64,8 @@ class Article extends DataBase
         FROM `article`
         INNER JOIN city
         ON city.city_id = article.city_id 
-        WHERE `article_id` = :article_id';
+        WHERE `article_id` = :article_id
+        ORDER BY  `article_date` DESC';
 
         // je prepare requête à l'aide de la methode prepare pour me premunir des injections SQL
         $getDetailsArticleQuery = $this->dataBase->prepare($query);

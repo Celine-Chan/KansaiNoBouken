@@ -53,7 +53,7 @@ require_once '../controllers/controller_connexion.php';
                 </div>
             </div>
 
-            <div class="row mb-4 mt-3">
+            <div class="row mb-4 mt-3 captcha">
                 <div class="g-recaptcha mb-1" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" name="captcha"></div>
                 <div class="text-danger">
                     <span><?= isset($errorMessages['captcha']) ? $errorMessages['captcha'] : '' ?></span>

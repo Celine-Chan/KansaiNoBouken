@@ -9,6 +9,7 @@ $regexPassword = '/^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-Z]).{8,20}$/';
 $errorMessages = [];
 $messageConnection = '';
 
+
 if (isset($_POST['btnConnexion'])) {
 
     if (isset($_POST['pseudoConnexion'])) {
@@ -54,12 +55,12 @@ if (isset($_POST['btnConnexion'])) {
     $passwordConnection = $_POST['passConnexion'];
 
     $usersObj = new Users;
+    $usersInfoArray = $usersObj->getInfoUser($pseudoConnection);
+    var_dump($usersInfoArray);
 
-    if ($usersObj->verifyPassword($pseudoConnection, $passwordConnection)) {
-        $usersObj = new Users;
-        $usersInfo = $usersInfoObj->connexionUser($pseudoConnection);
-        $_SESSION['users_id'] = $usersInfo['users_id'];
-        $_SESSION['users_pseudo'] = $usersInfo['users_pseudo'];
+    if (password_verify($passwordConnection, $usersInfoArray['users_password'])) {
+        $_SESSION['users_id'] = $usersInfoArray['users_id'];
+        $_SESSION['users_pseudo'] = $usersInfoArray['users_pseudo'];
         header("location: ../index.php");
     } else {
         $messageConnection = 'Votre mail ou votre mot de passe est incorrect !';

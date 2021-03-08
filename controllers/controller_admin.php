@@ -75,11 +75,11 @@ if (isset($_POST['addArticle'])) {
         $errorMessages['city_id'] = 'veuillez faire un choix.';
     }
     // sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
-    if (isset($_POST['city_id'])) {
-        if (!array_key_exists($_POST['city_id'], $articleArray)) {
-            $errorMessages['city_id'] = 'Veuillez choisir une ville.';
-        }
-    }
+    // if (isset($_POST['city_id'])) {
+    //     if (!array_key_exists($_POST['city_id'], $articleArray)) {
+    //         $errorMessages['city_id'] = 'Veuillez choisir une ville.';
+    //     }
+    // }
 
     if (isset($_POST['article_contenu'])) {
         if (empty($_POST['article_contenu'])) {

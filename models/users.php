@@ -41,10 +41,11 @@ class Users extends DataBase
     }
 
     //récupération de l'user dans la base de données
-    public function connexionUser($usersPseudo)
+    public function getInfoUser(string $usersPseudo)
     {
 
-        $query = 'SELECT * 
+        $query = 'SELECT `users_id`, `users_firstname`, `users_lastname`, `users_pseudo`, `users_birthdate`, 
+        `users_gender`, `users_japantrip`, `users_mail`, `users_password`, `users_role` 
         FROM `users` 
         WHERE `users_pseudo` = :users_pseudo';
 
@@ -55,7 +56,11 @@ class Users extends DataBase
         $infosUsers = $getInfoQuery->fetch();
 
         if ($infosUsers) {
-            return $infosUsers;
+            if (!empty($infosUsers)) {
+               return $infosUsers;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
@@ -64,7 +69,8 @@ class Users extends DataBase
     public function verifyPassword($usersPseudo, $usersPassword)
     {
 
-        $query = 'SELECT * 
+        $query = 'SELECT `users_firstname`, `users_lastname`, `users_pseudo`, `users_birthdate`, 
+        `users_gender`, `users_japantrip`, `users_mail`, `users_password`, `users_role` 
         FROM `users` 
         WHERE `users_pseudo` = :users_pseudo';
 
