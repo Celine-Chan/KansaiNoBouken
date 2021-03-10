@@ -40,7 +40,7 @@ class Users extends DataBase
         }
     }
 
-    //récupération de l'user dans la base de données
+    //récupération de l'user dans la base de données pour connexion
     public function getInfoUser(string $usersPseudo)
     {
 
@@ -57,7 +57,7 @@ class Users extends DataBase
 
         if ($infosUsers) {
             if (!empty($infosUsers)) {
-               return $infosUsers;
+                return $infosUsers;
             } else {
                 return false;
             }
@@ -86,7 +86,30 @@ class Users extends DataBase
         } else {
             return false;
         }
-        
+
         return $infosUsers;
+    }
+
+    //aficher info user sur userAccount
+    public function getUsersDetail(string $idUser)
+    {
+        $query = 'SELECT `users_id`, `users_firstname`, `users_lastname`, `users_pseudo`, `users_birthdate`, 
+        `users_gender`, `users_japantrip`, `users_mail` 
+        FROM `users` 
+        WHERE `users_id` = :users_id';
+
+        // je prepare requête à l'aide de la methode prepare pour me premunir des injections SQL
+        $getDetailsUserQuery = $this->dataBase->prepare($query);
+
+        // Je bind ma value idPatient à mon paramètre $idArticle
+        $getDetailsUserQuery->bindValue(':users_id', $idUser, PDO::PARAM_STR);
+
+        // test et execution de la requête pour afficher message erreur
+        if ($getDetailsUserQuery->execute()) {
+            // je retourne le resultat sous forme de tableau via la methode fetch car une seule ligne comme résultat
+            return $getDetailsUserQuery->fetch();
+        } else {
+            return false;
+        }
     }
 }

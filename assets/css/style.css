@@ -543,3 +543,12 @@ li {
     height: 20rem;
     width: auto;
 }
+
+/* ---------- PAGE UTILISATEUR ---------- */
+
+.kitsuneProfil{
+    height: 5rem;
+    width: auto;
+    background-color: black;
+}
+
