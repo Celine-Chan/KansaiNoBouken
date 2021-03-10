@@ -43,6 +43,13 @@ session_destroy();
     </div>
 
     <?php include('include/footer.php') ?>
+    <script type="text/javascript">
+        setTimeout('Redirect()', 2000);
+
+        function Redirect() {
+            location.href = '../index.php';
+        }
+    </script>
 </body>
 
 </html>

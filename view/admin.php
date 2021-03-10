@@ -16,32 +16,42 @@ require_once "../controllers/controller_admin.php";
 
     <?php include('../view/include/navbar.php') ?>
 
-    <h1 class="text-center mb-5 mt-5 adminTitle text-light">Compte administrateur</h1>
+    <h1 class="text-center mb-5 mt-3 adminTitle text-light">Compte administrateur</h1>
 
-    <div class="container text-dark btnBack mt-5 col-10">
+    <div class="container btnBack mt-5 col-10">
 
-    <h2 class="text-center pt-5 titleTable">Tableau de bord</h2>
+        <h2 class="text-center mt-3 titleTable mb-5 text-light">Tableau de bord</h2>
 
-        <div>
-            <h2 class="mt-5 fontAdmin">Article</h2>
-            <a href="#addArticle" class="btn btn-danger ms-5">Ajouter un article</a>
+        <div class="d-flex justify-content-around text-dark">
+
+            <div class="card backCardAdmin col-5 row mb-5 text-center">
+                <div class="card-body">
+                    <div>
+                        <h2 class="fontAdmin">Article</h2>
+                        <a href="#addArticle" class="btn btn-danger ms-5">Ajouter un article</a>
+                    </div>
+
+                    <div>
+                        <h3 class="ms-3 mt-5 fontAdmin">Voir/Modifier/Supprimer les articles :</h3>
+                        <a href="kansai.php" class="btn btn-primary ms-5">Kansai</a>
+                        <a href="osaka.php" class="btn btn-primary">Osaka</a>
+                        <a href="kyoto.php" class="btn btn-primary">Kyoto</a>
+                        <a href="nara.php" class="btn btn-primary">Nara</a>
+                        <a href="kobe.php" class="btn btn-primary">Kobe</a>
+                        <a href="wakayama.php" class="btn btn-primary">Wakayama</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card backCardAdmin col-5 row mb-5 text-center">
+                <div class="mt-5 pb-5">
+                    <h2 class="fontAdmin">Galerie</h2>
+                    <a href="#addImg" class="btn btn-danger ms-5 mt-3">Ajouter une photo</a>
+                    <a href="galerie.php" class="btn btn-primary ms-3">Voir la Galerie</a>
+                </div>
+            </div>
         </div>
 
-        <div>
-            <h3 class="ms-3 mt-5 fontAdmin">Voir/Modifier/Supprimer les articles :</h3>
-            <a href="kansai.php" class="btn btn-primary ms-5">Kansai</a>
-            <a href="osaka.php" class="btn btn-primary">Osaka</a>
-            <a href="kyoto.php" class="btn btn-primary">Kyoto</a>
-            <a href="nara.php" class="btn btn-primary">Nara</a>
-            <a href="kobe.php" class="btn btn-primary">Kobe</a>
-            <a href="wakayama.php" class="btn btn-primary">Wakayama</a>
-        </div>
-
-        <div class="mt-5 pb-5">
-            <h2 class="fontAdmin">Galerie</h2>
-            <a href="#addImg" class="btn btn-danger ms-5 mt-3">Ajouter une photo</a>
-            <a href="galerie.php" class="btn btn-primary ms-3">Voir la Galerie</a>
-        </div>
     </div>
 
     <div class="text-center mt-5">

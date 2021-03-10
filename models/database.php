@@ -4,9 +4,9 @@ class DataBase
 {
     protected $dataBase;
 
-    // private $user = 'kansaiProjet';
-    // private $password = 'kansainobouken';
-
+    /**
+     * Connexion à la base de données
+     */
     public function __construct()
     {
         try {

@@ -463,7 +463,7 @@ li {
 
 .fontAdmin{
     font-family: 'Bodoni Moda', serif;
-    font-weight: bold;
+    font-weight: bold !important;
 }
 
 .adminTitle{
@@ -509,9 +509,14 @@ li {
     text-decoration: underline;
 }
 
-.btnBack{
+/* .btnBack{
     background-color: white;
     border-radius: 2rem;
+} */
+
+.backCardAdmin{
+    background-color: white; 
+    box-shadow: 1px 1px 12px #555;;
 }
 
 /* ---------- PAGE CONNEXION ---------- */

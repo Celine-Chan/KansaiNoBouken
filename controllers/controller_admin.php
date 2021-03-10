@@ -74,7 +74,7 @@ if (isset($_POST['addArticle'])) {
     if (!isset($_POST['city_id'])) {
         $errorMessages['city_id'] = 'veuillez faire un choix.';
     }
-    // sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
+    //sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
     // if (isset($_POST['city_id'])) {
     //     if (!array_key_exists($_POST['city_id'], $articleArray)) {
     //         $errorMessages['city_id'] = 'Veuillez choisir une ville.';

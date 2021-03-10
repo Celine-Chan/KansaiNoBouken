@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
         }
         if (empty($_POST['pseudo'])) {
             $errorMessages['pseudo'] = 'Veuillez saisir votre pseudo.';
-        } 
+        }
     }
 
     if (isset($_POST['birthDate'])) {
