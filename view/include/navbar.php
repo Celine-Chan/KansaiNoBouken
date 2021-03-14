@@ -28,26 +28,36 @@
                 <li class="nav-item">
                     <a class="nav-link navFont" href="../../view/vocabulaire.php">Vocabulaire</a>
                 </li>
+
+                <!-- disparait quand l'user est connecté -->
+                <?php if (empty($_SESSION['users_id'])) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link navFont btnNavConnexion" href="../../view/inscription.php">Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navFont btnNavConnexion" href="../../view/connexion.php">Connexion</a>
+                    </li>
+                <?php } ?>
+
+                <!-- apparait quand l'user est connecté -->
+                <?php if (isset($_SESSION['users_id'])) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link navFont btnNavConnexion userBtn" href="../../view/userAccount.php">Mon compte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navFont btnNavConnexion userBtn" href="../../view/disconnection.php">Déconnexion</a>
+                    </li>
+                <?php } ?>
+
+                <!-- apparait quand l'admin est connecté -->
+                <?php if (isset($_SESSION['users_role']) == 1) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link navFont btnNavConnexion adminbtn" href="../../view/admin.php">Admin</a>
+                    </li>
+                <?php } ?>
+
                 <li class="nav-item">
                     <a class="nav-link navFont" href="../../view/contact.php">Contact</a>
-                </li>
-                <!-- disparait quand l'user est connecté -->
-                <li class="nav-item">
-                <a class="nav-link navFont btnNavConnexion" href="../../view/inscription.php">Inscription</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link navFont btnNavConnexion" href="../../view/connexion.php">Connexion</a>
-                </li>
-                <!-- apparait quand l'user est connecté -->
-                <li class="nav-item">
-                    <a class="nav-link navFont btnNavConnexion" href="../../view/userAccount.php">Mon compte</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link navFont btnNavConnexion" href="../../view/disconnection.php">Déconnexion</a>
-                </li>
-                <!-- apparait quand l'admin est connecté -->
-                <li class="nav-item">
-                    <a class="nav-link navFont btnNavConnexion" href="../../view/admin.php">Admin</a>
                 </li>
             </ul>
             <form class="d-flex">

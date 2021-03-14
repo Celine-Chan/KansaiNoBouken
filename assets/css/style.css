@@ -7,6 +7,13 @@ body {
 }
 
 /* ---------- NAVBAR ---------- */
+.userBtn{
+    color: rgb(68, 5, 68) !important;
+}
+
+.adminbtn{
+    color: rgb(77, 2, 2) !important;
+}
 
 .searchNavBar{
     height: 1.5rem;
@@ -562,5 +569,20 @@ li {
     width: auto;
     margin-top: 7rem;
     margin-left: 7rem;
+}
+
+@media all and (max-width: 768px){
+    .momiji {
+        margin-top: 5rem;
+        margin-left: 0.1rem;
+        overflow-x: hidden;
+    }
+}
+
+@media all and (max-width: 425px){
+    .momiji {
+        display: none;
+        overflow-x: hidden;
+    }
 }
 

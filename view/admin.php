@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once "../controllers/controller_admin.php";
 
 ?>
@@ -24,7 +24,7 @@ require_once "../controllers/controller_admin.php";
 
         <div class="d-flex justify-content-around text-dark">
 
-            <div class="card backCardAdmin col-5 row mb-5 text-center">
+            <div class="card backCardAdmin col-12 col-sm-5 row mb-5 text-center">
                 <div class="card-body">
                     <div>
                         <h2 class="fontAdmin">Article</h2>
@@ -43,7 +43,7 @@ require_once "../controllers/controller_admin.php";
                 </div>
             </div>
 
-            <div class="card backCardAdmin col-5 row mb-5 text-center">
+            <div class="card backCardAdmin col-12 col-sm-5 row mb-5 text-center">
                 <div class="mt-5 pb-5">
                     <h2 class="fontAdmin">Galerie</h2>
                     <a href="#addImg" class="btn btn-danger ms-5 mt-3">Ajouter une photo</a>
@@ -61,7 +61,7 @@ require_once "../controllers/controller_admin.php";
 
     <div id="addArticle"></div>
 
-    <div class="container mt-5 col-10 row g-3 mx-auto">
+    <div class="container mt-5 col-12 col-sm-10 row g-3 mx-auto">
 
         <form action="admin.php" method="POST" class="shadow-lg p-5 addArticleForm">
             <p class="h3 text-info text-center"><?= $messages['addArticle'] ?? '' ?></p>
@@ -116,8 +116,8 @@ require_once "../controllers/controller_admin.php";
 
     <div id="addImg"></div>
 
-    <div class="mt-5">
-        <form action="admin.php" method="POST" enctype="multipart/form-data" class="container mx-auto col-10 row g-3 mt-5 uploadImgForm">
+    <div class="mt-5 col-12 col-sm-11 row g-3 container mx-auto">
+        <form action="admin.php" method="POST" enctype="multipart/form-data" class="container mx-auto row g-3 mt-5 uploadImgForm">
 
             <p class="h3 text-info"><?= $messages['addImg'] ?? '' ?></p>
 

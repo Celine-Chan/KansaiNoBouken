@@ -181,7 +181,7 @@ session_start();
                 <div class="card-body">
                     <h5 class="card-title titleCardSize">Wakayama 和歌山</h5>
                     <p class="card-text fontSizeCard">
-                        Préfecture au plus au sud de Honshu, connu notamment pous ses sites sacrés et chemins 
+                        Préfecture la plus au sud de Honshu, connu notamment pous ses sites sacrés et chemins 
                         de pélerinage dans les monts KII classés aux patrimoine mondial de l'Unesco.
                     <p><a href="view/kobe.php" class="black-text seeMore ml-3">Plus d'infos sur Wakayama <i class="fas fa-plus-circle"></i></a></p>
                     </p>

@@ -16,7 +16,7 @@ require_once "../controllers/controller_modifyArticle.php";
 
     <h1 class="text-center mb-5 mt-5 adminTitle text-light">Compte administrateur</h1>
 
-    <div class="container mt-5 col-10 row g-3 mx-auto">
+    <div class="container mt-2 col-10 row g-3 mx-auto">
 
         <p class="text-info"><?= $messages['addArticle'] ?? '' ?></p>
 

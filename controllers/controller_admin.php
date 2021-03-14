@@ -58,6 +58,7 @@ if (count(scandir('../assets/img/galerieUpload')) > 0) {
 $regexArticleTitle = '/^[a-zA-Z0-9éèàêâùïüëçæœÉÈÇÙÆŒ -]+$/';
 $messages = [];
 $errorMessages = [];
+// $articleArray = [];
 
 //sécurité ajout d'article
 if (isset($_POST['addArticle'])) {
@@ -87,7 +88,7 @@ if (isset($_POST['addArticle'])) {
         }
     }
 
-//je vérifie s'il n'y a pas d'erreurs afin de lancer ma requête
+    //je vérifie s'il n'y a pas d'erreurs afin de lancer ma requête
     if (isset($_POST['addArticle']) && empty($errorMessages)) {
         $ArticleObj = new Article;
 
@@ -108,8 +109,7 @@ if (isset($_POST['addArticle'])) {
             $messages['addArticle'] = 'Erreur de connexion lors de l\'enregistrement';
         }
     }
-
 }
 
 $article = new Article;
-    $articleArray = $article->getSelectCity();
+$articleArray = $article->getSelectCity();
