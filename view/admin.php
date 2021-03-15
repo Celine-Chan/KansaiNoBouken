@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['users_role'])) {
+    // $_SESSION["message"]["danger"] = "Vous n'êtes pas connecté";
+    header("Location:../index.php");
+}
 require_once "../controllers/controller_admin.php";
 ?>
 <!DOCTYPE html>
