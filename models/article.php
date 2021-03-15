@@ -129,7 +129,6 @@ class Article extends DataBase
 
         // test et execution de la requête pour afficher message erreur
         if ($deleteArticleQuery->execute()) {
-            // je retourne le resultat sous forme de tableau via la methode fetch car une seule ligne comme résultat
             return true;
         } else {
             return false;

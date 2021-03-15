@@ -1,7 +1,6 @@
 <?php
-
+session_start();
 require_once '../controllers/controller_kyoto.php';
-
 ?>
 <!doctype html>
 <html lang="fr">

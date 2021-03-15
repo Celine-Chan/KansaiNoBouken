@@ -27,11 +27,8 @@ if (!empty($_POST['modifyArticle'])) {
     $_SESSION['idArticleToUpdate'] = $detailsArticleArray['article_id'];
 }
 
-// var_dump($_POST);
-
 if (isset($_POST['modifyArticle'])) {
     $detailsArticleArray = $articleObj->getDetailsArticle($_POST['modifyArticle']);
-    // var_dump($detailsArticleArray);
 } else {
     $detailsArticleArray = false;
 }
@@ -48,17 +45,15 @@ if (isset($_POST['updateArticleBtn'])) {
         }
     }
 
-    // if (!isset($_POST['city_id'])) {
-    //     $errorMessages['city_id'] = 'veuillez faire un choix.';
-    // }
-    // // sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
-    // if (isset($_POST['city_id'])) {
-    //     if (!array_key_exists($_POST['city_id'], $articleArray)) {
-    //         $errorMessages['city_id'] = 'Veuillez choisir une ville.';
-    //     }
-    // }
-
-    // var_dump($errorMessages);
+    if (!isset($_POST['city_id'])) {
+        $errorMessages['city_id'] = 'veuillez faire un choix.';
+    }
+    // sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
+    if (isset($_POST['city_id'])) {
+        if (!array_key_exists($_POST['city_id'], $articleArray)) {
+            $errorMessages['city_id'] = 'Veuillez choisir une ville.';
+        }
+    }
 
     //je vérifie s'il n'y a pas d'erreurs afin de lancer ma requête
     if (empty($errorMessages) && isset($_POST['updateArticleBtn'])) {
@@ -81,8 +76,5 @@ if (isset($_POST['updateArticleBtn'])) {
             $messages['updateArticle'] = 'Erreur de connexion lors de la modification';
         }
     }
-    var_dump($errorMessages);
-    var_dump($ArticleObj->UpdateArticle($ArticleDetails));
     
-
 }

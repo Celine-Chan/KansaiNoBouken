@@ -112,4 +112,5 @@ class Users extends DataBase
             return false;
         }
     }
+
 }

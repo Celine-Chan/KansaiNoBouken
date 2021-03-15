@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once '../controllers/controller_osaka.php';
 ?>
 <!doctype html>
@@ -51,35 +51,36 @@ require_once '../controllers/controller_osaka.php';
     <div>
         <h2 class="mt-5 text-dark ms-5 mb-5">Derniers articles...</h2>
 
-        <?php foreach ($osakaArticles as $articles) { ?>
+        <?php foreach ($osakaArticles as $articles) {
+            if (isset($_SESSION['users_role']) && $_SESSION['users_role'] == '1') { ?>
 
-            <form action="modifyArticle.php" method="POST">
-                <div class="container d-flex flex-row-reverse col-12 mb-3">
-                    <button type="submit" class="btn btn-success btn-rounded" name="modifyArticle" value="<?= $articles['article_id'] ?>"><i class="fas fa-edit"></i> Modifier l'article</button>
-            </form>
+                <form action="modifyArticle.php" method="POST">
+                    <div class="container d-flex flex-row-reverse col-12 mb-3">
+                        <button type="submit" class="btn btn-success btn-rounded" name="modifyArticle" value="<?= $articles['article_id'] ?>"><i class="fas fa-edit"></i> Modifier l'article</button>
+                </form>
 
-
-            <button type="button" class="btn btn-danger btn-rounded" data-bs-toggle="modal" data-bs-target="#deleteArticle<?php echo $articles['article_id'] ?>"><i class="fas fa-trash-alt"></i> Supprimer l'article</button>
-            <!-- Modal -->
-            <div class="modal fade" id="deleteArticle<?php echo $articles['article_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title text-danger" id="exampleModalLabel"><img src="../assets/img/deux-katanas.svg" class="deleteIcon" alt="deleteIcon"> Supprimer l'article</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                        Voulez-vous vraiment supprimer cet article?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                            <form action="osaka.php" method="POST">
-                                <button type="submit" name="deleteArticle" value="<?php echo $articles['article_id'] ?>" class="btn btn-danger">Supprimer</button>
-                            </form>
+                <button type="button" class="btn btn-danger btn-rounded" data-bs-toggle="modal" data-bs-target="#deleteArticle<?php echo $articles['article_id'] ?>"><i class="fas fa-trash-alt"></i> Supprimer l'article</button>
+                <!-- Modal -->
+                <div class="modal fade" id="deleteArticle<?php echo $articles['article_id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-danger" id="exampleModalLabel"><img src="../assets/img/deux-katanas.svg" class="deleteIcon" alt="deleteIcon"> Supprimer l'article</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Voulez-vous vraiment supprimer cet article?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Annuler</button>
+                                <form action="osaka.php" method="POST">
+                                    <button type="submit" name="deleteArticle" value="<?php echo $articles['article_id'] ?>" class="btn btn-danger">Supprimer</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            <?php } ?>
     </div>
 
 

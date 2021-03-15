@@ -29,15 +29,6 @@ session_destroy();
         <img src="../assets/img/fantome.svg" alt="yokai" class="Kaonashi">
     </div>
 
-    <div class="container mt-5 text-center">
-        <a href="connexion.php" type="button" class="btn btn-danger">Se connecter</a>
-        <a href="../index.php" type="button" class="btn btn-primary">Retour a l'accueil</a>
-    </div>
-
-
-
-
-
     <div>
         <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
     </div>

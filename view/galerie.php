@@ -1,5 +1,6 @@
 <?php
-    require_once "../controllers/controller_galerie.php";
+session_start();
+require_once "../controllers/controller_galerie.php";
 ?>
 <!doctype html>
 <html lang="fr">
@@ -22,9 +23,9 @@
 
                 <div class="col">
                     <div class="card bg-image hover-overlay ripple shadow-1-strong rounded" data-mdb-ripple-color="light">
-                        <a data-lightbox="galleryJapan" href="<?php echo $dir ?><?php echo $imgUpload ?>"><img src="<?php echo $dir ?><?php echo $imgUpload ?>" 
-                        class="card-img-top imgGallery w-100 hover-shadow" alt="<?php echo $imgUpload ?>"><div class="mask" 
-                        style="background-color: rgba(251, 251, 251, 0.2)"></div></a>
+                        <a data-lightbox="galleryJapan" href="<?php echo $dir ?><?php echo $imgUpload ?>"><img src="<?php echo $dir ?><?php echo $imgUpload ?>" class="card-img-top imgGallery w-100 hover-shadow" alt="<?php echo $imgUpload ?>">
+                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
+                        </a>
                     </div>
                 </div>
 

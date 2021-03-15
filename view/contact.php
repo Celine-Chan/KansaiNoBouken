@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once "../controllers/controller_contact.php";
 
 ?>
@@ -19,7 +19,7 @@ require_once "../controllers/controller_contact.php";
         <img src="../assets/img/osaka/osakajou2.jpg" alt="osakajou" class="img-fluid osakajouImg">
     </div> -->
 
-    <div class="container mt-5 col-6 row g-3 mx-auto">
+    <div class="container mt-5 col-12 col-md-10 col-xl-6 row g-3 mx-auto">
         <form class="shadow-lg p-5 contactForm" action="post_contact.php" method="POST">
 
             <h1 class="mb-4 text-center text-dark contactTitle">Contact</h1>

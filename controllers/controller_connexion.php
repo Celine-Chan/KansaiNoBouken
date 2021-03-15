@@ -36,12 +36,9 @@ if (isset($_POST['btnConnexion'])) {
         $recaptcha = new \ReCaptcha\ReCaptcha('6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe');
         $resp = $recaptcha->verify($_POST['g-recaptcha-response']);
         if ($resp->isSuccess()) {
-            // var_dump('Captcha Valide');
         } else {
             $errors = $resp->getErrorCodes();
             $errorMessages['captcha'] = 'Erreur dans le Captcha';
-            // var_dump($errors);
-            // var_dump ($errorMessages['captcha'] = 'Erreur dans le Captcha');
         }
     } else {
         $errorMessages['captcha'] = 'Erreur dans le Captcha';
@@ -56,11 +53,11 @@ if (isset($_POST['btnConnexion'])) {
 
     $usersObj = new Users;
     $usersInfoArray = $usersObj->getInfoUser($pseudoConnection);
-    var_dump($usersInfoArray);
 
     if (password_verify($passwordConnection, $usersInfoArray['users_password'])) {
         $_SESSION['users_id'] = $usersInfoArray['users_id'];
         $_SESSION['users_pseudo'] = $usersInfoArray['users_pseudo'];
+        $_SESSION['users_role'] = $usersInfoArray['users_role'];
         header("location: ../index.php");
     } else {
         $messageConnection = 'Votre mail ou votre mot de passe est incorrect !';

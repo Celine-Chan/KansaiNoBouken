@@ -50,7 +50,7 @@
                 <?php } ?>
 
                 <!-- apparait quand l'admin est connecté -->
-                <?php if (isset($_SESSION['users_role']) == 1) { ?>
+                <?php if (isset($_SESSION['users_role']) && $_SESSION['users_role'] == '1') { ?>
                     <li class="nav-item">
                         <a class="nav-link navFont btnNavConnexion adminbtn" href="../../view/admin.php">Admin</a>
                     </li>
