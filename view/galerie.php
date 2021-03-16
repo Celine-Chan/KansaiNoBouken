@@ -16,7 +16,7 @@ require_once "../controllers/controller_galerie.php";
     <?php include('../view/include/navbar.php') ?>
 
     <div class="container">
-        <h1 class="text-center galleryTitle mt-5 mb-5">Galerie</h1>
+        <h1 class="text-center galleryTitle mt-5 mb-5 text-dark">Galerie</h1>
 
         <div class="row row-cols-1 row-cols-md-2 g-4" data-masonry='{"percentPosition": true }'>
             <?php foreach ($galleryUpload as $imgUpload) { ?>

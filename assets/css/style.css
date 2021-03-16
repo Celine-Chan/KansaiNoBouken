@@ -526,6 +526,15 @@ li {
     box-shadow: 1px 1px 12px #555;;
 }
 
+.backforminscri{
+    background-color: white;
+}
+
+.logoforminscrip{
+    height: 12rem;
+    width: auto;
+}
+
 /* ---------- PAGE CONNEXION ---------- */
 .connexionForm{
     border-radius: 2rem;

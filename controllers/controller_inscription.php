@@ -5,6 +5,8 @@ require_once '../models/users.php';
 
 //var_dump($_POST);
 
+$showForm = true;
+
 $errorMessages = [];
 
 $messages = [];
@@ -127,5 +129,9 @@ if (isset($_POST['submit'])) {
         } else {
             $messages['addUsers'] = 'Erreur de connexion lors de l\'inscription';
         }
+    }
+
+    if (count($errorMessages) == 0) {
+        $showForm = false;
     }
 }

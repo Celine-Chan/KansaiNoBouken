@@ -23,9 +23,9 @@ require_once "../controllers/controller_inscription.php";
 
     <div class="container mt-5 col-12 col-md-10 col-xl-6 row g-3 mx-auto">
 
-        <form class="shadow-lg p-5 inscriptionForm" method="POST" action="inscription.php">
+    <?php if ($showForm) { ?>
 
-            <p class="h3 text-info"><?= $messages['addUsers'] ?? '' ?></p>
+        <form class="shadow-lg p-5 inscriptionForm" method="POST" action="inscription.php">
 
             <h1 class="mb-5 text-center inscriptionTitle">Inscription</h1>
 
@@ -82,11 +82,11 @@ require_once "../controllers/controller_inscription.php";
             <div class="mb-3">
                 <label for="japanTrip" class="form-label text-dark">Avez-vous déjà effectué un voyage au Japon</label>
                 <div class="form-check ms-3">
-                    <input class="form-check-input" type="radio" name="japanTrip" id="flexRadioDefault1" value="0" <?= isset($_POST['japanTrip']) && $_POST['japanTrip'] == '0' ? 'checked' : '' ?>>
+                    <input class="form-check-input" type="radio" name="japanTrip" id="japanTrip" value="0" <?= isset($_POST['japanTrip']) && $_POST['japanTrip'] == '0' ? 'checked' : '' ?>>
                     <label class="form-check-label" for="flexRadioDefault1">Oui</label>
                 </div>
                 <div class="form-check ms-3">
-                    <input class="form-check-input" type="radio" name="japanTrip" id="flexRadioDefault2" value="1" <?= isset($_POST['japanTrip']) && $_POST['japanTrip'] == '1' ? 'checked' : '' ?>>
+                    <input class="form-check-input" type="radio" name="japanTrip" id="japanTrip" value="1" <?= isset($_POST['japanTrip']) && $_POST['japanTrip'] == '1' ? 'checked' : '' ?>>
                     <label class="form-check-label" for="flexRadioDefault2">Non</label>
                 </div>
                 <div class="text-danger">
@@ -115,7 +115,7 @@ require_once "../controllers/controller_inscription.php";
             </div>
 
             <div class="mb-4">
-                <label for="confirmPasword">Comfirmer votre mot de passe :</label>
+                <label for="confirmPassword">Comfirmer votre mot de passe :</label>
                 <input type="password" id="confirmPassword" name="confirmPassword" class="form-control ms-3" placeholder="ex : JaneDoe76*" aria-describedby="defaultRegisterFormPasswordHelpBlock" value="<?= isset($_POST['confirmPassword']) ? $_POST['confirmPassword'] : '' ?>">
                 <div class="showPass ms-4">
                     <input type="checkbox" onclick="showConfirmPassword()">Afficher le mot de passe
@@ -137,6 +137,11 @@ require_once "../controllers/controller_inscription.php";
             <p>En cliquant sur <em>s'inscrire</em> vous acceptez nos <a href="cgu.php" target="_blank">terms of service</a></p>
 
         </form>
+
+        <?php } else { ?>
+            <p class="h3 text-info text-center border rounded backforminscri mb-5 p-3"><?= $messages['addUsers'] ?? '' ?></p>
+            <img src="../assets/img/fantome2.svg" alt="yokai Logo" class="logoforminscrip mx-auto">
+        <?php } ?>
     </div>
 
     <div>
