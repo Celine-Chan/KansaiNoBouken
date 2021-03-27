@@ -6,7 +6,7 @@ class Article extends DataBase
      */
     public function getArticle($city_id)
     {
-        $query = 'SELECT `article_id`, `article_title`, `article_contenu`, DATE_FORMAT(`article_date`, \'%d-%m-%Y\') AS `article_date`, `city_id` FROM `article` WHERE `city_id` = ' . $city_id;
+        $query = 'SELECT `article_id`, `article_title`, `article_contenu`, DATE_FORMAT(`article_date`, \'%d-%m-%Y\') AS `article_date`, `city_id` FROM `article` WHERE `city_id` = "' . $city_id . '"ORDER BY article_date DESC';
         $queryObj = $this->dataBase->query($query);
         $result = $queryObj->fetchAll();
         return $result;
@@ -115,6 +115,9 @@ class Article extends DataBase
         }
     }
 
+    /**
+     * Méthode permettant de supprimer les articles
+     */
     public function DeleteArticle($articleId)
     {
 

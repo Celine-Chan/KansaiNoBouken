@@ -1,5 +1,8 @@
 <?php
 
+require_once '../models/database.php';
+require_once '../models/uploadImg.php';
+
 //scandir
 $dir = '../assets/img/galerieUpload/';
 $galleryUpload = scandir($dir);

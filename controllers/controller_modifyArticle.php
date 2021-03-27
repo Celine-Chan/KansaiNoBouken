@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 require_once '../models/database.php';
 require_once '../models/article.php';
 

@@ -5,15 +5,15 @@ require_once '../models/article.php';
 
 $articleObj = new Article;
 $osakaArticles = $articleObj->getArticle(2);
-// var_dump($_POST);
 
+//modification d'article
 if (isset($_POST['modifyArticle'])) {
     $detailsArticleArray = $articleObj->getDetailsArticle($_POST['modifyArticle']);
-    // var_dump($detailsArticleArray);
 } else {
     $detailsArticleArray = false;
 }
 
+//suppression d'article
 if (isset($_POST['deleteArticle'])) {
     $idArticle = $_POST['deleteArticle'];
     $deleteArticle = $articleObj->DeleteArticle($idArticle);

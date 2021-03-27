@@ -15,10 +15,6 @@ require_once "../controllers/controller_contact.php";
 
     <?php include('include/navbar.php') ?>
 
-    <!-- <div class="imgContact">
-        <img src="../assets/img/osaka/osakajou2.jpg" alt="osakajou" class="img-fluid osakajouImg">
-    </div> -->
-
     <div class="container mt-5 col-12 col-md-10 col-xl-6 row g-3 mx-auto">
         <form class="shadow-lg p-5 contactForm" action="post_contact.php" method="POST">
 

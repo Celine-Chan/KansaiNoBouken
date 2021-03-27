@@ -2,6 +2,7 @@
 
 require_once '../models/database.php';
 require_once '../models/article.php';
+require_once '../models/uploadImg.php';
 
 $messagesUpload = [];
 $errorMessages = [];
@@ -11,8 +12,8 @@ $messageSecond = "";
 $messageOk = "";
 $messageNoFormat = "";
 
-// Vérifie la taille du fichier - 1Mo maximum
-$maxsize = 1000000;
+// Vérifie la taille du fichier - 2Mo maximum
+$maxsize = 2000000;
 // Vérifie si le fichier a été uploadé sans erreur.
 if (isset($_FILES["fileToUpload"]) && $_FILES["fileToUpload"]["error"] == 0) {
     $allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "gif" => "image/gif", "png" => "image/png");
@@ -34,7 +35,7 @@ if (isset($_FILES["fileToUpload"]) && $_FILES["fileToUpload"]["error"] == 0) {
             // echo 'Erreur : Veuillez sélectionner un format de fichier valide.';
             $message = 'Erreur : Veuillez sélectionner un format de fichier valide.';
         } else if ($filesize > $maxsize) {
-            // echo 'Error: La taille de l'image est supérieure à la limite autorisée.';
+            echo 'Error: La taille de l\'image est supérieure à la limite autorisée.';
             $messageSecond = 'Erreur: La taille de l\'image est supérieure à la limite autorisée.';
         } else if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "../assets/img/galerieUpload/" . uniqid() . $_FILES["fileToUpload"]["name"])) {
             // echo'Le fichier ' . $filename . ' a bien été uploadé.';
@@ -76,11 +77,11 @@ if (isset($_POST['addArticle'])) {
         $errorMessages['city_id'] = 'veuillez faire un choix.';
     }
     //sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
-    if (isset($_POST['city_id'])) {
-        if (!array_key_exists($_POST['city_id'], $articleArray)) {
-            $errorMessages['city_id'] = 'Veuillez choisir une ville.';
-        }
-    }
+    // if (isset($_POST['city_id'])) {
+    //     if (!array_key_exists($_POST['city_id'], $articleArray)) {
+    //         $errorMessages['city_id'] = 'Veuillez choisir une ville.';
+    //     }
+    // }
 
     if (isset($_POST['article_contenu'])) {
         if (empty($_POST['article_contenu'])) {
@@ -91,7 +92,6 @@ if (isset($_POST['addArticle'])) {
     //je vérifie s'il n'y a pas d'erreurs afin de lancer ma requête
     if (isset($_POST['addArticle']) && empty($errorMessages)) {
         $ArticleObj = new Article;
-
 
         //création d'un tableau associatif contenant toutes les infos du form
         $ArticleDetails = [
@@ -113,3 +113,50 @@ if (isset($_POST['addArticle'])) {
 
 $article = new Article;
 $articleArray = $article->getSelectCity();
+
+//Ajout Galerie
+if (isset($_POST['addImg'])) {
+
+    if (isset($_POST['gallery_name'])) {
+        if (!preg_match($regexArticleTitle, $_POST['gallery_name'])) {
+            $errorMessages['gallery_name'] = 'Veuillez saisir un titre valide.';
+        }
+        if (empty($_POST['gallery_name'])) {
+            $errorMessages['gallery_name'] = 'Veuillez saisir un titre.';
+        }
+    }
+
+    if (isset($_POST['gallery_textalt'])) {
+        if (!preg_match($regexArticleTitle, $_POST['gallery_textalt'])) {
+            $errorMessages['gallery_textalt'] = 'Veuillez saisir un descriptif valide.';
+        }
+        if (empty($_POST['gallery_textalt'])) {
+            $errorMessages['gallery_textalt'] = 'Veuillez saisir un descriptif.';
+        }
+    }
+
+    if (isset($_POST['fileToUpload'])) {
+        if (empty($_POST['fileToUpload'])) {
+            $errorMessages['fileToUpload'] = 'Veuillez saisir une photo.';
+        }
+    }
+
+    //je vérifie s'il n'y a pas d'erreurs afin de lancer ma requête
+    if (isset($_POST['addImg']) && empty($errorMessages)) {
+        $uploadObj = new UploadImg;
+
+        //création d'un tableau associatif contenant toutes les infos du form
+        $uploadDetails = [
+            'gallery_name' => htmlspecialchars($_POST['gallery_name']),
+            'gallery_textalt' => htmlspecialchars($_POST['gallery_textalt'])
+        ];
+
+        //var_dump($ArticleDetails);
+
+        if ($uploadObj->addImg($uploadDetails)) {
+            $messages['addImg'] = 'Photo enregistré';
+        } else {
+            $messages['addImg'] = 'Erreur de connexion lors de l\'enregistrement';
+        }
+    }
+}
