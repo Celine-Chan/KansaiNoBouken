@@ -106,6 +106,10 @@ nav {
     object-position: center;
 }
 
+.textSlide{
+    text-shadow: 1px 1px black;
+}
+
 .titleIndexPres{
     font-family: 'Bodoni Moda', serif;
     font: 1.5rem;

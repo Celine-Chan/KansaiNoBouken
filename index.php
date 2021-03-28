@@ -25,22 +25,51 @@ session_start();
                 <li data-target="#carousel-example-1z" data-slide-to="2"></li>
                 <li data-target="#carousel-example-1z" data-slide-to="3"></li>
                 <li data-target="#carousel-example-1z" data-slide-to="4"></li>
+                <li data-target="#carousel-example-1z" data-slide-to="5"></li>
+                <li data-target="#carousel-example-1z" data-slide-to="6"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="assets/img/osaka/sumiyoshiBridge.jpg" class="d-block w-100 imgCaroussel" alt="First Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="textSlide">Sumiyoshi-Taisha - Osaka</h5>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="assets/img/kyoto/fushimiInari.jpg" class="d-block w-100 imgCaroussel" alt="Second Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="textSlide">Fushimi Inari - Kyoto</h5>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="assets/img/Nara/bicheNara.jpg" class="d-block w-100 imgCaroussel" alt="Third Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="textSlide">Cerf de Nara</h5>
+                    </div>
                 </div>
                 <div class="carousel-item">
                     <img src="assets/img/kyoto/kyoto3.jpg" class="d-block w-100 imgCaroussel" alt="Fourth Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="textSlide">Kinkaku-Ji - Kyoto</h5>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/Minoh/minohTemple.jpg" class="d-block w-100 imgCaroussel" alt="Fifth Slide">
+                    <img src="assets/img/geishaStreet.jpg" class="d-block w-100 imgCaroussel" alt="Fifth Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="textSlide">Meiko dans les rues de Kyoto</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/sakura.jpg" class="d-block w-100 imgCaroussel" alt="sixth Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="textSlide">Fleurs de Sakura</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/izakaya2.jpg" class="d-block w-100 imgCaroussel" alt="seventh Slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="textSlide">Restaurant Izakaya traditionnel</h5>
+                    </div>
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
@@ -78,7 +107,7 @@ session_start();
     </div>
 
     <div class="text-center mt-5">
-    <img src="assets/img/japonmap.svg" alt="japanMap" class="japanMap">
+        <img src="assets/img/japonmap.svg" alt="japanMap" class="japanMap">
         <img src="assets/img/la-carte-de-la-région-de-kansai.png" class="img-fluid">
     </div>
 
@@ -180,7 +209,7 @@ session_start();
                 <div class="card-body">
                     <h5 class="card-title titleCardSize">Wakayama 和歌山</h5>
                     <p class="card-text fontSizeCard">
-                        Préfecture la plus au sud de Honshu, connu notamment pous ses sites sacrés et chemins 
+                        Préfecture la plus au sud de Honshu, connu notamment pous ses sites sacrés et chemins
                         de pélerinage dans les monts KII classés aux patrimoine mondial de l'Unesco.
                     <p><a href="view/kobe.php" class="black-text seeMore ml-3">Plus d'infos sur Wakayama <i class="fas fa-plus-circle"></i></a></p>
                     </p>
@@ -215,12 +244,12 @@ session_start();
 
     <div class="container-fluid gastronomieSection mt-5">
         <h2 class="titleFoodIndex">La Cuisine du kansai</h2>
-        <p class="container textGastronomie">La <bold>gastronomie japonaise</bold> est l'une des cuisines la plus répandue dans le monde. 
-        De par sa qualité et à sa diversité. Chaque région du Japon possède sa cuisine locale, selon la disposition des ingrédients cultivés.
-        Cette grande diversité gastonomique est désignée sous le terme <em>kyoudo ryouri 郷土料理</em>. Certaines spécialités régionales 
-        sont devenues des plats nationaux tels que les <em>sushis</em> ou encore l'<em>okonomiyaki</em>.<br>
-        La <bold>cuisine du Kansai</bold> est une cuisine très street-food du côté d'</em>Osaka</em> et très raffinée à </em>Kyoto</em>.
-        Connue mondialement grâce, notamment, à l'</em>okonomiyaki</em>, aux <em>takoyaki</em> et, bien sûr, le <em>boeuf de Kobe</em>.</p>
+        <p class="container textGastronomie">La <bold>gastronomie japonaise</bold> est l'une des cuisines la plus répandue dans le monde.
+            De par sa qualité et à sa diversité. Chaque région du Japon possède sa cuisine locale, selon la disposition des ingrédients cultivés.
+            Cette grande diversité gastonomique est désignée sous le terme <em>kyoudo ryouri 郷土料理</em>. Certaines spécialités régionales
+            sont devenues des plats nationaux tels que les <em>sushis</em> ou encore l'<em>okonomiyaki</em>.<br>
+            La <bold>cuisine du Kansai</bold> est une cuisine très street-food du côté d'</em>Osaka</em> et très raffinée à </em>Kyoto</em>.
+            Connue mondialement grâce, notamment, à l'</em>okonomiyaki</em>, aux <em>takoyaki</em> et, bien sûr, le <em>boeuf de Kobe</em>.</p>
     </div>
 
     <div class="container mt-4 text-center">
