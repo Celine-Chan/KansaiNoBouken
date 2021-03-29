@@ -24,16 +24,16 @@ require_once "../controllers/controller_admin.php";
 
         <h2 class="text-center mt-3 titleTable mb-5 text-light">Tableau de bord</h2>
 
-        <div class="d-flex justify-content-around text-dark">
+        <div class="d-flex flex-column flex-md-row justify-content-around text-dark">
 
             <div class="card backCardAdmin col-12 col-sm-5 row mb-5 text-center">
-                <div class="card-body">
-                    <div>
+                <div class="card-body ">
+                    <div class="mt-2">
                         <h2 class="fontAdmin">Article</h2>
                         <a href="#addArticle" class="btn btn-danger ms-5">Ajouter un article</a>
                     </div>
 
-                    <div>
+                    <div class="mx-auto">
                         <h3 class="ms-3 mt-5 fontAdmin">Voir/Modifier/Supprimer les articles :</h3>
                         <div>
                             <a href="kansai.php" class="btn btn-primary ms-5">Kansai</a>
@@ -47,8 +47,8 @@ require_once "../controllers/controller_admin.php";
                 </div>
             </div>
 
-            <div class="card backCardAdmin col-12 col-sm-5 row mb-5 text-center">
-                <div class="mt-5">
+            <div class="card backCardAdmin col-12 col-sm-5 row mb-5 text-center d-flex justify-content-center">
+                <div class="mt-2">
                     <h2 class="fontAdmin">Galerie</h2>
                     <a href="#addImg" class="btn btn-danger ms-5 mt-3">Ajouter une photo</a>
                     <a href="galerie.php" class="btn btn-primary ms-3">Voir la Galerie</a>

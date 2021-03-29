@@ -76,13 +76,13 @@ require_once "../controllers/controller_modifyArticle.php";
         } else if ($updateArticleInBase) { ?>
             <h5 class="text-center text-info">Les modifications ont bien été prises en compte</h5>
             <div class="text-center mt-4">
-                <a type="button" href="admin.php" class="btn btn-sm btn-outline-secondary">Retour administrateur</a>
+                <a type="button" href="admin.php" class="btn btn-sm btn-info">Retour administrateur</a>
             </div>
 
         <?php } else { ?>
             <p class="h5 text-center text-info">Veuillez selectionner un article</p>
             <div class="text-center mt-4">
-                <a type="button" href="admin.php" class="btn btn-sm btn-warning">Retour</a>
+                <a type="button" href="admin.php" class="btn btn-sm btn-info">Retour</a>
             </div>
 
         <?php } ?>

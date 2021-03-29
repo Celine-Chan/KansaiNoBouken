@@ -78,8 +78,6 @@ require_once '../controllers/controller_osaka.php';
             <?php } ?>
     </div>
 
-
-
     <div class="card container mb-2 text-dark">
         <div class="h3"><?php if (isset($_SESSION['users_id'])) { ?>
                 <div class="container mb-2 rating">

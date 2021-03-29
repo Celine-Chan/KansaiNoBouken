@@ -31,7 +31,7 @@ require_once '../controllers/controller_userAccount.php';
     </div>
 
     <div class="container d-flex mt-5 justify-content-around">
-        <div class="card col-8 mt-5 row">
+        <div class="card col-12 col-md-8 mt-5 row">
             <div class="card-body">
                 <div class="container d-flex text-dark">
                     <h2>Mes informations personnelles :</h2>
@@ -47,9 +47,11 @@ require_once '../controllers/controller_userAccount.php';
                 </div>
             </div>
         </div>
-        <div class="row ms-5 col-4">
-            <img src="../assets/img/svg/momiji.svg" alt="momiji" class="momiji">
-        </div>
+
+    </div>
+
+    <div class="container d-flex justify-content-center mt-5">
+        <img src="../assets/img/svg/momiji.svg" alt="momiji" class="momiji">
     </div>
 
     <div class="container commentUser mt-5 text-dark">

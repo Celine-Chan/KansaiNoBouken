@@ -106,6 +106,14 @@ nav {
     object-position: center;
 }
 
+@media all and (max-width: 1024px)
+{
+    .carousel
+    {
+        display: none;
+    }
+}
+
 .textSlide{
     text-shadow: 1px 1px black;
 }
@@ -436,12 +444,27 @@ li {
     transition: 0.5s;
 }
 
-.ramenGif{
+.ramenGif {
     height: 3rem;
     width: 4rem;
 }
 
-/* arrow top */
+.videoresponsive {
+    overflow:hidden; 
+    padding-bottom:56.25%; 
+    position:relative; 
+    height:0;
+}
+
+.videoresponsive iframe {
+    left:0; 
+    top:0; 
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+/* ---------- arrow top ---------- */
 #scrollTop {
     position: fixed;
     width: 25px;
@@ -633,24 +656,23 @@ li {
 }
 
 .momiji{
-    height: 18rem;
+    height: 10rem;
     width: auto;
-    margin-top: 7rem;
-    margin-left: 7rem;
+    /* margin-top: 7rem;
+    margin-left: 7rem; */
 }
 
 @media all and (max-width: 768px){
     .momiji {
-        margin-top: 5rem;
-        margin-left: 0.1rem;
-        overflow-x: hidden;
+        height: 7rem;
+        width: auto;
     }
 }
 
 @media all and (max-width: 425px){
     .momiji {
-        display: none;
-        overflow-x: hidden;
+        height: 5rem;
+        width: auto;
     }
 }
 

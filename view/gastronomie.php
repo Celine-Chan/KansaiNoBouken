@@ -54,14 +54,13 @@ session_start();
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Takoyaki</h5>
-                        <p class="card-text">
+                        <h5 class="card-title text-dark">Takoyaki</h5>
+                        <p class="card-text text-dark">
                             Spécialités d'Osaka, les takoyaki se présentent sous forme de boulette fourées avec des
                             morceaux de poulpe (tako).
                             Ils peuvent se manger à toute heure et sont vendu en barquette de 6 à 12 takoyaki.
                         </p>
-                        <button type="button" class="btn btn-rounded btnGastronomieRecipe" data-mdb-toggle="modal"
-                            data-mdb-target="#recipeTakoyaki">
+                        <button type="button" class="btn btn-rounded btnGastronomieRecipe" data-mdb-toggle="modal" data-mdb-target="#recipeTakoyaki">
                             Voir la recette
                         </button>
                     </div>
@@ -70,7 +69,7 @@ session_start();
         </div>
 
         <!-- modal recipe 1 -->
-        <div class="modal fade" id="recipeTakoyaki" tabindex="-1" aria-labelledby="recipeTakoyaki" aria-hidden="true">
+        <div class="modal fade text-dark" id="recipeTakoyaki" tabindex="-1" aria-labelledby="recipeTakoyaki" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -78,9 +77,9 @@ session_start();
                         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-center">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/v-qm6bThYjY" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <div class="videoresponsive">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/v-qm6bThYjY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                         <p class="mt-2 titleModalRecipe">Ingrédients (40 takoyaki) :</p>
                         <ul>
                             <li>200g de farine de takoyaki</li>
@@ -104,8 +103,7 @@ session_start();
                                 les copeaux de bonites</li>
                         </ul>
 
-                        <img class="imgRecipeSize mb-3" src="../assets/img/gastronomie/takoyakiRecipe.jpg"
-                            alt="takoyaki">
+                        <img class="imgRecipeSize mb-3 img-fluid" src="../assets/img/gastronomie/takoyakiRecipe.jpg" alt="takoyaki">
                         <p>Source : <a href="https://www.youtube.com/channel/UCt8iNzhAJONk3leOg0hoNYA">Les
                                 recettes
                                 d'une japonaise</a></p>
@@ -128,15 +126,14 @@ session_start();
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Ramen</h5>
-                        <p class="card-text">
+                        <h5 class="card-title text-dark">Ramen</h5>
+                        <p class="card-text text-dark">
                             Le Ramen, un plat très populaire, est constitué de nouilles servis dans un bouillon à
                             base de viande ou de poisson.
                             Il existe plusieurs sorte de ramen, le plus commun est servi généralement avec un oeuf et
                             des tranches de porc.
                         </p>
-                        <button type="button" class="btn btn-rounded btnGastronomieRecipe" data-mdb-toggle="modal"
-                            data-mdb-target="#recipeRamen">
+                        <button type="button" class="btn btn-rounded btnGastronomieRecipe" data-mdb-toggle="modal" data-mdb-target="#recipeRamen">
                             Voir la recette
                         </button>
                     </div>
@@ -145,7 +142,7 @@ session_start();
         </div>
 
         <!-- modal recipe 2 -->
-        <div class="modal fade" id="recipeRamen" tabindex="-1" aria-labelledby="recipeRamen" aria-hidden="true">
+        <div class="modal fade text-dark" id="recipeRamen" tabindex="-1" aria-labelledby="recipeRamen" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -153,9 +150,9 @@ session_start();
                         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-center">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kTMomm4d73c" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <div class="videoresponsive">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/kTMomm4d73c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                         <p class="mt-2 titleModalRecipe">Ingrédients pour recette d'accompagnement Ajitama :</p>
                         <ul>
                             <li>4 oeufs mollets</li>
@@ -174,8 +171,7 @@ session_start();
                             <li>laisser reposer 1 ou 2 jours dans le frigo</li>
                         </ul>
 
-                        <img class="imgRecipeSize mb-3" src="../assets/img/gastronomie/ramen-gastronomie.jpg"
-                            alt="ramen">
+                        <img class="imgRecipeSize mb-3 img-fluid" src="../assets/img/gastronomie/ramen-gastronomie.jpg" alt="ramen">
                         <p>Source : <a href="https://www.youtube.com/channel/UCt8iNzhAJONk3leOg0hoNYA">Les
                                 recettes
                                 d'une japonaise</a></p>
@@ -198,13 +194,12 @@ session_start();
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Okonomiyaki</h5>
-                        <p class="card-text">
+                        <h5 class="card-title text-dark">Okonomiyaki</h5>
+                        <p class="card-text text-dark">
                             L'okonomiyaki est plat type d'Osaka. Il se présente sous la forme d'omelette composé de farine et de chou et accompagné
                             généralemetn de fines tranches de porc et du dashi. Il est préparé sur une plaque chauffante.
                         </p>
-                        <button type="button" class="btn btn-rounded btnGastronomieRecipe" data-mdb-toggle="modal"
-                            data-mdb-target="#recipeOkonomyaki">
+                        <button type="button" class="btn btn-rounded btnGastronomieRecipe" data-mdb-toggle="modal" data-mdb-target="#recipeOkonomyaki">
                             Voir la recette
                         </button>
                     </div>
@@ -213,8 +208,7 @@ session_start();
         </div>
 
         <!-- modal recipe 3 -->
-        <div class="modal fade" id="recipeOkonomyaki" tabindex="-1" aria-labelledby="recipeOkonomyaki"
-            aria-hidden="true">
+        <div class="modal fade text-dark" id="recipeOkonomyaki" tabindex="-1" aria-labelledby="recipeOkonomyaki" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -222,20 +216,19 @@ session_start();
                         <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body text-center">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/RoJM6ob0oiE" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                        <div class="videoresponsive">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/RoJM6ob0oiE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                         <p class="mt-2 titleModalRecipe">Ingrédients :</p>
                         <ul>
-                            
+
                         </ul>
                         <p class="titleModalRecipe">Préparation:</p>
                         <ul>
-                            
+
                         </ul>
 
-                        <img class="imgRecipeSize mb-3" src="../assets/img/gastronomie/okonoRecipe.jpg"
-                            alt="okonomiyaki">
+                        <img class="imgRecipeSize mb-3 img-fluid" src="../assets/img/gastronomie/okonoRecipe.jpg" alt="okonomiyaki">
                         <p>Source : <a href="https://www.youtube.com/channel/UCt8iNzhAJONk3leOg0hoNYA">Les
                                 recettes
                                 d'une japonaise</a></p>
@@ -251,16 +244,14 @@ session_start();
         </div>
     </div>
 
-        <div class="text-center mt-5">
-            <img src="../assets/img/separator.svg" alt="separator" class="w-25">
-        </div>
+    <div class="text-center mt-5">
+        <img src="../assets/img/separator.svg" alt="separator" class="w-25">
+    </div>
 
-        <h2 class="subTitleGastronomie ms-5 mt-5">Quelques adresses...</h2>
-        <div>
+    <h2 class="subTitleGastronomie ms-5 mt-5">Quelques adresses...</h2>
+    <div>
 
-        </div>
-
-
+    </div>
 
 
 
@@ -270,11 +261,13 @@ session_start();
 
 
 
-        <div>
-            <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
-        </div>
 
-        <?php include('../view/include/footer.php') ?>
+
+    <div>
+        <a id="scrollTop"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
+    </div>
+
+    <?php include('../view/include/footer.php') ?>
 </body>
 
 </html>
