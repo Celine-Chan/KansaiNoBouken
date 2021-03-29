@@ -8,7 +8,7 @@
 
 <body>
 
-    <div class="container text-center">
+    <div class="container text-center text-dark">
         <h1 class="errorTitle">Oups ! Page introuvable !</h1>
 
         <div class="mt-3">
@@ -17,7 +17,7 @@
         </div>
 
         <div class="imgerror mt-5">
-            <img src="../assets/img/kasaObake.png" alt="Kasa-Obake Yokai" class="kasaObakeImg">
+            <img src="../assets/img/error404/kasaObake.png" alt="Kasa-Obake Yokai" class="kasaObakeImg">
         </div>
 
         

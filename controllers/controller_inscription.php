@@ -43,6 +43,9 @@ if (isset($_POST['submit'])) {
         if (empty($_POST['pseudo'])) {
             $errorMessages['pseudo'] = 'Veuillez saisir votre pseudo.';
         }
+        if ($_POST['pseudo'] == 1) {
+            $errorMessages['pseudo'] = 'Ce pseudo est déjà utilisé.';
+        }
     }
 
     if (isset($_POST['birthDate'])) {

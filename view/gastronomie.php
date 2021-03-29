@@ -175,7 +175,7 @@ session_start();
                         </ul>
 
                         <img class="imgRecipeSize mb-3" src="../assets/img/gastronomie/ramen-gastronomie.jpg"
-                            alt="takoyaki">
+                            alt="ramen">
                         <p>Source : <a href="https://www.youtube.com/channel/UCt8iNzhAJONk3leOg0hoNYA">Les
                                 recettes
                                 d'une japonaise</a></p>
@@ -235,7 +235,7 @@ session_start();
                         </ul>
 
                         <img class="imgRecipeSize mb-3" src="../assets/img/gastronomie/okonoRecipe.jpg"
-                            alt="takoyaki">
+                            alt="okonomiyaki">
                         <p>Source : <a href="https://www.youtube.com/channel/UCt8iNzhAJONk3leOg0hoNYA">Les
                                 recettes
                                 d'une japonaise</a></p>

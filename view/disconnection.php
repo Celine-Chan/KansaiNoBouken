@@ -1,6 +1,8 @@
 <?php
 session_start();
-
+if (!isset($_SESSION['users_id'])) {
+    header("Location:../error-404.php");
+}
 require_once '../models/database.php';
 require_once '../models/users.php';
 
@@ -26,7 +28,7 @@ session_destroy();
     </div>
 
     <div class="container mt-5 text-center">
-        <img src="../assets/img/fantome.svg" alt="yokai" class="Kaonashi">
+        <img src="../assets/img/svg/fantome.svg" alt="yokai" class="Kaonashi">
     </div>
 
     <div>

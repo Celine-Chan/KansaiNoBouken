@@ -162,7 +162,7 @@ nav {
 
 .gastronomieSection {
     background-color: rgb(87, 83, 83);
-    background-image: url('../img/gastronomie/ramen-gastronomie.jpg');
+    background-image: url('../img/accueil/ramen-gastronomie.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -266,6 +266,39 @@ nav {
     margin-left: 10rem;
 }
 
+.backComment{
+    background-color: rgb(129, 120, 120);
+    background-image: url('../img/osaka/ombrelle.jpg');
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+.sizeStar{
+    height: 2rem;
+    width: auto;
+}
+
+.sizeStar:hover{
+    background-image: url('../img/star.svg');
+}
+
+.rating img {
+    text-decoration: none;
+    font-size: 3em;
+    transition: color .4s;
+}
+
+.rating img:hover,
+.rating img:focus,
+.rating a:hover ~ a,
+.rating a:focus ~ a { 
+    background-image: url('../img/star.svg');
+    cursor: pointer;
+}
+
 /* ---------- PAGE KYOTO ----------  */
 .kyotoPageParalax {
     background-image: url('../img/kyoto/jizoKyoto2.jpg');
@@ -336,7 +369,7 @@ nav {
 }
 
 .contactBack{
-    background-image: url('../img/street.jpg');
+    background-image: url('../img/contact/street.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -468,7 +501,7 @@ li {
 }
 
 .backBody{
-    background-image: url('../img/osaka/osaka_night.jpg');
+    background-image: url('../img/inscription/osaka_night.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -526,7 +559,7 @@ li {
 }
 
 .backAdmin{
-    background-image: url('../img/lanterns.jpg');
+    background-image: url('../img/admin/lanterns.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -568,7 +601,7 @@ li {
 }
 
 .connexionBack{
-    background-image: url('../img/geisha.jpg');
+    background-image: url('../img/connexion/geisha.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;

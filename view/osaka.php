@@ -8,6 +8,7 @@ require_once '../controllers/controller_osaka.php';
 <head>
     <title>Kansai no bouken - 関西の冒険 - Osaka</title>
     <?php include('../view/include/header.php') ?>
+    <script src="https://cdn.tiny.cloud/1/75w0aspes5o1fsfrwo2wxkidqu37998magwy5f44mnuk9ytq/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 
 <body>
@@ -78,14 +79,60 @@ require_once '../controllers/controller_osaka.php';
     </div>
 
 
-    <div class="card container mb-5">
-        <div class="h3"><?= $articles['article_title'] ?></div>
+
+    <div class="card container mb-2 text-dark">
+        <div class="h3"><?php if (isset($_SESSION['users_id'])) { ?>
+                <div class="container mb-2 rating">
+                    <img src="../assets/img/svg/emptyStar.svg" alt="note1" class="sizeStar">
+                    <img src="../assets/img/svg/emptyStar.svg" alt="note2" class="sizeStar">
+                    <img src="../assets/img/svg/emptyStar.svg" alt="note3" class="sizeStar">
+                    <img src="../assets/img/svg/emptyStar.svg" alt="note4" class="sizeStar">
+                    <img src="../assets/img/svg/emptyStar.svg" alt="note5" class="sizeStar">
+                </div>
+                <?php } ?><?= $articles['article_title'] ?>
+        </div>
         <span class="ms-2 fst-italic"><?= $articles['article_date'] ?></span>
         <div class="card-body">
             <p class="card-text">
                 <?= $articles['article_contenu'] ?>
             </p>
         </div>
+    </div>
+
+    <div class="container">
+        <!-- apparait quand l'user est déconnecté -->
+        <?php if (empty($_SESSION['users_id'])) { ?>
+            <p class="mb-5">Vous souhaitez ajouter un commentaire à cet article ? <a href="connexion.php">Connectez-vous</a> ou <a href="inscription.php">inscrivez-vous</a> !</p>
+        <?php } ?>
+    </div>
+
+    <div class="container backComment">
+        <!-- apparait quand l'user est connecté -->
+        <?php if (isset($_SESSION['users_id'])) { ?>
+
+            <form action="osaka.php" method="POST" enctype="multipart/form-data" class="shadow-lg mb-5">
+                <h2 class="mb-5 text-light">Ajouter un commentaire</h2>
+
+                <div class="mb-4">
+                    <input name="commentUser_date" type="date" value="<?php date_default_timezone_set('Europe/Paris');
+                                                                        setlocale(LC_TIME, 'fr.utf8');
+                                                                        echo strftime('%Y-%m-%d') ?>">
+                </div>
+
+                <div class="form-floating">
+                    <textarea class="form-control" id="floatingTextarea" style="height: 100px"></textarea>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <input class="btn btn-primary" type="submit" name="addComment" value="Ajouter un commentaire">
+                </div>
+            </form>
+
+        <?php } ?>
+    </div>
+
+    <div class="text-center mt-5 mb-5">
+        <img src="../assets/img/separator.svg" alt="separator" class="w-25">
     </div>
 
 <?php } ?>
@@ -97,6 +144,13 @@ require_once '../controllers/controller_osaka.php';
 </div>
 
 <?php include('../view/include/footer.php') ?>
+<script>
+    tinymce.init({
+        selector: 'textarea',
+        plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+        toolbar_mode: 'floating',
+    });
+</script>
 </body>
 
 </html>

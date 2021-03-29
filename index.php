@@ -30,43 +30,43 @@ session_start();
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/img/osaka/sumiyoshiBridge.jpg" class="d-block w-100 imgCaroussel" alt="First Slide">
+                    <img src="assets/img/carroussel/sumiyoshiBridge.jpg" class="d-block w-100 imgCaroussel" alt="First Slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="textSlide">Sumiyoshi-Taisha - Osaka</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/kyoto/fushimiInari.jpg" class="d-block w-100 imgCaroussel" alt="Second Slide">
+                    <img src="assets/img/carroussel/fushimiInari.jpg" class="d-block w-100 imgCaroussel" alt="Second Slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="textSlide">Fushimi Inari - Kyoto</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/Nara/bicheNara.jpg" class="d-block w-100 imgCaroussel" alt="Third Slide">
+                    <img src="assets/img/carroussel/bicheNara.jpg" class="d-block w-100 imgCaroussel" alt="Third Slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="textSlide">Cerf de Nara</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/kyoto/kyoto3.jpg" class="d-block w-100 imgCaroussel" alt="Fourth Slide">
+                    <img src="assets/img/carroussel/kyoto3.jpg" class="d-block w-100 imgCaroussel" alt="Fourth Slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="textSlide">Kinkaku-Ji - Kyoto</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/geishaStreet.jpg" class="d-block w-100 imgCaroussel" alt="Fifth Slide">
+                    <img src="assets/img/carroussel/geishaStreet.jpg" class="d-block w-100 imgCaroussel" alt="Fifth Slide">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5 class="textSlide">Meiko dans les rues de Kyoto</h5>
+                        <h5 class="textSlide">Maiko dans les rues de Kyoto</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/sakura.jpg" class="d-block w-100 imgCaroussel" alt="sixth Slide">
+                    <img src="assets/img/carroussel/sakura.jpg" class="d-block w-100 imgCaroussel" alt="sixth Slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="textSlide">Fleurs de Sakura</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/img/izakaya2.jpg" class="d-block w-100 imgCaroussel" alt="seventh Slide">
+                    <img src="assets/img/carroussel/izakaya2.jpg" class="d-block w-100 imgCaroussel" alt="seventh Slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5 class="textSlide">Restaurant Izakaya traditionnel</h5>
                     </div>
@@ -83,10 +83,10 @@ session_start();
         </div>
     </div>
 
-    <h1 class="text-center mt-5 titleIndexPres"><img src="assets/img/saison-de-floraison.svg" alt="earthSakura" class="earthSakura"> Présentation du site Kansai No Bouken</h1>
+    <h1 class="text-center mt-5 titleIndexPres"><img src="assets/img/accueil/saison-de-floraison.svg" alt="earthSakura" class="earthSakura"> Présentation du site Kansai No Bouken</h1>
 
     <div class="text-center mt-5">
-        <img src="assets/img/osaka/tanuki.jpg" alt="tanuki" class="tanukiSize">
+        <img src="assets/img/accueil/tanuki.jpg" alt="tanuki" class="tanukiSize">
     </div>
     <div class="d-flex mt-5 container">
         <div>
@@ -107,8 +107,8 @@ session_start();
     </div>
 
     <div class="text-center mt-5">
-        <img src="assets/img/japonmap.svg" alt="japanMap" class="japanMap">
-        <img src="assets/img/la-carte-de-la-région-de-kansai.png" class="img-fluid">
+        <img src="assets/img/accueil/japonmap.svg" alt="japanMap" class="japanMap">
+        <img src="assets/img/accueil/la-carte-de-la-région-de-kansai.png" class="img-fluid">
     </div>
 
     <div class="text-center mt-5">
@@ -121,7 +121,7 @@ session_start();
         <div class="col mt-5 OsakaCard">
             <div class="card h-100">
                 <div class="bg-image hover-zoom view view-cascade overlay">
-                    <img src="assets/img/osaka/osaka_night.jpg" class="card-img-top w-100" alt="osakaCity" />
+                    <img src="assets/img/accueil/osaka_night.jpg" class="card-img-top w-100" alt="osakaCity" />
                     <a href="view/osaka.php">
                         <div class="mask rgba-red-light"></div>
                     </a>
@@ -141,7 +141,7 @@ session_start();
         <div class="col mt-5">
             <div class="card h-100">
                 <div class="bg-image hover-zoom view view-cascade overlay">
-                    <img src="assets/img/kyoto/fushimi.jpg" class="card-img-top" alt="kyotoFushimiInari" />
+                    <img src="assets/img/accueil/fushimi.jpg" class="card-img-top" alt="kyotoFushimiInari" />
                     <a href="view/kyoto.php">
                         <div class="mask rgba-red-light"></div>
                     </a>
@@ -161,7 +161,7 @@ session_start();
         <div class="col mt-5">
             <div class="card h-100">
                 <div class="bg-image hover-zoom view view-cascade overlay">
-                    <img src="assets/img/Nara/shika3.jpg" class="card-img-top" alt="naraShika" />
+                    <img src="assets/img/accueil/shika3.jpg" class="card-img-top" alt="naraShika" />
                     <a href="view/nara.php">
                         <div class="mask rgba-red-light"></div>
                     </a>
@@ -181,7 +181,7 @@ session_start();
         <div class="col mt-5">
             <div class="card h-100">
                 <div class="bg-image hover-zoom view view-cascade overlay">
-                    <img src="assets/img/Kobe/kobeCity.jpg" class="card-img-top" alt="kobeCity" />
+                    <img src="assets/img/accueil/kobeCity.jpg" class="card-img-top" alt="kobeCity" />
                     <a href="view/kobe.php">
                         <div class="mask rgba-red-light"></div>
                     </a>
@@ -201,7 +201,7 @@ session_start();
         <div class="col mt-5">
             <div class="card h-100">
                 <div class="bg-image hover-zoom view view-cascade overlay">
-                    <img src="assets/img/Wakayama/wakayamaCity.jpg" class="card-img-top" alt="wakayamaCity" />
+                    <img src="assets/img/accueil/wakayamaCity.jpg" class="card-img-top" alt="wakayamaCity" />
                     <a href="view/kobe.php">
                         <div class="mask rgba-red-light"></div>
                     </a>
@@ -220,7 +220,7 @@ session_start();
         <div class="col mt-5">
             <div class="card h-100">
                 <div class="bg-image hover-zoom view view-cascade overlay">
-                    <img src="assets/img/geisha.jpg" class="card-img-top" alt="kimonoWoman" />
+                    <img src="assets/img/accueil/geisha.jpg" class="card-img-top" alt="kimonoWoman" />
                     <a href="view/kansai.php">
                         <div class="mask rgba-red-light"></div>
                     </a>

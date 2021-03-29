@@ -29,7 +29,7 @@
                     <a class="nav-link navFont" href="../../view/vocabulaire.php">Vocabulaire</a>
                 </li>
 
-                <!-- disparait quand l'user est connecté -->
+                <!-- apparait quand l'user est déconnecté -->
                 <?php if (empty($_SESSION['users_id'])) { ?>
                     <li class="nav-item">
                         <a class="nav-link navFont btnNavConnexion" href="../../view/inscription.php">Inscription</a>
@@ -62,7 +62,7 @@
             </ul>
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="mot-clé" aria-label="Search">
-                <a type="submit" class="searchButton"><img src="../../assets/img/tambour.svg" alt="search" class="searchNavBar"></a>
+                <a type="submit" class="searchButton"><img src="../../assets/img/svg/tambour.svg" alt="search" class="searchNavBar"></a>
             </form>
         </div>
     </div>

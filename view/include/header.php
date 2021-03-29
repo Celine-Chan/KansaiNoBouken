@@ -1,4 +1,4 @@
-<link rel="icon" type="img/svg" href="../../assets/img/sakura.svg">
+<link rel="icon" type="img/svg" href="../../assets/img/svg/sakura.svg">
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

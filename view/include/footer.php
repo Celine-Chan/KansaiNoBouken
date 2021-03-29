@@ -57,10 +57,10 @@
                 <h5 class="text-uppercase mb-0">Réseaux sociaux</h5>
 
                 <ul class="list-unstyled mt-4">
-                    <a href="https://www.facebook.com/nihonnobouken"><img src="../../assets/img/facebook.svg" alt="facebook" class="socialIcon socialLogo"></a>
-                    <a href="https://www.instagram.com/"><img src="../../assets/img/instagram.svg" alt="instagram" class="socialIcon socialLogo"></a>
-                    <a href="https://www.linkedin.com/in/c%C3%A9line-louvel/"><img src="../../assets/img/linkedin.svg" alt="linkedin" class="socialIcon socialLogo"></a>
-                    <a href="https://github.com/Celine-chan"><img src="../../assets/img/signe-github.svg" alt="github" class="socialIcon socialLogo"></a>
+                    <a href="https://www.facebook.com/nihonnobouken"><img src="../../assets/img/accueil/facebook.svg" alt="facebook" class="socialIcon socialLogo"></a>
+                    <a href="https://www.instagram.com/"><img src="../../assets/img/accueil/instagram.svg" alt="instagram" class="socialIcon socialLogo"></a>
+                    <a href="https://www.linkedin.com/in/c%C3%A9line-louvel/"><img src="../../assets/img/accueil/linkedin.svg" alt="linkedin" class="socialIcon socialLogo"></a>
+                    <a href="https://github.com/Celine-chan"><img src="../../assets/img/accueil/signe-github.svg" alt="github" class="socialIcon socialLogo"></a>
                 </ul>
             </div>
             <!--Grid column-->

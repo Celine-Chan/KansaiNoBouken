@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['users_id'])) {
+    header("Location:../error-404.php");
+}
 require_once '../controllers/controller_userAccount.php';
 // var_dump($_SESSION);
 ?>
@@ -24,7 +27,7 @@ require_once '../controllers/controller_userAccount.php';
     </div>
 
     <div class="container mt-2 text-center text-dark">
-        <h1><img src="../assets/img/kitsune.svg" alt="kitsuneprofil" class="kitsuneProfil border border-dark rounded px-2 py-2"> Bienvenue <?php echo $_SESSION['users_pseudo'] ?></h1>
+        <h1><img src="../assets/img/svg/kitsune.svg" alt="kitsuneprofil" class="kitsuneProfil border border-dark rounded px-2 py-2"> Bienvenue <?php echo $_SESSION['users_pseudo'] ?></h1>
     </div>
 
     <div class="container d-flex mt-5 justify-content-around">
@@ -45,7 +48,7 @@ require_once '../controllers/controller_userAccount.php';
             </div>
         </div>
         <div class="row ms-5 col-4">
-            <img src="../assets/img/momiji.svg" alt="momoji" class="momiji">
+            <img src="../assets/img/svg/momiji.svg" alt="momiji" class="momiji">
         </div>
     </div>
 

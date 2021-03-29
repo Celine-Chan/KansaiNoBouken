@@ -19,7 +19,7 @@ require_once '../controllers/controller_connexion.php';
 
         <form method="POST" action="" class="shadow-lg p-5 connexionForm mb-5">
 
-            <h1 class="text-center text-dark mb-5"><img src="../assets/img/daruma.svg" alt="daruma" class="daruma"> Connexion</h1>
+            <h1 class="text-center text-dark mb-5"><img src="../assets/img/connexion/daruma.svg" alt="daruma" class="daruma"> Connexion</h1>
 
             <div class="form-outline mb-4">
                 <input type="text" id="pseudoConnexion" name="pseudoConnexion" class="form-control" value="<?= isset($_POST['pseudoConnexion']) ? htmlspecialchars($_POST['pseudoConnexion']) : '' ?>" />
