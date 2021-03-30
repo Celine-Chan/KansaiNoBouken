@@ -93,7 +93,7 @@ class Users extends DataBase
     //aficher info user sur userAccount
     public function getUsersDetail(string $idUser)
     {
-        $query = 'SELECT `users_id`, `users_firstname`, `users_lastname`, `users_pseudo`, `users_birthdate`, 
+        $query = 'SELECT `users_id`, `users_firstname`, `users_lastname`, `users_pseudo`, DATE_FORMAT(`users_birthdate`, \'%d-%m-%Y\') AS `users_birthdate`, 
         `users_gender`, `users_japantrip`, `users_mail` 
         FROM `users` 
         WHERE `users_id` = :users_id';

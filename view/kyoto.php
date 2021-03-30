@@ -30,25 +30,13 @@ require_once '../controllers/controller_kyoto.php';
         <div class="mt-5">
             <img src="../assets/img/kyoto/lanterne.jpg" alt="lanterne" class="img-fluid lanterneImgKyoto img-fluid">
         </div>
-        <div class="textPageKyoto mt-5 col">
-            <p>At vero eos et accusam et justo duo dolores et ea rebum.
-                Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et
-                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                ipsum
-                dolor sit amet, consetetur sad. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-                accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-                Lorem
-                ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing eli tr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et
-                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p>
+        <div class="textPageKyoto mt-5 ms-3 col text-dark">
+            <p>Mondialement connu comme étant la ville japonaise traditionnelle et culturelle grâce à son architecture et
+                ses nombreux temples, Kyoto fut la capitale du Japon de l'an 794 à 1868 sous le nom de Heian-Kyo.
+            Elle compte plus de 2 000 temples bouddhistes, des sanctuaires shinto, des palais, etc. Nombreux de ces 
+            sites sont classés au patrimoine mondiale de l'UNESCO.</p>
+            <p>Elle fut miraculeusement épargné par les bombardements de la seconde guerre mondiale ainsi qu'à 
+                la bombe atomique.</p>
         </div>
     </div>
 
@@ -71,7 +59,7 @@ require_once '../controllers/controller_kyoto.php';
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title text-danger" id="exampleModalLabel"><img src="../assets/img/deux-katanas.svg" class="deleteIcon" alt="deleteIcon"> Supprimer l'article</h5>
+                                <h5 class="modal-title text-danger" id="exampleModalLabel"><img src="../assets/img//svg/deux-katanas.svg" class="deleteIcon" alt="deleteIcon"> Supprimer l'article</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -89,14 +77,66 @@ require_once '../controllers/controller_kyoto.php';
             <?php } ?>
     </div>
 
-    <div class="card container mb-5">
-        <div class="h3"><?= $articles['article_title'] ?></div>
+    <div class="card container mb-2 text-dark">
+        <div class="h3"><?php if (isset($_SESSION['users_id'])) { ?>
+                <div class="container mb-2 rating">
+                    <img src="../assets/img/svg/emptyStar.svg" alt="note1" class="sizeStar">
+                    <img src="../assets/img/svg/emptyStar.svg" alt="note2" class="sizeStar">
+                    <img src="../assets/img/svg/emptyStar.svg" alt="note3" class="sizeStar">
+                    <img src="../assets/img/svg/emptyStar.svg" alt="note4" class="sizeStar">
+                    <img src="../assets/img/svg/emptyStar.svg" alt="note5" class="sizeStar">
+                </div>
+                <?php } ?><?= $articles['article_title'] ?>
+        </div>
         <span class="ms-2 fst-italic"><?= $articles['article_date'] ?></span>
         <div class="card-body">
-            <p class="card-text">
+            <p class="card-text text-dark">
                 <?= $articles['article_contenu'] ?>
             </p>
         </div>
+    </div>
+
+
+    <div class="container text-dark">
+        <!-- apparait quand l'user est déconnecté -->
+        <?php if (empty($_SESSION['users_id'])) { ?>
+            <p class="mb-5">Vous souhaitez ajouter un commentaire à cet article ? <a href="connexion.php">Connectez-vous</a> ou <a href="inscription.php">inscrivez-vous</a> !</p>
+        <?php } ?>
+    </div>
+
+    <div class="container text-dark">
+        <?php if (isset($_SESSION['users_id'])) { ?>
+            <p>Vous souhaitez donnez votre avis sur cet article ? N'hésitez pas à laisser un commentaire.</p>
+        <?php } ?>
+    </div>
+
+    <div class="container backComment">
+        <!-- apparait quand l'user est connecté -->
+        <?php if (isset($_SESSION['users_id'])) { ?>
+
+            <form action="osaka.php" method="POST" enctype="multipart/form-data" class="shadow-lg mb-5 container">
+                <h2 class="mb-4 text-dark">Ajouter un commentaire</h2>
+
+                <div class="mb-4">
+                    <input name="commentUser_date" type="date" value="<?php date_default_timezone_set('Europe/Paris');
+                                                                        setlocale(LC_TIME, 'fr.utf8');
+                                                                        echo strftime('%Y-%m-%d') ?>">
+                </div>
+
+                <div class="form-floating">
+                    <textarea class="form-control" id="floatingTextarea" style="height: 100px"></textarea>
+                </div>
+
+                <div class="col-12 mt-3">
+                    <input class="btn btn-primary" type="submit" name="addComment" value="Ajouter un commentaire">
+                </div>
+            </form>
+
+        <?php } ?>
+    </div>
+
+    <div class="text-center mt-5 mb-5">
+        <img src="../assets/img/separator.svg" alt="separator" class="w-25">
     </div>
 
 <?php } ?>

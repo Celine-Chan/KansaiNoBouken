@@ -27,7 +27,8 @@ require_once '../controllers/controller_userAccount.php';
     </div>
 
     <div class="container mt-2 text-center text-dark">
-        <h1><img src="../assets/img/svg/kitsune.svg" alt="kitsuneprofil" class="kitsuneProfil border border-dark rounded px-2 py-2"> Bienvenue <?php echo $_SESSION['users_pseudo'] ?></h1>
+        <h1><img src="../assets/img/svg/kitsune.svg" alt="kitsuneprofil" class="kitsuneProfil border border-dark rounded px-2 py-2"> Bienvenue <?php echo $_SESSION['users_pseudo'] ?> </h1>
+        <small class="text-primary">(Vous êtes en mode <?php echo $_SESSION['users_role'] == 1 ? 'Administrateur' : 'Utilisateur' ?>)</small>
     </div>
 
     <div class="container d-flex mt-5 justify-content-around">
@@ -38,12 +39,12 @@ require_once '../controllers/controller_userAccount.php';
                 </div>
 
                 <div class="container text-dark mt-5">
-                    <p>Mon Nom : <?php echo $usersDetail['users_lastname'] ?></p>
-                    <p>Mon Prénom : <?php echo $usersDetail['users_firstname'] ?></p>
-                    <p>Ma date de naissance : <?php echo $usersDetail['users_birthdate'] ?></p>
-                    <p>Mon adresse mail : <?php echo $usersDetail['users_mail'] ?></p>
-                    <p>Genre : <?php echo $usersDetail['users_gender'] ?></p>
-                    <p>J'ai déjà voyagé au Japon ? <?php echo $usersDetail['users_japantrip'] == 0 ? 'oui' : 'non' ?></p>
+                    <p><span class="text-danger">Mon Nom : </span><span><?php echo $usersDetail['users_lastname'] ?></span></p>
+                    <p><span class="text-danger">Mon Prénom : </span><span><?php echo $usersDetail['users_firstname'] ?></span></p>
+                    <p><span class="text-danger">Ma date de naissance : </span><span><?php echo $usersDetail['users_birthdate'] ?></span></p>
+                    <p><span class="text-danger">Mon adresse mail : </span><span><?php echo $usersDetail['users_mail'] ?></span></p>
+                    <p><span class="text-danger">Genre : </span><span><?php echo $usersDetail['users_gender'] ?></span></p>
+                    <p><span class="text-danger">J'ai déjà voyagé au Japon ? </span><span><?php echo $usersDetail['users_japantrip'] == 0 ? 'oui' : 'non' ?></span></p>
                 </div>
             </div>
         </div>

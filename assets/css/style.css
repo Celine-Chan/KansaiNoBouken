@@ -274,15 +274,15 @@ nav {
     margin-left: 10rem;
 }
 
-.backComment{
-    background-color: rgb(129, 120, 120);
-    background-image: url('../img/osaka/ombrelle.jpg');
-    /* background-attachment: fixed; */
+ .backComment{
+    background-color: rgb(255, 255, 255);
+    /*background-image: url('../img/osaka/ombrelle.jpg');
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-blend-mode: multiply;
-}
+    background-blend-mode: multiply;*/
+} 
 
 .sizeStar{
     height: 2rem;
@@ -335,8 +335,10 @@ nav {
 
 .textPageKyoto {
     text-align: justify;
-    font-size: 0.9rem;
-    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-family: 'Bodoni Moda', serif;
+    color: black;
+    font-weight: bold;
 }
 
 .lanterneImgKyoto {

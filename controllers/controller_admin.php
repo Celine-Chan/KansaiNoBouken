@@ -56,10 +56,12 @@ if (count(scandir('../assets/img/galerieUpload')) > 0) {
 
 
 //PDO Article
-$regexArticleTitle = '/^[a-zA-Z0-9éèàêâùïüëçæœÉÈÇÙÆŒ -]+$/';
+$regexArticleTitle = '/^[a-zA-Z0-9éèàêâùïüëçæœÉÈÇÙÆŒ\' -]+$/';
 $messages = [];
 $errorMessages = [];
-// $articleArray = [];
+
+$cityArticle = new Article;
+$articleArray = $cityArticle->getSelectCity();
 
 //sécurité ajout d'article
 if (isset($_POST['addArticle'])) {
@@ -77,11 +79,11 @@ if (isset($_POST['addArticle'])) {
         $errorMessages['city_id'] = 'veuillez faire un choix.';
     }
     //sécurité si quelqu'un essaie de modifier html/ajouter une option (en "inspecter")
-    // if (isset($_POST['city_id'])) {
-    //     if (!array_key_exists($_POST['city_id'], $articleArray)) {
-    //         $errorMessages['city_id'] = 'Veuillez choisir une ville.';
-    //     }
-    // }
+    if (isset($_POST['city_id'])) {
+        if (!array_key_exists($_POST['city_id'], $articleArray)) {
+            $errorMessages['city_id'] = 'Veuillez choisir une ville.';
+        }
+    }
 
     if (isset($_POST['article_contenu'])) {
         if (empty($_POST['article_contenu'])) {

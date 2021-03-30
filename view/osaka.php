@@ -60,7 +60,7 @@ require_once '../controllers/controller_osaka.php';
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title text-danger" id="exampleModalLabel"><img src="../assets/img/deux-katanas.svg" class="deleteIcon" alt="deleteIcon"> Supprimer l'article</h5>
+                                <h5 class="modal-title text-danger" id="exampleModalLabel"><img src="../assets/img/svg/deux-katanas.svg" class="deleteIcon" alt="deleteIcon"> Supprimer l'article</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -91,16 +91,22 @@ require_once '../controllers/controller_osaka.php';
         </div>
         <span class="ms-2 fst-italic"><?= $articles['article_date'] ?></span>
         <div class="card-body">
-            <p class="card-text">
+            <p class="card-text text-dark">
                 <?= $articles['article_contenu'] ?>
             </p>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container text-dark">
         <!-- apparait quand l'user est déconnecté -->
         <?php if (empty($_SESSION['users_id'])) { ?>
             <p class="mb-5">Vous souhaitez ajouter un commentaire à cet article ? <a href="connexion.php">Connectez-vous</a> ou <a href="inscription.php">inscrivez-vous</a> !</p>
+        <?php } ?>
+    </div>
+
+    <div class="container text-dark">
+        <?php if (isset($_SESSION['users_id'])) { ?>
+            <p>Vous souhaitez donnez votre avis sur cet article ? N'hésitez pas à laisser un commentaire.</p>
         <?php } ?>
     </div>
 
@@ -109,7 +115,7 @@ require_once '../controllers/controller_osaka.php';
         <?php if (isset($_SESSION['users_id'])) { ?>
 
             <form action="osaka.php" method="POST" enctype="multipart/form-data" class="shadow-lg mb-5">
-                <h2 class="mb-5 text-light">Ajouter un commentaire</h2>
+                <h2 class="mb-4 text-dark">Ajouter un commentaire</h2>
 
                 <div class="mb-4">
                     <input name="commentUser_date" type="date" value="<?php date_default_timezone_set('Europe/Paris');
