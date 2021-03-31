@@ -66,6 +66,7 @@ class Users extends DataBase
         }
     }
 
+    // Vérification du mot de passe pour la connexion
     public function verifyPassword($usersPseudo, $usersPassword)
     {
 
@@ -101,7 +102,7 @@ class Users extends DataBase
         // je prepare requête à l'aide de la methode prepare pour me premunir des injections SQL
         $getDetailsUserQuery = $this->dataBase->prepare($query);
 
-        // Je bind ma value idPatient à mon paramètre $idArticle
+        // Je bind ma value users_id à mon paramètre $idArticle
         $getDetailsUserQuery->bindValue(':users_id', $idUser, PDO::PARAM_STR);
 
         // test et execution de la requête pour afficher message erreur
@@ -113,4 +114,32 @@ class Users extends DataBase
         }
     }
 
+    /**
+     * function renvoie faux si le pseudo $samePseudo n'existe pas dans la base de données
+     * 
+     */
+    public function samePseudo($samePseudo)
+    {
+
+        $query = 'SELECT `users_pseudo` FROM `users` WHERE `users_pseudo` = :users_pseudo';
+
+        // je prepare requête à l'aide de la methode prepare pour me premunir des injections SQL
+        $getSamePseudo = $this->dataBase->prepare($query);
+
+        // Je bind ma value users_pseudo à mon paramètre $samePseudo
+        $getSamePseudo->bindValue(':users_pseudo', $samePseudo, PDO::PARAM_STR);
+
+        $getSamePseudo->execute();
+        $infosPseudo = $getSamePseudo->fetch();
+
+        if ($infosPseudo) {
+            if (!empty($infosPseudo)) {
+                return $infosPseudo;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
 }

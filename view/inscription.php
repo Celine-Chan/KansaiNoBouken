@@ -1,7 +1,5 @@
 <?php
-
 require_once "../controllers/controller_inscription.php";
-
 ?>
 <!doctype html>
 <html lang="fr">
@@ -12,14 +10,9 @@ require_once "../controllers/controller_inscription.php";
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
-
 <body class="backBody">
 
     <?php include('../view/include/navbar.php') ?>
-
-    <!-- <div class="banniereInscriptionImg">
-        <img src="../assets/img/banniere/osakaPortKansai2.jpg" alt="takoyaki" class="img-fluid takoyakiImg">
-    </div> -->
 
     <div class="container mt-5 col-12 col-md-10 col-xl-6 row g-3 mx-auto">
 
@@ -140,7 +133,14 @@ require_once "../controllers/controller_inscription.php";
 
         <?php } else { ?>
             <p class="h3 text-info text-center border rounded backforminscri mb-5 p-3"><?= $messages['addUsers'] ?? '' ?></p>
-            <img src="../assets/img/fantome2.svg" alt="yokai Logo" class="logoforminscrip mx-auto">
+            <img src="../assets/img/svg/fantome2.svg" alt="yokai Logo" class="logoforminscrip mx-auto">
+            <script type="text/javascript">
+                setTimeout('Redirect()', 2000);
+
+                function Redirect() {
+                    location.href = '../index.php';
+                }
+            </script>
         <?php } ?>
     </div>
 

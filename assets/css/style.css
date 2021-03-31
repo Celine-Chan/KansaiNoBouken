@@ -274,14 +274,8 @@ nav {
     margin-left: 10rem;
 }
 
- .backComment{
+.backComment{
     background-color: rgb(255, 255, 255);
-    /*background-image: url('../img/osaka/ombrelle.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: multiply;*/
 } 
 
 .sizeStar{
@@ -305,6 +299,10 @@ nav {
 .rating a:focus ~ a { 
     background-image: url('../img/star.svg');
     cursor: pointer;
+}
+
+.textModify{
+    background-color: white;
 }
 
 /* ---------- PAGE KYOTO ----------  */
@@ -397,6 +395,11 @@ nav {
     color: black;
     font-weight: bold;
     font-style: italic
+}
+
+.sushiOsaka{
+    height: 30rem;
+    width: 40rem;
 }
 
 .textGastronomyPage{

@@ -23,20 +23,13 @@ session_start();
     <div class="d-flex flex-row mt-5 container">
         <div><img src="../assets/img/gastronomie/sushi.jpg" alt="sushiOsaka" class="img-fluid sushiOsaka rounded d-none d-sm-block"></div>
         <div>
-            <p class="textGastronomyPage ml-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore
-                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </p>
+            <p class="textGastronomyPage ml-4"><strong>La gastronomie du Kansai</strong>, très populaire sur l'archipel est composé de plats 
+            et de mets variés, ce qui en fait une cuisine riche. Il y a bien sûr, les <em>okonomiyaki</em> et les <em>takoyaki</em> d'Osaka 
+            en abondance dans les restaurants de Dotonbori, mais également, le <em>boeufs de Kobe</em>, les <em>sushis</em>, les <em>kuchikatsu</em> et 
+            sans oublié les <em>fruits de mer</em> et <em>poissons</em>. </p>
+            <p class="textGastronomyPage ml-4">A Kyoto, la cuisine locale porte un nom le <em>Kyou-Ryouri</em>. Vous trouverez de nombreuses pâtisserie, spécialités
+            de la ville comme le <em>Yatsuhashi</em>, frit ou cuit à la vapeur, qui renferme de l'anko (pâte de haricot rouge) pour 
+            le traditionnel mais vous en retrouverez également au chocolat, à la confiture ou encore à la crème.</p>
         </div>
     </div>
 

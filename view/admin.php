@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['users_role'])) {
+if (!isset($_SESSION['users_role']) || $_SESSION['users_role'] == 0)  {
     header("Location:../error-404.php");
 }
 require_once "../controllers/controller_admin.php";

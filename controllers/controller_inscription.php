@@ -36,6 +36,11 @@ if (isset($_POST['submit'])) {
         }
     }
 
+    $pseudoCheck = htmlspecialchars($_POST['pseudo']);
+
+    $pseudoObj = new Users;
+    $pseudoInfoArray = $pseudoObj->samePseudo($pseudoCheck);
+
     if (isset($_POST['pseudo'])) {
         if (!preg_match($regexPseudo, $_POST['pseudo'])) {
             $errorMessages['pseudo'] = 'Veuillez saisir un pseudo valide.';
@@ -43,7 +48,7 @@ if (isset($_POST['submit'])) {
         if (empty($_POST['pseudo'])) {
             $errorMessages['pseudo'] = 'Veuillez saisir votre pseudo.';
         }
-        if ($_POST['pseudo'] == 1) {
+        if ($pseudoInfoArray != false) {
             $errorMessages['pseudo'] = 'Ce pseudo est déjà utilisé.';
         }
     }
@@ -99,14 +104,10 @@ if (isset($_POST['submit'])) {
         } else {
             $errors = $resp->getErrorCodes();
             $errorMessages['captcha'] = 'Erreur dans le Captcha';
-            // var_dump($errors);
-            // var_dump ($errorMessages['captcha'] = 'Erreur dans le Captcha');
         }
     } else {
         $errorMessages['captcha'] = 'Erreur dans le Captcha';
     }
-
-    //var_dump($errorMessages);
 
     //je vérifie s'il n'y a pas d'erreurs afin de lancer ma requête
     if (empty($errorMessages)) {

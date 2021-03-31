@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['users_role'])) {
+if (!isset($_SESSION['users_role']) || $_SESSION['users_role'] == 0) {
     header("Location:../error-404.php");
 }
 require_once "../controllers/controller_modifyArticle.php";
@@ -74,13 +74,13 @@ require_once "../controllers/controller_modifyArticle.php";
         <?php
             // si la requête d'update passe, nous l'indiquons à l'utilisateur via un message
         } else if ($updateArticleInBase) { ?>
-            <h5 class="text-center text-info">Les modifications ont bien été prises en compte</h5>
+            <h5 class="text-center text-info border rounded textModify">Les modifications ont bien été prises en compte</h5>
             <div class="text-center mt-4">
                 <a type="button" href="admin.php" class="btn btn-sm btn-info">Retour administrateur</a>
             </div>
 
         <?php } else { ?>
-            <p class="h5 text-center text-info">Veuillez selectionner un article</p>
+            <p class="h5 text-center text-info border rounded textModify">Veuillez selectionner un article</p>
             <div class="text-center mt-4">
                 <a type="button" href="admin.php" class="btn btn-sm btn-info">Retour</a>
             </div>
