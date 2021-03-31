@@ -50,13 +50,13 @@ class Article extends DataBase
     }
 
     /**
-     * 
+     * Méthode me permettant de recupéper les infos des articles
      * @param string $id article
      * @return array ou false si la requête ne passe pas
      */
     public function getDetailsArticle(string $idArticle)
     {
-        // requete me permettant de recup infos article
+        
         $query = 'SELECT 
         `article_id`, 
         `article_title`, 
@@ -73,7 +73,7 @@ class Article extends DataBase
         // je prepare requête à l'aide de la methode prepare pour me premunir des injections SQL
         $getDetailsArticleQuery = $this->dataBase->prepare($query);
 
-        // Je bind ma value idPatient à mon paramètre $idArticle
+        // Je bind ma value article_id à mon paramètre $idArticle
         $getDetailsArticleQuery->bindValue(':article_id', $idArticle, PDO::PARAM_STR);
 
         // test et execution de la requête pour afficher message erreur
