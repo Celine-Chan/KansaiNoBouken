@@ -228,8 +228,8 @@ session_start();
                 <div class="card-body">
                     <h5 class="card-title titleCardSize">Kansai 関西</h5>
                     <p class="card-text fontSizeCard">
-                        This is a longer card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.
+                        Région du Japon situé sur l'île principale de Honshu. Elle est considéré comme 
+                        le centre historique et culturel de l'archipel.
                     <p><a href="view/kansai.php" class="black-text seeMore ml-3">Plus d'infos sur le Kansai <i class="fas fa-plus-circle"></i></a></p>
                     </p>
 
